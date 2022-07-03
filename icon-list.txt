@@ -1,0 +1,5 @@
+★true
+https://img.icons8.com/material-outlined/48/000000/filled-circle--v2.png
+
+★false
+https://img.icons8.com/material-outlined/48/000000/delete-sign.png
