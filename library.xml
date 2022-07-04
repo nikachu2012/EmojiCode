@@ -64,7 +64,7 @@
             <field name="ALIGN">LEFT</field>
             <statement name="FIELDS">
               <block type="field_dropdown" id="}QyS~WUi!%-]6Idw{WN[">
-                <mutation options="[&quot;image&quot;,&quot;image&quot;,&quot;image&quot;,&quot;image&quot;,&quot;image&quot;]"></mutation>
+                <mutation options="[&quot;image&quot;,&quot;image&quot;,&quot;image&quot;,&quot;image&quot;,&quot;image&quot;,&quot;text&quot;]"></mutation>
                 <field name="FIELDNAME">calc-type</field>
                 <field name="SRC0">https://img.icons8.com/color/48/000000/plus-math.png</field>
                 <field name="WIDTH0">16</field>
@@ -91,6 +91,8 @@
                 <field name="HEIGHT4">16</field>
                 <field name="ALT4">^</field>
                 <field name="CPU4">super</field>
+                <field name="USER5">あまり</field>
+                <field name="CPU5">remainder</field>
               </block>
             </statement>
             <next>
@@ -119,11 +121,12 @@
     </value>
     <value name="OUTPUTTYPE">
       <shadow type="type_null" id="EurMJ,,3h7Q4j6{zRtON"></shadow>
+      <block type="type_number" id="tQK6Yn+!eD0-(BrEY,Hf"></block>
     </value>
     <value name="COLOUR">
-      <block type="colour_hue" id="g]%4Z}apAh#qU5J:G?UZ">
-        <mutation colour="#9fa55b"></mutation>
-        <field name="HUE">65</field>
+      <block type="colour_hue" id="D))dfDm^UM0l_(.v,3==">
+        <mutation colour="#5b67a5"></mutation>
+        <field name="HUE">230</field>
       </block>
     </value>
   </block><block type="factory_base" id="*uN/RV[au3xyJj516Bht" deletable="false" movable="false" x="10" y="10">
@@ -782,7 +785,7 @@
             <field name="ALIGN">LEFT</field>
             <value name="TYPE">
               <shadow type="type_null" id="eDa]]Gz2R|mEBsm8~LB."></shadow>
-              <block type="type_string" id="M,.nci;(%mQeFtyy|uM."></block>
+              <block type="type_number" id="ze2~t0[{KQ@I3^^,!PiM"></block>
             </value>
             <next>
               <block type="input_dummy" id="[9+$Zp!RPAus`P$Npd|I">
@@ -798,7 +801,7 @@
                     <field name="ALIGN">LEFT</field>
                     <value name="TYPE">
                       <shadow type="type_null" id="8u*Nrea08co?GdQ+We{+"></shadow>
-                      <block type="type_string" id="nFUd[o)U)nDl/vZnYI./"></block>
+                      <block type="type_number" id="nH#5ONy*Xb;@e+|MbI{u"></block>
                     </value>
                     <next>
                       <block type="input_dummy" id="G5{RHXE.XcqqYiq^N[^7">
@@ -814,7 +817,7 @@
                             <field name="ALIGN">LEFT</field>
                             <value name="TYPE">
                               <shadow type="type_null" id="8u*Nrea08co?GdQ+We{+"></shadow>
-                              <block type="type_string" id="wlAMFB@TBDMF`rEnPTI:"></block>
+                              <block type="type_number" id="8x6XuIs5Q61*F@^bueOn"></block>
                             </value>
                             <next>
                               <block type="input_dummy" id="{fU!$LArr!RuFUF{6DtW">
@@ -1034,6 +1037,432 @@
       <block type="colour_hue" id="ipLls^{@Pk!mD*@T2i7g">
         <mutation colour="#5ba55b"></mutation>
         <field name="HUE">120</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="sSkyA-d$T$P;SzGzu78f" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"></mutation>
+    <field name="NAME">string</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="|o@((xSgIy%*TfrXO1m$">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_input" id="Aap5h5rJBK]-%)otJMjx">
+            <field name="TEXT">123</field>
+            <field name="FIELDNAME">string</field>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="`|z;YS@+X4mv-gC(sDD$" deletable="false" movable="false">
+        <field name="TEXT">数字入力です。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="Ru.-ZKwf38pntOa(VK8L" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="@[;d{G[o`xHk}w/TANod"></shadow>
+      <block type="type_number" id="vxsc[f;]OZ+q#Ztk5E.~"></block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="21P4_UofK1888MMZmIbh">
+        <mutation colour="#5b67a5"></mutation>
+        <field name="HUE">230</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="n4/ZgyTZP/XjCDzej)jv" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"></mutation>
+    <field name="NAME">math_etc1</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="tI;:#uWbIXuLRE$*1(Bp">
+        <field name="INPUTNAME">input</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_dropdown" id="9!vM=Ofekc/Uinv3dHwL">
+            <mutation options="[&quot;image&quot;,&quot;text&quot;,&quot;image&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;]"></mutation>
+            <field name="FIELDNAME">select</field>
+            <field name="SRC0">https://img.icons8.com/color/48/000000/square-root.png</field>
+            <field name="WIDTH0">16</field>
+            <field name="HEIGHT0">16</field>
+            <field name="ALT0">ルート</field>
+            <field name="CPU0">root</field>
+            <field name="USER1">絶対値</field>
+            <field name="CPU1">absolute</field>
+            <field name="SRC2">https://img.icons8.com/color/48/000000/minus-math.png</field>
+            <field name="WIDTH2">16</field>
+            <field name="HEIGHT2">16</field>
+            <field name="ALT2">*</field>
+            <field name="CPU2">minus</field>
+            <field name="USER3">ln</field>
+            <field name="CPU3">log</field>
+            <field name="USER4">log10</field>
+            <field name="CPU4">log10</field>
+            <field name="USER5">e^</field>
+            <field name="CPU5">exp</field>
+            <field name="USER6">10^</field>
+            <field name="CPU6">OPTIONNAME</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="1.CL9$+CRs?#BF|qSLnO"></shadow>
+          <block type="type_number" id="ny88Z.o^+?p07#HpZ![2"></block>
+        </value>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="g]7*y6R},)pUbex^+:4K" deletable="false" movable="false">
+        <field name="TEXT">数学のいろいろな計算が簡単にできます。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="z,XcwSaYim]).Q)RjcId" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="zs]*5SFwld80WnK!d95o"></shadow>
+      <block type="type_number" id="Q5*au!MUE@nWfe(;W;44"></block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="X=C`(z+wVyyWrMTf(F6T">
+        <mutation colour="#5b67a5"></mutation>
+        <field name="HUE">230</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="n4/ZgyTZP/XjCDzej)jv" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"></mutation>
+    <field name="NAME">math_etc2</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="`Rq)_)zteCco(`dw]~^8">
+        <field name="INPUTNAME">input</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_dropdown" id="9!vM=Ofekc/Uinv3dHwL">
+            <mutation options="[&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;]"></mutation>
+            <field name="FIELDNAME">select</field>
+            <field name="USER0">sin</field>
+            <field name="CPU0">sin</field>
+            <field name="USER1">cos</field>
+            <field name="CPU1">cos</field>
+            <field name="USER2">tan</field>
+            <field name="CPU2">tan</field>
+            <field name="USER3">asin</field>
+            <field name="CPU3">asin</field>
+            <field name="USER4">acos</field>
+            <field name="CPU4">acos</field>
+            <field name="USER5">atan</field>
+            <field name="CPU5">atan</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="+lhVOLR9O9+9LnWfPIjK"></shadow>
+          <block type="type_string" id="$i6-%[mSgqxueps}4M|9"></block>
+        </value>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="g]7*y6R},)pUbex^+:4K" deletable="false" movable="false">
+        <field name="TEXT">数学のいろいろな計算が簡単にできます。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="z,XcwSaYim]).Q)RjcId" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="zs]*5SFwld80WnK!d95o"></shadow>
+      <block type="type_number" id="Q5*au!MUE@nWfe(;W;44"></block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="X=C`(z+wVyyWrMTf(F6T">
+        <mutation colour="#5b67a5"></mutation>
+        <field name="HUE">230</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="(6]n%i!`%hTSXe16F8wG" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"></mutation>
+    <field name="NAME">const-return</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="yJ~|rcg`~0*whd=NG]Q_">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_dropdown" id="/npa9+uJ6W:jiCQ#8k6}">
+            <mutation options="[&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;]"></mutation>
+            <field name="FIELDNAME">NAME</field>
+            <field name="USER0">π</field>
+            <field name="CPU0">pi</field>
+            <field name="USER1">e</field>
+            <field name="CPU1">e</field>
+            <field name="USER2">φ</field>
+            <field name="CPU2">phi</field>
+            <field name="USER3">∞</field>
+            <field name="CPU3">infinity</field>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="(S(1~$9v:U%]L#0%Z|Z3" deletable="false" movable="false">
+        <field name="TEXT">いろいろな定数を返します</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id=";CwTKHPS[V,}7Bt!(glt" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="Nz2oP:Nw+;3F:-}|!0K9"></shadow>
+      <block type="type_string" id="}MrsiC-WGAT!6wyD-HQ)"></block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="PKz+@vHA|WQ-jQ0wuBea">
+        <mutation colour="#5b67a5"></mutation>
+        <field name="HUE">230</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="y#}|IO,*eZR%,8fp^$yZ" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"></mutation>
+    <field name="NAME">hantei-boolean</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="`/y]huHz~ydpwWJAUe~5">
+        <field name="INPUTNAME">NAME</field>
+        <field name="ALIGN">LEFT</field>
+        <value name="TYPE">
+          <shadow type="type_null" id="H}Oeo*UfbELX0~3XjlYl"></shadow>
+          <block type="type_number" id="~~:C6~Q*l:m(HCgD[%q="></block>
+        </value>
+        <next>
+          <block type="input_dummy" id="AnfazJv}(!;xYaWtfR)|">
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_dropdown" id="3OYq;S^x7`^bzJnrwRmx">
+                <mutation options="[&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;]"></mutation>
+                <field name="FIELDNAME">select</field>
+                <field name="USER0">は偶数</field>
+                <field name="CPU0">even</field>
+                <field name="USER1">は奇数</field>
+                <field name="CPU1">odd</field>
+                <field name="USER2">は素数</field>
+                <field name="CPU2">prime</field>
+                <field name="USER3">は整数</field>
+                <field name="CPU3">integer</field>
+                <field name="USER4">は正</field>
+                <field name="CPU4">true</field>
+                <field name="USER5">は負</field>
+                <field name="CPU5">false</field>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="B?,B.HKvgI-.E^7b5*.Z" deletable="false" movable="false">
+        <field name="TEXT">入力に対する判定を変える</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="dwQ07qmfVqD#P]y*zt3t" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="zP?=||%+`]Bw[MnDLX8l"></shadow>
+      <block type="type_boolean" id="LIY*__i.s*}`REk$XfDU"></block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="oSo$,HO*iVVny#=+f][l">
+        <mutation colour="#5b67a5"></mutation>
+        <field name="HUE">230</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="y#}|IO,*eZR%,8fp^$yZ" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"></mutation>
+    <field name="NAME">rewrite-input</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="_#|0X1|?v*cXih,MuIa+">
+        <field name="INPUTNAME">input</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_dropdown" id="3OYq;S^x7`^bzJnrwRmx">
+            <mutation options="[&quot;text&quot;,&quot;text&quot;,&quot;text&quot;]"></mutation>
+            <field name="FIELDNAME">select</field>
+            <field name="USER0">四捨五入</field>
+            <field name="CPU0">round</field>
+            <field name="USER1">切り上げ</field>
+            <field name="CPU1">roundup</field>
+            <field name="USER2">切り下げ</field>
+            <field name="CPU2">rounddown</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="uI8!R:FpBOGl{RU44jiZ"></shadow>
+          <block type="type_number" id="K9L/|I+iv/]@_fCZyi8^"></block>
+        </value>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="B?,B.HKvgI-.E^7b5*.Z" deletable="false" movable="false">
+        <field name="TEXT">入力を変換します。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="dwQ07qmfVqD#P]y*zt3t" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="zP?=||%+`]Bw[MnDLX8l"></shadow>
+      <block type="type_boolean" id="LIY*__i.s*}`REk$XfDU"></block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="oSo$,HO*iVVny#=+f][l">
+        <mutation colour="#5b67a5"></mutation>
+        <field name="HUE">230</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="t#V2w._rj]DQ)z]:}v${" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"></mutation>
+    <field name="NAME">list-search</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="Ncy@?l_k^zZiL,e+tb|]">
+        <field name="INPUTNAME">NAME</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="y;!owR%M.bXh?+G{xmp`">
+            <field name="TEXT">リストの</field>
+            <next>
+              <block type="field_dropdown" id="(X(:vVvu_B#0T=_cf?Fw">
+                <mutation options="[&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;]"></mutation>
+                <field name="FIELDNAME">select</field>
+                <field name="USER0">合計</field>
+                <field name="CPU0">sum</field>
+                <field name="USER1">最小値</field>
+                <field name="CPU1">min</field>
+                <field name="USER2">最大値</field>
+                <field name="CPU2">max</field>
+                <field name="USER3">平均</field>
+                <field name="CPU3">avg</field>
+                <field name="USER4">中央値</field>
+                <field name="CPU4">median</field>
+                <field name="USER5">最頻値</field>
+                <field name="CPU5">mode</field>
+                <field name="USER6">標準偏差</field>
+                <field name="CPU6">deviasion</field>
+                <field name="USER7">ランダムの項目</field>
+                <field name="CPU7">random</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="jjcx=7;*P0(SWNUPe%O}"></shadow>
+          <block type="type_list" id="2j9j7][8J:9D*dJ(aywn"></block>
+        </value>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="u5W7y2JRFt0Ah.l2VhfM" deletable="false" movable="false">
+        <field name="TEXT">リストの中で指定された条件を返します。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="}/I[4GLi^,A2.SBNnQ@t" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="M~=4^=UH7QA[s#?KxKbu"></shadow>
+      <block type="type_number" id="}N5dbY/Oc_/,t374Y:H5"></block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="cUmElb~f/D.v6SX|7rl4">
+        <mutation colour="#5b67a5"></mutation>
+        <field name="HUE">230</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id=".MmUb|U2dLbHz=,~gk{l" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"></mutation>
+    <field name="NAME">random</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="z$=W(?/Tb=hAhR-@)t=l">
+        <field name="INPUTNAME">start</field>
+        <field name="ALIGN">LEFT</field>
+        <value name="TYPE">
+          <shadow type="type_null" id="4L.`KpP}WNGPNdXm||m0"></shadow>
+          <block type="type_number" id="=YXbv2kK0lm/U~5R#HRm"></block>
+        </value>
+        <next>
+          <block type="input_dummy" id="~g]Q+C[+dH?_ZbqoQ^dv">
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="2utfOjXS[w#Uro(.%Exi">
+                <field name="TEXT">から</field>
+              </block>
+            </statement>
+            <next>
+              <block type="input_value" id="e^r?YY,GF|-]fFBxLagL">
+                <field name="INPUTNAME">end</field>
+                <field name="ALIGN">LEFT</field>
+                <value name="TYPE">
+                  <shadow type="type_null" id="s9:/lw%lr{FJwK6vd,R!"></shadow>
+                  <block type="type_number" id="-8oF]e!xQWd}74KegcV9"></block>
+                </value>
+                <next>
+                  <block type="input_dummy" id="q5!IhyHHRD/J9TV_7d=4">
+                    <field name="ALIGN">LEFT</field>
+                    <statement name="FIELDS">
+                      <block type="field_static" id="``U1Oi_m@;rt:f}F191x">
+                        <field name="TEXT">までの乱数</field>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="dn#:Qh@5`+4dQ!!,IK/S" deletable="false" movable="false">
+        <field name="TEXT">指定範囲の乱数</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="erKOKOc6bHiSvIr%|(pJ" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="%a-qy,g,CmRSB`Il0@,E"></shadow>
+      <block type="type_number" id="Dfw;Sw?WprvPYYW~euLW"></block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="ghE{),^38J3.@wO8r?a0">
+        <mutation colour="#5b67a5"></mutation>
+        <field name="HUE">230</field>
       </block>
     </value>
   </block></xml>
