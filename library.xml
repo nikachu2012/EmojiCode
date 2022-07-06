@@ -2034,4 +2034,665 @@
         <field name="HUE">160</field>
       </block>
     </value>
+  </block><block type="factory_base" id="DvGr{d)n_c3-Y3=6ZV@5" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"></mutation>
+    <field name="NAME">list-create</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="R:emvYLH^qY|w~2py[i~">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="oE%nTn#%M{QCc$cbY$z~">
+            <field name="TEXT">リストの作成</field>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="oClbHYf:=+qXJkP/w*gM" deletable="false" movable="false">
+        <field name="TEXT">リストを作成します</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="#Hou:Eh=;7dUI_Oo8r,I" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="}8CN=`hJK7I](^DWhUM{"></shadow>
+      <block type="type_list" id=";ZcDHZ0^O8VF#wk#^yS["></block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id=";}.s]YmQ({sf.RT)tK_x">
+        <mutation colour="#745ba5"></mutation>
+        <field name="HUE">260</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="DvGr{d)n_c3-Y3=6ZV@5" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">list-push</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="Wkc2:Co[ej^a9GqF!fi1">
+        <field name="INPUTNAME">value</field>
+        <field name="ALIGN">LEFT</field>
+        <value name="TYPE">
+          <shadow type="type_null" id="kC/A.whawo*TA#~#8.2b"></shadow>
+          <block type="type_group" id="sloTap/E9q%js1ph7,8D">
+            <mutation types="2"></mutation>
+            <value name="TYPE0">
+              <block type="type_string" id="$V(EwQfGDQOm:Z}eh/$W"></block>
+            </value>
+            <value name="TYPE1">
+              <block type="type_number" id="4w^{P|:k37D)Z9/k_uw."></block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="input_dummy" id="R:emvYLH^qY|w~2py[i~">
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="oE%nTn#%M{QCc$cbY$z~">
+                <field name="TEXT">を</field>
+              </block>
+            </statement>
+            <next>
+              <block type="input_value" id="qV-r-vlh)znlc?@IOVJr">
+                <field name="INPUTNAME">array</field>
+                <field name="ALIGN">LEFT</field>
+                <value name="TYPE">
+                  <shadow type="type_null" id="7^uoFR5SOY|m_baJV9$j"></shadow>
+                  <block type="type_list" id="Eerqr~-Hdhkt;jrj`)@q"></block>
+                </value>
+                <next>
+                  <block type="input_dummy" id="96OIkIlg,!vmFmJ8eM2~">
+                    <field name="ALIGN">LEFT</field>
+                    <statement name="FIELDS">
+                      <block type="field_static" id="=vs7MlyA`kW1NO-sx.G@">
+                        <field name="TEXT">に追加する</field>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="oClbHYf:=+qXJkP/w*gM" deletable="false" movable="false">
+        <field name="TEXT">リストを作成します</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="#Hou:Eh=;7dUI_Oo8r,I" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="D^8h*z,_=7;oXIt9p2bB"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="OVkpRM[xt9)REmjAP9e,"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="YPl+tkg27:$ibiP/#c21">
+        <mutation colour="#745ba5"></mutation>
+        <field name="HUE">260</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="DvGr{d)n_c3-Y3=6ZV@5" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">list-delete</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="Wkc2:Co[ej^a9GqF!fi1">
+        <field name="INPUTNAME">value</field>
+        <field name="ALIGN">LEFT</field>
+        <value name="TYPE">
+          <shadow type="type_null" id="kC/A.whawo*TA#~#8.2b"></shadow>
+          <block type="type_group" id="sloTap/E9q%js1ph7,8D">
+            <mutation types="2"></mutation>
+            <value name="TYPE0">
+              <block type="type_string" id="$V(EwQfGDQOm:Z}eh/$W"></block>
+            </value>
+            <value name="TYPE1">
+              <block type="type_number" id="4w^{P|:k37D)Z9/k_uw."></block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="input_dummy" id="96OIkIlg,!vmFmJ8eM2~">
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="=vs7MlyA`kW1NO-sx.G@">
+                <field name="TEXT">の</field>
+              </block>
+            </statement>
+            <next>
+              <block type="input_value" id="Z#qo22$NURH~jCz*BQ.N">
+                <field name="INPUTNAME">NAME</field>
+                <field name="ALIGN">LEFT</field>
+                <value name="TYPE">
+                  <shadow type="type_null" id=";V@tncv=!8I`hid(aK@L"></shadow>
+                </value>
+                <next>
+                  <block type="input_dummy" id="t2!/rT[BA,^O[EM1I[l,">
+                    <field name="ALIGN">LEFT</field>
+                    <statement name="FIELDS">
+                      <block type="field_static" id="/W7!_EYSe;GZC3E8/Rp{">
+                        <field name="TEXT">番目を削除する</field>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="oClbHYf:=+qXJkP/w*gM" deletable="false" movable="false">
+        <field name="TEXT">リストを作成します</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="#Hou:Eh=;7dUI_Oo8r,I" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="D^8h*z,_=7;oXIt9p2bB"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="OVkpRM[xt9)REmjAP9e,"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id=":{7@63`%Kf;uK[C]AoPL">
+        <mutation colour="#745ba5"></mutation>
+        <field name="HUE">260</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="DvGr{d)n_c3-Y3=6ZV@5" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">list-all-delete</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="Wkc2:Co[ej^a9GqF!fi1">
+        <field name="INPUTNAME">value</field>
+        <field name="ALIGN">LEFT</field>
+        <value name="TYPE">
+          <shadow type="type_null" id="kC/A.whawo*TA#~#8.2b"></shadow>
+          <block type="type_group" id="sloTap/E9q%js1ph7,8D">
+            <mutation types="2"></mutation>
+            <value name="TYPE0">
+              <block type="type_string" id="$V(EwQfGDQOm:Z}eh/$W"></block>
+            </value>
+            <value name="TYPE1">
+              <block type="type_number" id="4w^{P|:k37D)Z9/k_uw."></block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="input_dummy" id="96OIkIlg,!vmFmJ8eM2~">
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="=vs7MlyA`kW1NO-sx.G@">
+                <field name="TEXT">のすべてを削除</field>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="oClbHYf:=+qXJkP/w*gM" deletable="false" movable="false">
+        <field name="TEXT">リストを作成します</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="#Hou:Eh=;7dUI_Oo8r,I" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="D^8h*z,_=7;oXIt9p2bB"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="OVkpRM[xt9)REmjAP9e,"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="I4,Cr5.aZu+h@2V:*C~@">
+        <mutation colour="#745ba5"></mutation>
+        <field name="HUE">260</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="DvGr{d)n_c3-Y3=6ZV@5" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">list-insert</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="Wkc2:Co[ej^a9GqF!fi1">
+        <field name="INPUTNAME">array</field>
+        <field name="ALIGN">LEFT</field>
+        <value name="TYPE">
+          <shadow type="type_null" id="kC/A.whawo*TA#~#8.2b"></shadow>
+          <block type="type_list" id="Eerqr~-Hdhkt;jrj`)@q"></block>
+        </value>
+        <next>
+          <block type="input_dummy" id="R:emvYLH^qY|w~2py[i~">
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="oE%nTn#%M{QCc$cbY$z~">
+                <field name="TEXT">の</field>
+              </block>
+            </statement>
+            <next>
+              <block type="input_value" id="qV-r-vlh)znlc?@IOVJr">
+                <field name="INPUTNAME">index</field>
+                <field name="ALIGN">LEFT</field>
+                <value name="TYPE">
+                  <shadow type="type_null" id="7^uoFR5SOY|m_baJV9$j"></shadow>
+                  <block type="type_number" id="4w^{P|:k37D)Z9/k_uw."></block>
+                </value>
+                <next>
+                  <block type="input_dummy" id="96OIkIlg,!vmFmJ8eM2~">
+                    <field name="ALIGN">LEFT</field>
+                    <statement name="FIELDS">
+                      <block type="field_static" id="=vs7MlyA`kW1NO-sx.G@">
+                        <field name="TEXT">番目に</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="input_value" id="N7!1*uBpDcT.H`6Nvh+3">
+                        <field name="INPUTNAME">data</field>
+                        <field name="ALIGN">LEFT</field>
+                        <value name="TYPE">
+                          <shadow type="type_null" id="7^uoFR5SOY|m_baJV9$j"></shadow>
+                          <block type="type_string" id="hH)]*adn9kO~a|^i*7]l"></block>
+                        </value>
+                        <next>
+                          <block type="input_dummy" id="pYvj)x=^eY7nuGazb`)f">
+                            <field name="ALIGN">LEFT</field>
+                            <statement name="FIELDS">
+                              <block type="field_static" id="W=2s`wtf-LVa/m,*5*g7">
+                                <field name="TEXT">を挿入する</field>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="oClbHYf:=+qXJkP/w*gM" deletable="false" movable="false">
+        <field name="TEXT">リストの指定番目にテキストを挿入します</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="#Hou:Eh=;7dUI_Oo8r,I" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="D^8h*z,_=7;oXIt9p2bB"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="OVkpRM[xt9)REmjAP9e,"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="NpV9hKkPjVVI37@zw9r2">
+        <mutation colour="#745ba5"></mutation>
+        <field name="HUE">260</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="DvGr{d)n_c3-Y3=6ZV@5" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">list-replace</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="Wkc2:Co[ej^a9GqF!fi1">
+        <field name="INPUTNAME">array</field>
+        <field name="ALIGN">LEFT</field>
+        <value name="TYPE">
+          <shadow type="type_null" id="kC/A.whawo*TA#~#8.2b"></shadow>
+          <block type="type_list" id="Eerqr~-Hdhkt;jrj`)@q"></block>
+        </value>
+        <next>
+          <block type="input_dummy" id="R:emvYLH^qY|w~2py[i~">
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="oE%nTn#%M{QCc$cbY$z~">
+                <field name="TEXT">の</field>
+              </block>
+            </statement>
+            <next>
+              <block type="input_value" id="qV-r-vlh)znlc?@IOVJr">
+                <field name="INPUTNAME">index</field>
+                <field name="ALIGN">LEFT</field>
+                <value name="TYPE">
+                  <shadow type="type_null" id="7^uoFR5SOY|m_baJV9$j"></shadow>
+                  <block type="type_number" id="4w^{P|:k37D)Z9/k_uw."></block>
+                </value>
+                <next>
+                  <block type="input_dummy" id="96OIkIlg,!vmFmJ8eM2~">
+                    <field name="ALIGN">LEFT</field>
+                    <statement name="FIELDS">
+                      <block type="field_static" id="=vs7MlyA`kW1NO-sx.G@">
+                        <field name="TEXT">番目に</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="input_value" id="N7!1*uBpDcT.H`6Nvh+3">
+                        <field name="INPUTNAME">value</field>
+                        <field name="ALIGN">LEFT</field>
+                        <value name="TYPE">
+                          <shadow type="type_null" id="7^uoFR5SOY|m_baJV9$j"></shadow>
+                          <block type="type_string" id="LSG:H7Qf;O3yxdjV8LfL"></block>
+                        </value>
+                        <next>
+                          <block type="input_dummy" id="pYvj)x=^eY7nuGazb`)f">
+                            <field name="ALIGN">LEFT</field>
+                            <statement name="FIELDS">
+                              <block type="field_static" id="W=2s`wtf-LVa/m,*5*g7">
+                                <field name="TEXT">で置き換えする</field>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="oClbHYf:=+qXJkP/w*gM" deletable="false" movable="false">
+        <field name="TEXT">リストの指定番目を置き換えします。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="#Hou:Eh=;7dUI_Oo8r,I" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="D^8h*z,_=7;oXIt9p2bB"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="OVkpRM[xt9)REmjAP9e,"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="c,!2.;~-hJ`P,11f8x19">
+        <mutation colour="#745ba5"></mutation>
+        <field name="HUE">260</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="DvGr{d)n_c3-Y3=6ZV@5" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"></mutation>
+    <field name="NAME">list-index</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="FmUb_GRoPE{On6=DJNP0">
+        <field name="INPUTNAME">array</field>
+        <field name="ALIGN">LEFT</field>
+        <value name="TYPE">
+          <shadow type="type_null" id="`kcOaX#{6iXyK`Lm.f%z"></shadow>
+          <block type="type_list" id="e9t#IoQiJ]:pymJsPODg"></block>
+        </value>
+        <next>
+          <block type="input_dummy" id="2z+tK|^k*dEx^cB}25O*">
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="$G9zn$=LeT)E=SC;C~8]">
+                <field name="TEXT">の</field>
+              </block>
+            </statement>
+            <next>
+              <block type="input_value" id="Zru@aN]~Vn`kaItm:[AT">
+                <field name="INPUTNAME">index</field>
+                <field name="ALIGN">LEFT</field>
+                <value name="TYPE">
+                  <shadow type="type_null" id="?33[/lX{4@2oNk-kReW`"></shadow>
+                  <block type="type_number" id="2UdwR:C%vj6hP_8Sv)D^"></block>
+                </value>
+                <next>
+                  <block type="input_dummy" id="nP9{|/tJmX$Gg^5sYl.D">
+                    <field name="ALIGN">LEFT</field>
+                    <statement name="FIELDS">
+                      <block type="field_static" id="N}kmuoy?Q(gMAx@Q#0)2">
+                        <field name="TEXT">番目</field>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="oClbHYf:=+qXJkP/w*gM" deletable="false" movable="false">
+        <field name="TEXT">リストの指定番目を取得します</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="#Hou:Eh=;7dUI_Oo8r,I" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="}8CN=`hJK7I](^DWhUM{"></shadow>
+      <block type="type_group" id="8$Ieyq[nGvv;b2q+$qs-">
+        <mutation types="2"></mutation>
+        <value name="TYPE0">
+          <block type="type_number" id="@-3`O.Fk~V5E][xj@VX+"></block>
+        </value>
+        <value name="TYPE1">
+          <block type="type_string" id="dNxw%6:}zB`)Uvg.6}9b"></block>
+        </value>
+      </block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="~95q#!!J-8ak@Nn#{}kg">
+        <mutation colour="#745ba5"></mutation>
+        <field name="HUE">260</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="DvGr{d)n_c3-Y3=6ZV@5" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"></mutation>
+    <field name="NAME">list-str-index</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="FmUb_GRoPE{On6=DJNP0">
+        <field name="INPUTNAME">array</field>
+        <field name="ALIGN">LEFT</field>
+        <value name="TYPE">
+          <shadow type="type_null" id="`kcOaX#{6iXyK`Lm.f%z"></shadow>
+          <block type="type_list" id="e9t#IoQiJ]:pymJsPODg"></block>
+        </value>
+        <next>
+          <block type="input_dummy" id="2z+tK|^k*dEx^cB}25O*">
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="$G9zn$=LeT)E=SC;C~8]">
+                <field name="TEXT">の中の</field>
+              </block>
+            </statement>
+            <next>
+              <block type="input_value" id="Zru@aN]~Vn`kaItm:[AT">
+                <field name="INPUTNAME">valuie</field>
+                <field name="ALIGN">LEFT</field>
+                <value name="TYPE">
+                  <shadow type="type_null" id="?33[/lX{4@2oNk-kReW`"></shadow>
+                  <block type="type_string" id="@N!FQrIfvtjJyGG|bs;D"></block>
+                </value>
+                <next>
+                  <block type="input_dummy" id="L59KyG|r-;;+r}]VL*rZ">
+                    <field name="ALIGN">LEFT</field>
+                    <statement name="FIELDS">
+                      <block type="field_static" id="zY{`M,S~}JGB*lM?]*oG">
+                        <field name="TEXT">の場所</field>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="oClbHYf:=+qXJkP/w*gM" deletable="false" movable="false">
+        <field name="TEXT">リストに指定文字が入っている場所を取得します</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="#Hou:Eh=;7dUI_Oo8r,I" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="}8CN=`hJK7I](^DWhUM{"></shadow>
+      <block type="type_number" id="@-3`O.Fk~V5E][xj@VX+"></block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="YP#fqY*IIIP_-dkd-6h;">
+        <mutation colour="#745ba5"></mutation>
+        <field name="HUE">260</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="DvGr{d)n_c3-Y3=6ZV@5" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"></mutation>
+    <field name="NAME">list-length</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="FmUb_GRoPE{On6=DJNP0">
+        <field name="INPUTNAME">array</field>
+        <field name="ALIGN">LEFT</field>
+        <value name="TYPE">
+          <shadow type="type_null" id="`kcOaX#{6iXyK`Lm.f%z"></shadow>
+          <block type="type_list" id="e9t#IoQiJ]:pymJsPODg"></block>
+        </value>
+        <next>
+          <block type="input_dummy" id="2z+tK|^k*dEx^cB}25O*">
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="$G9zn$=LeT)E=SC;C~8]">
+                <field name="TEXT">の長さ</field>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="oClbHYf:=+qXJkP/w*gM" deletable="false" movable="false">
+        <field name="TEXT">リストの長さを取得します</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="#Hou:Eh=;7dUI_Oo8r,I" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="}8CN=`hJK7I](^DWhUM{"></shadow>
+      <block type="type_number" id="@-3`O.Fk~V5E][xj@VX+"></block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="7oPK*,-FQb3I$%Ay=+*8">
+        <mutation colour="#745ba5"></mutation>
+        <field name="HUE">260</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="DvGr{d)n_c3-Y3=6ZV@5" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"></mutation>
+    <field name="NAME">list-boolean-insert</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="FmUb_GRoPE{On6=DJNP0">
+        <field name="INPUTNAME">array</field>
+        <field name="ALIGN">LEFT</field>
+        <value name="TYPE">
+          <shadow type="type_null" id="`kcOaX#{6iXyK`Lm.f%z"></shadow>
+          <block type="type_list" id="e9t#IoQiJ]:pymJsPODg"></block>
+        </value>
+        <next>
+          <block type="input_dummy" id="2z+tK|^k*dEx^cB}25O*">
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="$G9zn$=LeT)E=SC;C~8]">
+                <field name="TEXT">の中に</field>
+              </block>
+            </statement>
+            <next>
+              <block type="input_value" id="Zru@aN]~Vn`kaItm:[AT">
+                <field name="INPUTNAME">value</field>
+                <field name="ALIGN">LEFT</field>
+                <value name="TYPE">
+                  <shadow type="type_null" id="?33[/lX{4@2oNk-kReW`"></shadow>
+                  <block type="type_string" id="@N!FQrIfvtjJyGG|bs;D"></block>
+                </value>
+                <next>
+                  <block type="input_dummy" id="L59KyG|r-;;+r}]VL*rZ">
+                    <field name="ALIGN">LEFT</field>
+                    <statement name="FIELDS">
+                      <block type="field_static" id="zY{`M,S~}JGB*lM?]*oG">
+                        <field name="TEXT">が入っているか</field>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="oClbHYf:=+qXJkP/w*gM" deletable="false" movable="false">
+        <field name="TEXT">リストに指定文字が入っている場所を取得します</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="#Hou:Eh=;7dUI_Oo8r,I" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="}8CN=`hJK7I](^DWhUM{"></shadow>
+      <block type="type_boolean" id="xMA:D]B]zgo(NAmREy9R"></block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="awy[)$m~mP^_,CZVi:,]">
+        <mutation colour="#745ba5"></mutation>
+        <field name="HUE">260</field>
+      </block>
+    </value>
   </block></xml>
