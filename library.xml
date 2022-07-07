@@ -2695,4 +2695,194 @@
         <field name="HUE">260</field>
       </block>
     </value>
+  </block><block type="factory_base" id=",h9$Kznc-17FY?2m+Ix9" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"></mutation>
+    <field name="NAME">color_selector</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="$i|xu0q%-.+wDy4:EBb]">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_image" id="aV|[vGKYcTitR2o/G8+{">
+            <field name="SRC">https://img.icons8.com/color/48/000000/color-palette.png</field>
+            <field name="WIDTH">16</field>
+            <field name="HEIGHT">16</field>
+            <field name="ALT">*</field>
+            <field name="FLIP_RTL">FALSE</field>
+            <next>
+              <block type="field_colour" id="Gz5]77#tM{Hj0UU(/e{;">
+                <field name="COLOUR">#ff0000</field>
+                <field name="FIELDNAME">select</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="~.Y0(88v3+nIKx-Z!dcG" deletable="false" movable="false">
+        <field name="TEXT">色をパレットから選ぶことができます。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="W1YdS^`Fc$+!$o~a0/eY" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="gfilCSEkk:T1k{*5RqBS"></shadow>
+      <block type="type_string" id="h^3o;`}66|EWJKiL,;Wa"></block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="y]t,X^0Z6?65jn?`7pk$">
+        <mutation colour="#a5745b"></mutation>
+        <field name="HUE">20</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id=",h9$Kznc-17FY?2m+Ix9" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"></mutation>
+    <field name="NAME">color_random</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="$i|xu0q%-.+wDy4:EBb]">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_image" id="aV|[vGKYcTitR2o/G8+{">
+            <field name="SRC">https://img.icons8.com/color/48/000000/color-palette.png</field>
+            <field name="WIDTH">16</field>
+            <field name="HEIGHT">16</field>
+            <field name="ALT">*</field>
+            <field name="FLIP_RTL">FALSE</field>
+            <next>
+              <block type="field_image" id="DLn8xSSU#I`M.Z}nGj(x">
+                <field name="SRC">https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-random-interface-kiranshastry-gradient-kiranshastry.png</field>
+                <field name="WIDTH">16</field>
+                <field name="HEIGHT">16</field>
+                <field name="ALT">*</field>
+                <field name="FLIP_RTL">FALSE</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="~.Y0(88v3+nIKx-Z!dcG" deletable="false" movable="false">
+        <field name="TEXT">色をランダムに指定します。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="W1YdS^`Fc$+!$o~a0/eY" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="gfilCSEkk:T1k{*5RqBS"></shadow>
+      <block type="type_string" id="h^3o;`}66|EWJKiL,;Wa"></block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="y]t,X^0Z6?65jn?`7pk$">
+        <mutation colour="#a5745b"></mutation>
+        <field name="HUE">20</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id=",h9$Kznc-17FY?2m+Ix9" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"></mutation>
+    <field name="NAME">color_option</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="qW?uK5fkM/::)=JMH@Li">
+        <field name="INPUTNAME">red</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_image" id="aV|[vGKYcTitR2o/G8+{">
+            <field name="SRC">https://img.icons8.com/color/48/000000/color-palette.png</field>
+            <field name="WIDTH">16</field>
+            <field name="HEIGHT">16</field>
+            <field name="ALT">色</field>
+            <field name="FLIP_RTL">FALSE</field>
+            <next>
+              <block type="field_static" id="6-+kwG%{:[tu+c{Md0W(">
+                <field name="TEXT">赤</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="lo7e!=MdN-!MiOn^lA=%"></shadow>
+          <block type="type_number" id="zB{YQIK[l6Na85#nj0h+"></block>
+        </value>
+        <next>
+          <block type="input_value" id="=b*WF8ue8:!/6Le$5nYj">
+            <field name="INPUTNAME">green</field>
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_image" id="3ip0ETYoW=;m{w`uF2C=">
+                <field name="SRC">data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==</field>
+                <field name="WIDTH">16</field>
+                <field name="HEIGHT">16</field>
+                <field name="ALT"></field>
+                <field name="FLIP_RTL">FALSE</field>
+                <next>
+                  <block type="field_static" id="X)`-U:mwy8m6cl?x-=9o">
+                    <field name="TEXT">青</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="TYPE">
+              <shadow type="type_null" id="jq(s~J19c6h{)51:KLl:"></shadow>
+              <block type="type_number" id="ScpQBh+TKO?|~pd0fP#E"></block>
+            </value>
+            <next>
+              <block type="input_value" id="`9XJL%W.Z_=~[2kd/[ct">
+                <field name="INPUTNAME">blue</field>
+                <field name="ALIGN">LEFT</field>
+                <statement name="FIELDS">
+                  <block type="field_image" id="uqK.-Xk{/H=}/C-z9kgb">
+                    <field name="SRC">data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==</field>
+                    <field name="WIDTH">16</field>
+                    <field name="HEIGHT">16</field>
+                    <field name="ALT"></field>
+                    <field name="FLIP_RTL">FALSE</field>
+                    <next>
+                      <block type="field_static" id=":1ztz2etbGZXDu)K(P*v">
+                        <field name="TEXT">緑</field>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <value name="TYPE">
+                  <shadow type="type_null" id="zrB0;TV+07x?L=13Bos0"></shadow>
+                  <block type="type_number" id="CrYG7_BMF~ziCymPY^%("></block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="~.Y0(88v3+nIKx-Z!dcG" deletable="false" movable="false">
+        <field name="TEXT">色を細かく数字で指定できます。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="W1YdS^`Fc$+!$o~a0/eY" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="gfilCSEkk:T1k{*5RqBS"></shadow>
+      <block type="type_string" id="h^3o;`}66|EWJKiL,;Wa"></block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="y]t,X^0Z6?65jn?`7pk$">
+        <mutation colour="#a5745b"></mutation>
+        <field name="HUE">20</field>
+      </block>
+    </value>
   </block></xml>
