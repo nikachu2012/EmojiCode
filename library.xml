@@ -3925,4 +3925,426 @@
         <field name="HUE">65</field>
       </block>
     </value>
+  </block><block type="factory_base" id="LMUassh79$ABTA_aXb+L" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">sound_play</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="/g3GMEE(0fDCDiQ]P|sD">
+        <field name="INPUTNAME">soundName</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_image" id="gJDAlx(y`SYa9C}lBZ.L">
+            <field name="SRC">https://img.icons8.com/material/48/000000/low-volume--v1.png</field>
+            <field name="WIDTH">16</field>
+            <field name="HEIGHT">16</field>
+            <field name="ALT">*</field>
+            <field name="FLIP_RTL">FALSE</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="olNz~2k8=#quwW1x5J[q"></shadow>
+          <block type="type_other" id="k3MY|10^0q0D`i%vq{Y-">
+            <field name="TYPE">sound_ID</field>
+          </block>
+        </value>
+        <next>
+          <block type="input_dummy" id="~PF!M~suO,j47goNK,Mz">
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="C)I}k,gx)V-=8huz-Lt(">
+                <field name="TEXT">を再生</field>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="v`0b[8A+`Vs*Y(?n~WAX" deletable="false" movable="false">
+        <field name="TEXT">音声を再生します</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="0AWqnp0[ZvDtVPb?BS@P" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="-}zAYtwoL#d=bIPo[yVx"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="vXUxyTlc,6t6{(7Nl{}T"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="E`y28`8(QekEN?Fw8I`y">
+        <mutation colour="#995ba5"></mutation>
+        <field name="HUE">290</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="LMUassh79$ABTA_aXb+L" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">sound_pause</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="~PF!M~suO,j47goNK,Mz">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_image" id="SEaA9dGs=nC74miOY{sP">
+            <field name="SRC">https://img.icons8.com/material/48/000000/no-audio--v1.png</field>
+            <field name="WIDTH">16</field>
+            <field name="HEIGHT">16</field>
+            <field name="ALT">*</field>
+            <field name="FLIP_RTL">FALSE</field>
+            <next>
+              <block type="field_static" id="C)I}k,gx)V-=8huz-Lt(">
+                <field name="TEXT">音を止める</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="v`0b[8A+`Vs*Y(?n~WAX" deletable="false" movable="false">
+        <field name="TEXT">音声を止めます。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="0AWqnp0[ZvDtVPb?BS@P" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="-}zAYtwoL#d=bIPo[yVx"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="vXUxyTlc,6t6{(7Nl{}T"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="E`y28`8(QekEN?Fw8I`y">
+        <mutation colour="#995ba5"></mutation>
+        <field name="HUE">290</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="LMUassh79$ABTA_aXb+L" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">sound_effect_select</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="qgk7gr:Qat{:5C}B0+6D">
+        <field name="INPUTNAME">soundName</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_image" id="SEaA9dGs=nC74miOY{sP">
+            <field name="SRC">https://img.icons8.com/material/48/000000/low-volume--v1.png</field>
+            <field name="WIDTH">16</field>
+            <field name="HEIGHT">16</field>
+            <field name="ALT">*</field>
+            <field name="FLIP_RTL">FALSE</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="t6O?GJ2r`?qf|U_.Ak2W"></shadow>
+          <block type="type_other" id="-G{K!(w(1X`uz5}MDPYW">
+            <field name="TYPE">sound_ID</field>
+          </block>
+        </value>
+        <next>
+          <block type="input_dummy" id="m~)OI%*/{o^ZuY8eJNM[">
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="1RQ[X1dCpvnE}9BsHjml">
+                <field name="TEXT">に</field>
+                <next>
+                  <block type="field_dropdown" id="W$`3c!2Yh4S$Id,yB{[/">
+                    <mutation options="[&quot;text&quot;,&quot;text&quot;]"></mutation>
+                    <field name="FIELDNAME">select</field>
+                    <field name="USER0">ピッチ</field>
+                    <field name="CPU0">pitch</field>
+                    <field name="USER1">リバーブ</field>
+                    <field name="CPU1">reverve</field>
+                    <next>
+                      <block type="field_static" id="C)I}k,gx)V-=8huz-Lt(">
+                        <field name="TEXT">の効果を</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="input_value" id="LVRW3FE$$1(S4s`-MW|t">
+                <field name="INPUTNAME">effect_level</field>
+                <field name="ALIGN">LEFT</field>
+                <value name="TYPE">
+                  <shadow type="type_null" id="-rNzSR.`x1MekSHhk0-H"></shadow>
+                  <block type="type_number" id=",+Qr6?2D@6{g3h$9zAW^"></block>
+                </value>
+                <next>
+                  <block type="input_dummy" id="i[tR#9MPHvZ~Y5f:blSh">
+                    <field name="ALIGN">LEFT</field>
+                    <statement name="FIELDS">
+                      <block type="field_static" id="+X)j9fq%:`;,v$+XoC`H">
+                        <field name="TEXT">にする</field>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="v`0b[8A+`Vs*Y(?n~WAX" deletable="false" movable="false">
+        <field name="TEXT">音声に効果をつけます。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="0AWqnp0[ZvDtVPb?BS@P" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="-}zAYtwoL#d=bIPo[yVx"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="vXUxyTlc,6t6{(7Nl{}T"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="E`y28`8(QekEN?Fw8I`y">
+        <mutation colour="#995ba5"></mutation>
+        <field name="HUE">290</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="LMUassh79$ABTA_aXb+L" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">sound_effect_dutu</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="qgk7gr:Qat{:5C}B0+6D">
+        <field name="INPUTNAME">soundName</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_image" id="SEaA9dGs=nC74miOY{sP">
+            <field name="SRC">https://img.icons8.com/material/48/000000/low-volume--v1.png</field>
+            <field name="WIDTH">16</field>
+            <field name="HEIGHT">16</field>
+            <field name="ALT">*</field>
+            <field name="FLIP_RTL">FALSE</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="t6O?GJ2r`?qf|U_.Ak2W"></shadow>
+          <block type="type_other" id="-G{K!(w(1X`uz5}MDPYW">
+            <field name="TYPE">sound_ID</field>
+          </block>
+        </value>
+        <next>
+          <block type="input_dummy" id="m~)OI%*/{o^ZuY8eJNM[">
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="1RQ[X1dCpvnE}9BsHjml">
+                <field name="TEXT">に</field>
+                <next>
+                  <block type="field_dropdown" id="W$`3c!2Yh4S$Id,yB{[/">
+                    <mutation options="[&quot;text&quot;,&quot;text&quot;]"></mutation>
+                    <field name="FIELDNAME">select</field>
+                    <field name="USER0">ピッチ</field>
+                    <field name="CPU0">pitch</field>
+                    <field name="USER1">リバーブ</field>
+                    <field name="CPU1">reverve</field>
+                    <next>
+                      <block type="field_static" id="C)I}k,gx)V-=8huz-Lt(">
+                        <field name="TEXT">の効果を</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="input_value" id="LVRW3FE$$1(S4s`-MW|t">
+                <field name="INPUTNAME">effect_level</field>
+                <field name="ALIGN">LEFT</field>
+                <value name="TYPE">
+                  <shadow type="type_null" id="-rNzSR.`x1MekSHhk0-H"></shadow>
+                  <block type="type_number" id=",+Qr6?2D@6{g3h$9zAW^"></block>
+                </value>
+                <next>
+                  <block type="input_dummy" id="i[tR#9MPHvZ~Y5f:blSh">
+                    <field name="ALIGN">LEFT</field>
+                    <statement name="FIELDS">
+                      <block type="field_static" id="+X)j9fq%:`;,v$+XoC`H">
+                        <field name="TEXT">づつ変える</field>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="v`0b[8A+`Vs*Y(?n~WAX" deletable="false" movable="false">
+        <field name="TEXT">音声に効果をつけます。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="0AWqnp0[ZvDtVPb?BS@P" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="-}zAYtwoL#d=bIPo[yVx"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="vXUxyTlc,6t6{(7Nl{}T"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="E`y28`8(QekEN?Fw8I`y">
+        <mutation colour="#995ba5"></mutation>
+        <field name="HUE">290</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="LMUassh79$ABTA_aXb+L" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">sound_volume_select</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="i[tR#9MPHvZ~Y5f:blSh">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_image" id="SEaA9dGs=nC74miOY{sP">
+            <field name="SRC">https://img.icons8.com/material/48/000000/low-volume--v1.png</field>
+            <field name="WIDTH">16</field>
+            <field name="HEIGHT">16</field>
+            <field name="ALT">*</field>
+            <field name="FLIP_RTL">FALSE</field>
+            <next>
+              <block type="field_static" id="+X)j9fq%:`;,v$+XoC`H">
+                <field name="TEXT">音量を</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="input_value" id="LVRW3FE$$1(S4s`-MW|t">
+            <field name="INPUTNAME">volume</field>
+            <field name="ALIGN">LEFT</field>
+            <value name="TYPE">
+              <shadow type="type_null" id="-rNzSR.`x1MekSHhk0-H"></shadow>
+              <block type="type_number" id=",+Qr6?2D@6{g3h$9zAW^"></block>
+            </value>
+            <next>
+              <block type="input_dummy" id="@mbvQDgieP{r9a4.Q;y~">
+                <field name="ALIGN">LEFT</field>
+                <statement name="FIELDS">
+                  <block type="field_static" id="qadL2.07J_^mPl4T50VM">
+                    <field name="TEXT">%にする</field>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="v`0b[8A+`Vs*Y(?n~WAX" deletable="false" movable="false">
+        <field name="TEXT">音量を変更します。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="0AWqnp0[ZvDtVPb?BS@P" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="-}zAYtwoL#d=bIPo[yVx"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="vXUxyTlc,6t6{(7Nl{}T"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="E`y28`8(QekEN?Fw8I`y">
+        <mutation colour="#995ba5"></mutation>
+        <field name="HUE">290</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="LMUassh79$ABTA_aXb+L" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">sound_volume_dutu</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="i[tR#9MPHvZ~Y5f:blSh">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_image" id="SEaA9dGs=nC74miOY{sP">
+            <field name="SRC">https://img.icons8.com/material/48/000000/low-volume--v1.png</field>
+            <field name="WIDTH">16</field>
+            <field name="HEIGHT">16</field>
+            <field name="ALT">*</field>
+            <field name="FLIP_RTL">FALSE</field>
+            <next>
+              <block type="field_static" id="+X)j9fq%:`;,v$+XoC`H">
+                <field name="TEXT">音量を</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="input_value" id="LVRW3FE$$1(S4s`-MW|t">
+            <field name="INPUTNAME">volume</field>
+            <field name="ALIGN">LEFT</field>
+            <value name="TYPE">
+              <shadow type="type_null" id="-rNzSR.`x1MekSHhk0-H"></shadow>
+              <block type="type_number" id=",+Qr6?2D@6{g3h$9zAW^"></block>
+            </value>
+            <next>
+              <block type="input_dummy" id="@mbvQDgieP{r9a4.Q;y~">
+                <field name="ALIGN">LEFT</field>
+                <statement name="FIELDS">
+                  <block type="field_static" id="qadL2.07J_^mPl4T50VM">
+                    <field name="TEXT">%づつ変える</field>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="v`0b[8A+`Vs*Y(?n~WAX" deletable="false" movable="false">
+        <field name="TEXT">音量を変更します。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="0AWqnp0[ZvDtVPb?BS@P" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="-}zAYtwoL#d=bIPo[yVx"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="vXUxyTlc,6t6{(7Nl{}T"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="E`y28`8(QekEN?Fw8I`y">
+        <mutation colour="#995ba5"></mutation>
+        <field name="HUE">290</field>
+      </block>
+    </value>
   </block></xml>
