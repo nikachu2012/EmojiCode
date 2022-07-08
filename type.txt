@@ -1,2 +1,5 @@
 sprite_ID
 // スプライトID
+
+sound_ID
+// 音ID
