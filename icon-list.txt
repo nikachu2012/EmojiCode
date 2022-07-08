@@ -3,3 +3,9 @@ https://img.icons8.com/material-outlined/48/000000/filled-circle--v2.png
 
 ★false
 https://img.icons8.com/material-outlined/48/000000/delete-sign.png
+
+★ｘ座標
+https://img.icons8.com/fluency-systems-filled/48/000000/x.png
+
+★ｙ座標
+https://img.icons8.com/fluency-systems-filled/48/000000/y.png
