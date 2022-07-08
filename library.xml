@@ -2885,4 +2885,1044 @@
         <field name="HUE">20</field>
       </block>
     </value>
+  </block><block type="factory_base" id="LMUassh79$ABTA_aXb+L" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">sprite_sayuu</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="/g3GMEE(0fDCDiQ]P|sD">
+        <field name="INPUTNAME">spriteName</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_image" id="y4CZ!:F!CUJecXy|#!w)">
+            <field name="SRC">https://img.icons8.com/external-flat-kendis-lasman/64/000000/external-move-graphic-design-flat-flat-kendis-lasman.png</field>
+            <field name="WIDTH">16</field>
+            <field name="HEIGHT">16</field>
+            <field name="ALT">*</field>
+            <field name="FLIP_RTL">FALSE</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="olNz~2k8=#quwW1x5J[q"></shadow>
+          <block type="type_other" id="k3MY|10^0q0D`i%vq{Y-">
+            <field name="TYPE">sprite_ID</field>
+          </block>
+        </value>
+        <next>
+          <block type="input_value" id="}w3s@;Uht-hD@G)*dCY?">
+            <field name="INPUTNAME">value</field>
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="2*r}a+Huk^x7zL]]-XKh">
+                <field name="TEXT">を</field>
+              </block>
+            </statement>
+            <value name="TYPE">
+              <shadow type="type_null" id="355?snQDgdPMSLZmW{R9"></shadow>
+              <block type="type_number" id="FY2[wlnbB,jTyA}/nClb"></block>
+            </value>
+            <next>
+              <block type="input_dummy" id="~PF!M~suO,j47goNK,Mz">
+                <field name="ALIGN">LEFT</field>
+                <statement name="FIELDS">
+                  <block type="field_static" id="C)I}k,gx)V-=8huz-Lt(">
+                    <field name="TEXT">歩動かす</field>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="v`0b[8A+`Vs*Y(?n~WAX" deletable="false" movable="false">
+        <field name="TEXT">指定したスプライトを動かします。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="0AWqnp0[ZvDtVPb?BS@P" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="xh22TpH)EEqH97I^74Mk"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="~fVu:vsxDk(jKJX$Kn7N"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="j9kTIXGJck0-X:9l/B;+">
+        <mutation colour="#9fa55b"></mutation>
+        <field name="HUE">65</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="LMUassh79$ABTA_aXb+L" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">sprite_rotate_right</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="/g3GMEE(0fDCDiQ]P|sD">
+        <field name="INPUTNAME">spriteName</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_image" id="y4CZ!:F!CUJecXy|#!w)">
+            <field name="SRC">https://img.icons8.com/material-outlined/48/000000/rotate-right.png</field>
+            <field name="WIDTH">16</field>
+            <field name="HEIGHT">16</field>
+            <field name="ALT">*</field>
+            <field name="FLIP_RTL">FALSE</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="olNz~2k8=#quwW1x5J[q"></shadow>
+          <block type="type_other" id="k3MY|10^0q0D`i%vq{Y-">
+            <field name="TYPE">sprite_ID</field>
+          </block>
+        </value>
+        <next>
+          <block type="input_value" id="}w3s@;Uht-hD@G)*dCY?">
+            <field name="INPUTNAME">rotate</field>
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="2*r}a+Huk^x7zL]]-XKh">
+                <field name="TEXT">を</field>
+              </block>
+            </statement>
+            <value name="TYPE">
+              <shadow type="type_null" id="355?snQDgdPMSLZmW{R9"></shadow>
+              <block type="type_number" id="@+!GBCIpCEyQ*LWn,%Tc"></block>
+            </value>
+            <next>
+              <block type="input_dummy" id="~PF!M~suO,j47goNK,Mz">
+                <field name="ALIGN">LEFT</field>
+                <statement name="FIELDS">
+                  <block type="field_static" id="C)I}k,gx)V-=8huz-Lt(">
+                    <field name="TEXT">度回転</field>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="v`0b[8A+`Vs*Y(?n~WAX" deletable="false" movable="false">
+        <field name="TEXT">指定したスプライトを右に回転します。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="0AWqnp0[ZvDtVPb?BS@P" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="xh22TpH)EEqH97I^74Mk"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="~fVu:vsxDk(jKJX$Kn7N"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="j9kTIXGJck0-X:9l/B;+">
+        <mutation colour="#9fa55b"></mutation>
+        <field name="HUE">65</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="LMUassh79$ABTA_aXb+L" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">sprite_rotate_left</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="/g3GMEE(0fDCDiQ]P|sD">
+        <field name="INPUTNAME">spriteName</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_image" id="y4CZ!:F!CUJecXy|#!w)">
+            <field name="SRC">https://img.icons8.com/material-outlined/48/000000/rotate-left.png</field>
+            <field name="WIDTH">16</field>
+            <field name="HEIGHT">16</field>
+            <field name="ALT">*</field>
+            <field name="FLIP_RTL">FALSE</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="olNz~2k8=#quwW1x5J[q"></shadow>
+          <block type="type_other" id="k3MY|10^0q0D`i%vq{Y-">
+            <field name="TYPE">sprite_ID</field>
+          </block>
+        </value>
+        <next>
+          <block type="input_value" id="}w3s@;Uht-hD@G)*dCY?">
+            <field name="INPUTNAME">value</field>
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="2*r}a+Huk^x7zL]]-XKh">
+                <field name="TEXT">を</field>
+              </block>
+            </statement>
+            <value name="TYPE">
+              <shadow type="type_null" id="355?snQDgdPMSLZmW{R9"></shadow>
+              <block type="type_number" id="6]O$ca*s1pVT-nY=N|3r"></block>
+            </value>
+            <next>
+              <block type="input_dummy" id="~PF!M~suO,j47goNK,Mz">
+                <field name="ALIGN">LEFT</field>
+                <statement name="FIELDS">
+                  <block type="field_static" id="C)I}k,gx)V-=8huz-Lt(">
+                    <field name="TEXT">度回転</field>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="v`0b[8A+`Vs*Y(?n~WAX" deletable="false" movable="false">
+        <field name="TEXT">指定したスプライトを左に回転します。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="0AWqnp0[ZvDtVPb?BS@P" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="xh22TpH)EEqH97I^74Mk"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="~fVu:vsxDk(jKJX$Kn7N"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="j9kTIXGJck0-X:9l/B;+">
+        <mutation colour="#9fa55b"></mutation>
+        <field name="HUE">65</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="LMUassh79$ABTA_aXb+L" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">sprite_move</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="/g3GMEE(0fDCDiQ]P|sD">
+        <field name="INPUTNAME">spriteName</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_image" id="y4CZ!:F!CUJecXy|#!w)">
+            <field name="SRC">https://img.icons8.com/external-flat-kendis-lasman/64/000000/external-move-graphic-design-flat-flat-kendis-lasman.png</field>
+            <field name="WIDTH">16</field>
+            <field name="HEIGHT">16</field>
+            <field name="ALT">*</field>
+            <field name="FLIP_RTL">FALSE</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="olNz~2k8=#quwW1x5J[q"></shadow>
+          <block type="type_other" id="k3MY|10^0q0D`i%vq{Y-">
+            <field name="TYPE">sprite_ID</field>
+          </block>
+        </value>
+        <next>
+          <block type="input_value" id="}w3s@;Uht-hD@G)*dCY?">
+            <field name="INPUTNAME">x</field>
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="2*r}a+Huk^x7zL]]-XKh">
+                <field name="TEXT">をx: </field>
+              </block>
+            </statement>
+            <value name="TYPE">
+              <shadow type="type_null" id="355?snQDgdPMSLZmW{R9"></shadow>
+              <block type="type_number" id="6DM2Y{QBNzRD,_:e~[1_"></block>
+            </value>
+            <next>
+              <block type="input_value" id="Wk3LX=sZIxs.|9V[+Qq`">
+                <field name="INPUTNAME">y</field>
+                <field name="ALIGN">LEFT</field>
+                <statement name="FIELDS">
+                  <block type="field_static" id="@3Whbff1s9`HD=X8[dP+">
+                    <field name="TEXT">y: </field>
+                  </block>
+                </statement>
+                <value name="TYPE">
+                  <shadow type="type_null" id="eh_5Dio38jsq-Z%sjbj{"></shadow>
+                  <block type="type_number" id="vjclQ~d_CQK*~zk|v`pI"></block>
+                </value>
+                <next>
+                  <block type="input_dummy" id="~PF!M~suO,j47goNK,Mz">
+                    <field name="ALIGN">LEFT</field>
+                    <statement name="FIELDS">
+                      <block type="field_static" id="C)I}k,gx)V-=8huz-Lt(">
+                        <field name="TEXT">にする</field>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="v`0b[8A+`Vs*Y(?n~WAX" deletable="false" movable="false">
+        <field name="TEXT">指定したスプライトを動かします。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="0AWqnp0[ZvDtVPb?BS@P" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="xh22TpH)EEqH97I^74Mk"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="~fVu:vsxDk(jKJX$Kn7N"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="j9kTIXGJck0-X:9l/B;+">
+        <mutation colour="#9fa55b"></mutation>
+        <field name="HUE">65</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="LMUassh79$ABTA_aXb+L" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">sprite_move_seconds</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="/g3GMEE(0fDCDiQ]P|sD">
+        <field name="INPUTNAME">spriteName</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_image" id="y4CZ!:F!CUJecXy|#!w)">
+            <field name="SRC">https://img.icons8.com/external-flat-kendis-lasman/64/000000/external-move-graphic-design-flat-flat-kendis-lasman.png</field>
+            <field name="WIDTH">16</field>
+            <field name="HEIGHT">16</field>
+            <field name="ALT">*</field>
+            <field name="FLIP_RTL">FALSE</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="olNz~2k8=#quwW1x5J[q"></shadow>
+          <block type="type_other" id="k3MY|10^0q0D`i%vq{Y-">
+            <field name="TYPE">sprite_ID</field>
+          </block>
+        </value>
+        <next>
+          <block type="input_value" id="}w3s@;Uht-hD@G)*dCY?">
+            <field name="INPUTNAME">x</field>
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="2*r}a+Huk^x7zL]]-XKh">
+                <field name="TEXT">をx: </field>
+              </block>
+            </statement>
+            <value name="TYPE">
+              <shadow type="type_null" id="355?snQDgdPMSLZmW{R9"></shadow>
+              <block type="type_number" id="6DM2Y{QBNzRD,_:e~[1_"></block>
+            </value>
+            <next>
+              <block type="input_value" id="Wk3LX=sZIxs.|9V[+Qq`">
+                <field name="INPUTNAME">y</field>
+                <field name="ALIGN">LEFT</field>
+                <statement name="FIELDS">
+                  <block type="field_static" id="@3Whbff1s9`HD=X8[dP+">
+                    <field name="TEXT">y: </field>
+                  </block>
+                </statement>
+                <value name="TYPE">
+                  <shadow type="type_null" id="eh_5Dio38jsq-Z%sjbj{"></shadow>
+                  <block type="type_number" id="vjclQ~d_CQK*~zk|v`pI"></block>
+                </value>
+                <next>
+                  <block type="input_value" id="%B5j}RkD/xO8};7OXstT">
+                    <field name="INPUTNAME">seconds</field>
+                    <field name="ALIGN">LEFT</field>
+                    <statement name="FIELDS">
+                      <block type="field_static" id="86*~FlXq=0*]ESxQJXJ[">
+                        <field name="TEXT">に</field>
+                      </block>
+                    </statement>
+                    <value name="TYPE">
+                      <shadow type="type_null" id="%ROU7A@fd*(#j2|r/(1~"></shadow>
+                      <block type="type_number" id="_xn-fYG]wq}J;0!wVqga"></block>
+                    </value>
+                    <next>
+                      <block type="input_dummy" id="~PF!M~suO,j47goNK,Mz">
+                        <field name="ALIGN">LEFT</field>
+                        <statement name="FIELDS">
+                          <block type="field_static" id="C)I}k,gx)V-=8huz-Lt(">
+                            <field name="TEXT">秒で動かす</field>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="v`0b[8A+`Vs*Y(?n~WAX" deletable="false" movable="false">
+        <field name="TEXT">指定したスプライトを指定秒数以内に動かします。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="0AWqnp0[ZvDtVPb?BS@P" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="xh22TpH)EEqH97I^74Mk"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="~fVu:vsxDk(jKJX$Kn7N"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="j9kTIXGJck0-X:9l/B;+">
+        <mutation colour="#9fa55b"></mutation>
+        <field name="HUE">65</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="LMUassh79$ABTA_aXb+L" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">sprite_rotate</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="/g3GMEE(0fDCDiQ]P|sD">
+        <field name="INPUTNAME">spriteName</field>
+        <field name="ALIGN">LEFT</field>
+        <value name="TYPE">
+          <shadow type="type_null" id="olNz~2k8=#quwW1x5J[q"></shadow>
+          <block type="type_other" id="k3MY|10^0q0D`i%vq{Y-">
+            <field name="TYPE">sprite_ID</field>
+          </block>
+        </value>
+        <next>
+          <block type="input_value" id="}w3s@;Uht-hD@G)*dCY?">
+            <field name="INPUTNAME">value</field>
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="2*r}a+Huk^x7zL]]-XKh">
+                <field name="TEXT">を</field>
+              </block>
+            </statement>
+            <value name="TYPE">
+              <shadow type="type_null" id="355?snQDgdPMSLZmW{R9"></shadow>
+              <block type="type_number" id="6]O$ca*s1pVT-nY=N|3r"></block>
+            </value>
+            <next>
+              <block type="input_dummy" id="~PF!M~suO,j47goNK,Mz">
+                <field name="ALIGN">LEFT</field>
+                <statement name="FIELDS">
+                  <block type="field_static" id="C)I}k,gx)V-=8huz-Lt(">
+                    <field name="TEXT">度に向ける</field>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="v`0b[8A+`Vs*Y(?n~WAX" deletable="false" movable="false">
+        <field name="TEXT">指定したスプライトの向きを変えます。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="0AWqnp0[ZvDtVPb?BS@P" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="xh22TpH)EEqH97I^74Mk"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="~fVu:vsxDk(jKJX$Kn7N"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="j9kTIXGJck0-X:9l/B;+">
+        <mutation colour="#9fa55b"></mutation>
+        <field name="HUE">65</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="LMUassh79$ABTA_aXb+L" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">sprite_move_xdake</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="/g3GMEE(0fDCDiQ]P|sD">
+        <field name="INPUTNAME">spriteName</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_image" id="y4CZ!:F!CUJecXy|#!w)">
+            <field name="SRC">https://img.icons8.com/fluency-systems-filled/48/000000/x.png</field>
+            <field name="WIDTH">16</field>
+            <field name="HEIGHT">16</field>
+            <field name="ALT">*</field>
+            <field name="FLIP_RTL">FALSE</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="olNz~2k8=#quwW1x5J[q"></shadow>
+          <block type="type_other" id="k3MY|10^0q0D`i%vq{Y-">
+            <field name="TYPE">sprite_ID</field>
+          </block>
+        </value>
+        <next>
+          <block type="input_value" id="}w3s@;Uht-hD@G)*dCY?">
+            <field name="INPUTNAME">x</field>
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="2*r}a+Huk^x7zL]]-XKh">
+                <field name="TEXT">のx座標を</field>
+              </block>
+            </statement>
+            <value name="TYPE">
+              <shadow type="type_null" id="355?snQDgdPMSLZmW{R9"></shadow>
+              <block type="type_number" id="@+!GBCIpCEyQ*LWn,%Tc"></block>
+            </value>
+            <next>
+              <block type="input_dummy" id="~PF!M~suO,j47goNK,Mz">
+                <field name="ALIGN">LEFT</field>
+                <statement name="FIELDS">
+                  <block type="field_static" id="C)I}k,gx)V-=8huz-Lt(">
+                    <field name="TEXT">にする</field>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="v`0b[8A+`Vs*Y(?n~WAX" deletable="false" movable="false">
+        <field name="TEXT">指定したスプライトのx座標を指定に変更します。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="0AWqnp0[ZvDtVPb?BS@P" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="xh22TpH)EEqH97I^74Mk"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="~fVu:vsxDk(jKJX$Kn7N"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="j9kTIXGJck0-X:9l/B;+">
+        <mutation colour="#9fa55b"></mutation>
+        <field name="HUE">65</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="LMUassh79$ABTA_aXb+L" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">sprite_move_xdutu</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="/g3GMEE(0fDCDiQ]P|sD">
+        <field name="INPUTNAME">spriteName</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_image" id="y4CZ!:F!CUJecXy|#!w)">
+            <field name="SRC">https://img.icons8.com/fluency-systems-filled/48/000000/x.png</field>
+            <field name="WIDTH">16</field>
+            <field name="HEIGHT">16</field>
+            <field name="ALT">*</field>
+            <field name="FLIP_RTL">FALSE</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="olNz~2k8=#quwW1x5J[q"></shadow>
+          <block type="type_other" id="k3MY|10^0q0D`i%vq{Y-">
+            <field name="TYPE">sprite_ID</field>
+          </block>
+        </value>
+        <next>
+          <block type="input_value" id="}w3s@;Uht-hD@G)*dCY?">
+            <field name="INPUTNAME">x</field>
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="2*r}a+Huk^x7zL]]-XKh">
+                <field name="TEXT">のx座標を</field>
+              </block>
+            </statement>
+            <value name="TYPE">
+              <shadow type="type_null" id="355?snQDgdPMSLZmW{R9"></shadow>
+              <block type="type_number" id="@+!GBCIpCEyQ*LWn,%Tc"></block>
+            </value>
+            <next>
+              <block type="input_dummy" id="~PF!M~suO,j47goNK,Mz">
+                <field name="ALIGN">LEFT</field>
+                <statement name="FIELDS">
+                  <block type="field_static" id="C)I}k,gx)V-=8huz-Lt(">
+                    <field name="TEXT">づつ動かす</field>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="v`0b[8A+`Vs*Y(?n~WAX" deletable="false" movable="false">
+        <field name="TEXT">指定したスプライトのｘ座標を指定分づつ動かします。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="0AWqnp0[ZvDtVPb?BS@P" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="xh22TpH)EEqH97I^74Mk"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="~fVu:vsxDk(jKJX$Kn7N"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="j9kTIXGJck0-X:9l/B;+">
+        <mutation colour="#9fa55b"></mutation>
+        <field name="HUE">65</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="LMUassh79$ABTA_aXb+L" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">sprite_move_ydake</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="/g3GMEE(0fDCDiQ]P|sD">
+        <field name="INPUTNAME">spriteName</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_image" id="y4CZ!:F!CUJecXy|#!w)">
+            <field name="SRC">https://img.icons8.com/fluency-systems-filled/48/000000/y.png</field>
+            <field name="WIDTH">16</field>
+            <field name="HEIGHT">16</field>
+            <field name="ALT">*</field>
+            <field name="FLIP_RTL">FALSE</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="olNz~2k8=#quwW1x5J[q"></shadow>
+          <block type="type_other" id="k3MY|10^0q0D`i%vq{Y-">
+            <field name="TYPE">sprite_ID</field>
+          </block>
+        </value>
+        <next>
+          <block type="input_value" id="}w3s@;Uht-hD@G)*dCY?">
+            <field name="INPUTNAME">y</field>
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="2*r}a+Huk^x7zL]]-XKh">
+                <field name="TEXT">のy座標を</field>
+              </block>
+            </statement>
+            <value name="TYPE">
+              <shadow type="type_null" id="355?snQDgdPMSLZmW{R9"></shadow>
+              <block type="type_number" id="@+!GBCIpCEyQ*LWn,%Tc"></block>
+            </value>
+            <next>
+              <block type="input_dummy" id="~PF!M~suO,j47goNK,Mz">
+                <field name="ALIGN">LEFT</field>
+                <statement name="FIELDS">
+                  <block type="field_static" id="C)I}k,gx)V-=8huz-Lt(">
+                    <field name="TEXT">にする</field>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="v`0b[8A+`Vs*Y(?n~WAX" deletable="false" movable="false">
+        <field name="TEXT">指定したスプライトのy座標を指定に変更します。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="0AWqnp0[ZvDtVPb?BS@P" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="xh22TpH)EEqH97I^74Mk"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="~fVu:vsxDk(jKJX$Kn7N"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="j9kTIXGJck0-X:9l/B;+">
+        <mutation colour="#9fa55b"></mutation>
+        <field name="HUE">65</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="LMUassh79$ABTA_aXb+L" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">sprite_move_ydutu</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="/g3GMEE(0fDCDiQ]P|sD">
+        <field name="INPUTNAME">spriteName</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_image" id="y4CZ!:F!CUJecXy|#!w)">
+            <field name="SRC">https://img.icons8.com/fluency-systems-filled/48/000000/y.png</field>
+            <field name="WIDTH">16</field>
+            <field name="HEIGHT">16</field>
+            <field name="ALT">*</field>
+            <field name="FLIP_RTL">FALSE</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="olNz~2k8=#quwW1x5J[q"></shadow>
+          <block type="type_other" id="k3MY|10^0q0D`i%vq{Y-">
+            <field name="TYPE">sprite_ID</field>
+          </block>
+        </value>
+        <next>
+          <block type="input_value" id="}w3s@;Uht-hD@G)*dCY?">
+            <field name="INPUTNAME">y</field>
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="2*r}a+Huk^x7zL]]-XKh">
+                <field name="TEXT">のy座標を</field>
+              </block>
+            </statement>
+            <value name="TYPE">
+              <shadow type="type_null" id="355?snQDgdPMSLZmW{R9"></shadow>
+              <block type="type_number" id="@+!GBCIpCEyQ*LWn,%Tc"></block>
+            </value>
+            <next>
+              <block type="input_dummy" id="~PF!M~suO,j47goNK,Mz">
+                <field name="ALIGN">LEFT</field>
+                <statement name="FIELDS">
+                  <block type="field_static" id="C)I}k,gx)V-=8huz-Lt(">
+                    <field name="TEXT">づつ動かす</field>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="v`0b[8A+`Vs*Y(?n~WAX" deletable="false" movable="false">
+        <field name="TEXT">指定したスプライトのｙ座標を指定分づつ動かします。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="0AWqnp0[ZvDtVPb?BS@P" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="xh22TpH)EEqH97I^74Mk"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="~fVu:vsxDk(jKJX$Kn7N"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="j9kTIXGJck0-X:9l/B;+">
+        <mutation colour="#9fa55b"></mutation>
+        <field name="HUE">65</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="LMUassh79$ABTA_aXb+L" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">sprite_end</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="/g3GMEE(0fDCDiQ]P|sD">
+        <field name="INPUTNAME">spriteName</field>
+        <field name="ALIGN">LEFT</field>
+        <value name="TYPE">
+          <shadow type="type_null" id="olNz~2k8=#quwW1x5J[q"></shadow>
+          <block type="type_other" id="k3MY|10^0q0D`i%vq{Y-">
+            <field name="TYPE">sprite_ID</field>
+          </block>
+        </value>
+        <next>
+          <block type="input_dummy" id="~PF!M~suO,j47goNK,Mz">
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="C)I}k,gx)V-=8huz-Lt(">
+                <field name="TEXT">は、もし端に着いたら跳ね返る</field>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="v`0b[8A+`Vs*Y(?n~WAX" deletable="false" movable="false">
+        <field name="TEXT">端に着いたら跳ね返るようにします。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="0AWqnp0[ZvDtVPb?BS@P" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="xh22TpH)EEqH97I^74Mk"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="~fVu:vsxDk(jKJX$Kn7N"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="j9kTIXGJck0-X:9l/B;+">
+        <mutation colour="#9fa55b"></mutation>
+        <field name="HUE">65</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="LMUassh79$ABTA_aXb+L" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">sprite_rotate-houhou</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="/g3GMEE(0fDCDiQ]P|sD">
+        <field name="INPUTNAME">spriteName</field>
+        <field name="ALIGN">LEFT</field>
+        <value name="TYPE">
+          <shadow type="type_null" id="olNz~2k8=#quwW1x5J[q"></shadow>
+          <block type="type_other" id="k3MY|10^0q0D`i%vq{Y-">
+            <field name="TYPE">sprite_ID</field>
+          </block>
+        </value>
+        <next>
+          <block type="input_dummy" id="~PF!M~suO,j47goNK,Mz">
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="C)I}k,gx)V-=8huz-Lt(">
+                <field name="TEXT">の回転方法を</field>
+                <next>
+                  <block type="field_dropdown" id="lnI|_yKx,/Jr%VG=bd{|">
+                    <mutation options="[&quot;text&quot;,&quot;text&quot;,&quot;text&quot;]"></mutation>
+                    <field name="FIELDNAME">NAME</field>
+                    <field name="USER0">左右のみ</field>
+                    <field name="CPU0">left-right</field>
+                    <field name="USER1">回転しない</field>
+                    <field name="CPU1">none</field>
+                    <field name="USER2">自由に回転</field>
+                    <field name="CPU2">free</field>
+                    <next>
+                      <block type="field_static" id="5qh.vLiP_uZ8#?|G]nF{">
+                        <field name="TEXT">のみにする</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="v`0b[8A+`Vs*Y(?n~WAX" deletable="false" movable="false">
+        <field name="TEXT">指定したスプライトの回転方向を変更します。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="0AWqnp0[ZvDtVPb?BS@P" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="xh22TpH)EEqH97I^74Mk"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="~fVu:vsxDk(jKJX$Kn7N"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="j9kTIXGJck0-X:9l/B;+">
+        <mutation colour="#9fa55b"></mutation>
+        <field name="HUE">65</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="LMUassh79$ABTA_aXb+L" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"></mutation>
+    <field name="NAME">sprite_const_xpos</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="/g3GMEE(0fDCDiQ]P|sD">
+        <field name="INPUTNAME">spriteName</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_image" id="vYK){]UOFjXwC_vlJ~8F">
+            <field name="SRC">https://img.icons8.com/fluency-systems-filled/48/000000/x.png</field>
+            <field name="WIDTH">16</field>
+            <field name="HEIGHT">16</field>
+            <field name="ALT">*</field>
+            <field name="FLIP_RTL">FALSE</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="olNz~2k8=#quwW1x5J[q"></shadow>
+          <block type="type_other" id="k3MY|10^0q0D`i%vq{Y-">
+            <field name="TYPE">sprite_ID</field>
+          </block>
+        </value>
+        <next>
+          <block type="input_dummy" id="~PF!M~suO,j47goNK,Mz">
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="C)I}k,gx)V-=8huz-Lt(">
+                <field name="TEXT">のｘ座標</field>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="v`0b[8A+`Vs*Y(?n~WAX" deletable="false" movable="false">
+        <field name="TEXT">指定したスプライトのｘ座標を取得します。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="0AWqnp0[ZvDtVPb?BS@P" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="qbQ1sT$,{AKHpm1`+R0V"></shadow>
+      <block type="type_number" id=")Q}3[e1jShsN;cDwdJ,Y"></block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="j9kTIXGJck0-X:9l/B;+">
+        <mutation colour="#9fa55b"></mutation>
+        <field name="HUE">65</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="LMUassh79$ABTA_aXb+L" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"></mutation>
+    <field name="NAME">sprite_const_ypos</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="/g3GMEE(0fDCDiQ]P|sD">
+        <field name="INPUTNAME">spriteName</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_image" id="vYK){]UOFjXwC_vlJ~8F">
+            <field name="SRC">https://img.icons8.com/fluency-systems-filled/48/000000/y.png</field>
+            <field name="WIDTH">16</field>
+            <field name="HEIGHT">16</field>
+            <field name="ALT">*</field>
+            <field name="FLIP_RTL">FALSE</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="olNz~2k8=#quwW1x5J[q"></shadow>
+          <block type="type_other" id="k3MY|10^0q0D`i%vq{Y-">
+            <field name="TYPE">sprite_ID</field>
+          </block>
+        </value>
+        <next>
+          <block type="input_dummy" id="~PF!M~suO,j47goNK,Mz">
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="C)I}k,gx)V-=8huz-Lt(">
+                <field name="TEXT">のｙ座標</field>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="v`0b[8A+`Vs*Y(?n~WAX" deletable="false" movable="false">
+        <field name="TEXT">指定したスプライトのｙ座標を取得します。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="0AWqnp0[ZvDtVPb?BS@P" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="qbQ1sT$,{AKHpm1`+R0V"></shadow>
+      <block type="type_number" id=")Q}3[e1jShsN;cDwdJ,Y"></block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="j9kTIXGJck0-X:9l/B;+">
+        <mutation colour="#9fa55b"></mutation>
+        <field name="HUE">65</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="LMUassh79$ABTA_aXb+L" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"></mutation>
+    <field name="NAME">sprite_const_rotate</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="/g3GMEE(0fDCDiQ]P|sD">
+        <field name="INPUTNAME">spriteName</field>
+        <field name="ALIGN">LEFT</field>
+        <value name="TYPE">
+          <shadow type="type_null" id="olNz~2k8=#quwW1x5J[q"></shadow>
+          <block type="type_other" id="k3MY|10^0q0D`i%vq{Y-">
+            <field name="TYPE">sprite_ID</field>
+          </block>
+        </value>
+        <next>
+          <block type="input_dummy" id="~PF!M~suO,j47goNK,Mz">
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="C)I}k,gx)V-=8huz-Lt(">
+                <field name="TEXT">の向き</field>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="v`0b[8A+`Vs*Y(?n~WAX" deletable="false" movable="false">
+        <field name="TEXT">指定したスプライトの向きを取得します。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="0AWqnp0[ZvDtVPb?BS@P" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="qbQ1sT$,{AKHpm1`+R0V"></shadow>
+      <block type="type_number" id=")Q}3[e1jShsN;cDwdJ,Y"></block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="j9kTIXGJck0-X:9l/B;+">
+        <mutation colour="#9fa55b"></mutation>
+        <field name="HUE">65</field>
+      </block>
+    </value>
   </block></xml>
