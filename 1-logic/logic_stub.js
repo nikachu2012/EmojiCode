@@ -19,6 +19,25 @@ Blockly.JavaScript[`equals_return_boolean`] = function(block) {
   var value_a = Blockly.JavaScript.valueToCode(block, `a`, Blockly.JavaScript.ORDER_ATOMIC);
   var dropdown_select_equal = block.getFieldValue(`select-equal`);
   var value_b = Blockly.JavaScript.valueToCode(block, `b`, Blockly.JavaScript.ORDER_ATOMIC);
+
+  if (dropdown_select_equal == "equals") {
+    var code = `${value_a} == ${value_b}`;
+  }
+  else if (dropdown_select_equal == "not-equals") {
+    var code = `${value_a} !== ${value_b}`;
+  }
+  else if (dropdown_select_equal == "less-than") {
+    var code = `${value_a} < ${value_b}`;
+  }
+  else if (dropdown_select_equal == "less-or-equal-than") {
+    var code = `${value_a} <= ${value_b}`;
+  }
+  else if (dropdown_select_equal == "more-than") {
+    var code = `${value_a} > ${value_b}`;
+  }
+  else if (dropdown_select_equal == "more-or-equal-than") {
+    var code = `${value_a} >= ${value_b}`;
+  }
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
