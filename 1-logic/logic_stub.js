@@ -54,8 +54,13 @@ Blockly.JavaScript[`and_or_return_boolean`] = function(block) {
   var value_a = Blockly.JavaScript.valueToCode(block, `a`, Blockly.JavaScript.ORDER_ATOMIC);
   var dropdown_and_or = block.getFieldValue(`and_or`);
   var value_b = Blockly.JavaScript.valueToCode(block, `b`, Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `...`;
+
+  if (dropdown_and_or == "and") {
+    var code = `${value_a} && ${value_b}`
+  }
+  else if (dropdown_and_or == "or"){
+    var code = `${value_a} || ${value_b}`
+  }
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
