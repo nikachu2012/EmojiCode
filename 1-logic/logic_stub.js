@@ -67,8 +67,13 @@ Blockly.JavaScript[`and_or_return_boolean`] = function(block) {
 
 Blockly.JavaScript[`true_false_return`] = function(block) {
   var dropdown_truefalse = block.getFieldValue(`truefalse`);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `...`;
+  if (dropdown_truefalse == "true") {
+    var code = "true"
+  }
+  else if (dropdown_truefalse == "false") {
+    var code = "false"
+  }
+
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
