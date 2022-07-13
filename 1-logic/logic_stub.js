@@ -79,8 +79,7 @@ Blockly.JavaScript[`true_false_return`] = function(block) {
 };
 
 Blockly.JavaScript[`null`] = function(block) {
-  // TODO: Assemble JavaScript into code variable.
-  var code = `...`;
+  var code = `null`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
