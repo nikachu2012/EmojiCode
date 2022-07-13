@@ -88,8 +88,7 @@ Blockly.JavaScript[`test`] = function(block) {
   var value_test = Blockly.JavaScript.valueToCode(block, `test`, Blockly.JavaScript.ORDER_ATOMIC);
   var value_if_true = Blockly.JavaScript.valueToCode(block, `if true`, Blockly.JavaScript.ORDER_ATOMIC);
   var value_if_false = Blockly.JavaScript.valueToCode(block, `if false`, Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `...`;
+  var code = `${value_test} ? ${value_if_true} : ${value_if_false}`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
