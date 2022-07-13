@@ -1,8 +1,8 @@
 Blockly.JavaScript['if'] = function(block) {
   var value_formula = Blockly.JavaScript.valueToCode(block, 'formula', Blockly.JavaScript.ORDER_ATOMIC);
   var statements_true = Blockly.JavaScript.statementToCode(block, 'true');
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+
+  var code = `if(${value_formula}){${statements_true}}`;
   return code;
 };
 
