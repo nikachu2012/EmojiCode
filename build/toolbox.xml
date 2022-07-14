@@ -24,7 +24,7 @@
       </value>
     </block>
     <block type="repeat_true">
-      <field name="boolean">true</field>
+      <field name="narumade">continue</field>
     </block>
     <block type="repeat_setting">
       <field name="various" id="JKT,LXU/E+$@J0Ln4az5">i</field>
@@ -53,6 +53,9 @@
   <category name="数学" colour="#5b67a5">
     <block type="math_number">
       <field name="NUM">0</field>
+    </block>
+    <block type="formula">
+      <field name="calc-type">plus</field>
     </block>
     <block type="math_etc1">
       <field name="select">root</field>
