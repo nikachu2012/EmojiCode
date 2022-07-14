@@ -15,7 +15,7 @@ Blockly.JavaScript['repeat'] = function(block) {
 
 Blockly.JavaScript['repeat_true'] = function(block) {
   var value_formula = Blockly.JavaScript.valueToCode(block, 'formula', Blockly.JavaScript.ORDER_ATOMIC);
-  var dropdown_boolean = block.getFieldValue('boolean');
+  var dropdown_narumade = block.getFieldValue('narumade');
   var statements_do = Blockly.JavaScript.statementToCode(block, 'do');
   // TODO: Assemble JavaScript into code variable.
   var code = '...;\n';

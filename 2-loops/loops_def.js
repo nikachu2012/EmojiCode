@@ -62,7 +62,7 @@
 },
 {
   "type": "repeat_true",
-  "message0": "%1 %2 が %3 になるまで %4 %5",
+  "message0": "%1 %2 が %3 に %4 %5 %6",
   "args0": [
     {
       "type": "field_image",
@@ -79,26 +79,24 @@
       "align": "RIGHT"
     },
     {
+      "type": "field_image",
+      "src": "https://img.icons8.com/material-outlined/48/000000/filled-circle--v2.png",
+      "width": 16,
+      "height": 16,
+      "alt": "*",
+      "flipRtl": false
+    },
+    {
       "type": "field_dropdown",
-      "name": "boolean",
+      "name": "narumade",
       "options": [
         [
-          {
-            "src": "https://img.icons8.com/material-outlined/48/000000/filled-circle--v2.png",
-            "width": 16,
-            "height": 16,
-            "alt": "*"
-          },
-          "true"
+          "なるまで続ける",
+          "continue"
         ],
         [
-          {
-            "src": "https://img.icons8.com/material-outlined/48/000000/delete-sign.png",
-            "width": 16,
-            "height": 16,
-            "alt": "*"
-          },
-          "false"
+          "なったら終わる",
+          "stop"
         ]
       ]
     },
