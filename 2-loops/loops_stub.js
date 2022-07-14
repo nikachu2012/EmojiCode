@@ -18,8 +18,15 @@ Blockly.JavaScript['repeat_true'] = function(block) {
   var value_formula = Blockly.JavaScript.valueToCode(block, 'formula', Blockly.JavaScript.ORDER_ATOMIC);
   var dropdown_narumade = block.getFieldValue('narumade');
   var statements_do = Blockly.JavaScript.statementToCode(block, 'do');
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+
+  if(dropdown_narumade == "continue"){
+    //なるまで続ける
+    var code = `while(${value_formula}){${dropdown_narumade}}`
+  }
+  else if(dropdown_narumade == "stop"){
+    //なったら終わる
+    var code = `while(!(${value_formula})){${dropdown_narumade}}`
+  }
   return code;
 };
 
