@@ -41,12 +41,13 @@ Blockly.JavaScript[`repeat_setting`] = function(block) {
   return code;
 };
 
-Blockly.JavaScript['repeat_list'] = function(block) {
-  var value_list = Blockly.JavaScript.valueToCode(block, 'list', Blockly.JavaScript.ORDER_ATOMIC);
-  var variable_various = Blockly.JavaScript.nameDB_.getName(block.getFieldValue('various'), Blockly.Variables.NAME_TYPE);
-  var statements_do = Blockly.JavaScript.statementToCode(block, 'do');
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+Blockly.JavaScript[`repeat_list`] = function(block) {
+  var value_list = Blockly.JavaScript.valueToCode(block, `list`, Blockly.JavaScript.ORDER_ATOMIC);
+  var variable_various = Blockly.JavaScript.nameDB_.getName(block.getFieldValue(`various`), Blockly.Variables.NAME_TYPE);
+  var statements_do = Blockly.JavaScript.statementToCode(block, `do`);
+  
+  var code = `${value_list}.forEach((${variable_various}) => {${statements_do}})`;
+
   return code;
 };
 
