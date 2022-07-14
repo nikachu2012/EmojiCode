@@ -51,9 +51,9 @@ Blockly.JavaScript[`repeat_list`] = function(block) {
   return code;
 };
 
-Blockly.JavaScript['break'] = function(block) {
+Blockly.JavaScript[`break`] = function(block) {
   // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+  var code = `break;`;
   return code;
 };
 
