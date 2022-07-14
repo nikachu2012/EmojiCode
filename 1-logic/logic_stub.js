@@ -23,7 +23,7 @@ Blockly.JavaScript[`equals_return_boolean`] = function(block) {
   if (dropdown_select_equal == "equals") {
     var code = `${value_a} == ${value_b}`;
   }
-  else if (dropdown_select_equal == "not-equals") {
+  else if (dropdown_select_equal == "not-equal") {
     var code = `${value_a} !== ${value_b}`;
   }
   else if (dropdown_select_equal == "less-than") {
