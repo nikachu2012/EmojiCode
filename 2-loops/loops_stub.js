@@ -5,11 +5,12 @@ Blockly.JavaScript[`repeat_infinity`] = function(block) {
   return code;
 };
 
-Blockly.JavaScript['repeat'] = function(block) {
-  var value_index = Blockly.JavaScript.valueToCode(block, 'index', Blockly.JavaScript.ORDER_ATOMIC);
-  var statements_do = Blockly.JavaScript.statementToCode(block, 'do');
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+Blockly.JavaScript[`repeat`] = function(block) {
+  var value_index = Blockly.JavaScript.valueToCode(block, `index`, Blockly.JavaScript.ORDER_ATOMIC);
+  var statements_do = Blockly.JavaScript.statementToCode(block, `do`);
+
+  var code = `for (let index = 0; index < ${value_index}; index++) {${statements_do}}`;
+  
   return code;
 };
 
