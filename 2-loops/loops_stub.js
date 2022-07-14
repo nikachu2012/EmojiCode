@@ -57,8 +57,8 @@ Blockly.JavaScript[`break`] = function(block) {
   return code;
 };
 
-Blockly.JavaScript['continue'] = function(block) {
+Blockly.JavaScript[`continue`] = function(block) {
   // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+  var code = `continue;`;
   return code;
 };
