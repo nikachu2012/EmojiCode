@@ -1,7 +1,7 @@
-Blockly.JavaScript['repeat_infinity'] = function(block) {
-  var statements_do = Blockly.JavaScript.statementToCode(block, 'do');
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+Blockly.JavaScript[`repeat_infinity`] = function(block) {
+  var statements_do = Blockly.JavaScript.statementToCode(block, `do`);
+
+  var code = `while(true){${statements_do}}`;
   return code;
 };
 
