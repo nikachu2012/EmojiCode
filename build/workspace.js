@@ -15,7 +15,21 @@ var options = {
 	rtl : false, 
 	scrollbars : true, 
 	sounds : true, 
-	oneBasedIndex : true
+	oneBasedIndex : true, 
+	grid : {
+		spacing : 20, 
+		length : 1, 
+		colour : '#888', 
+		snap : false
+	}, 
+	zoom : {
+		controls : true, 
+		wheel : false, 
+		startScale : 1, 
+		maxScale : 3, 
+		minScale : 0.3, 
+		scaleSpeed : 1.2
+	}
 };
 
 /* Inject your workspace */ 

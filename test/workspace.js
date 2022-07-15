@@ -22,13 +22,13 @@ Promise.all(
         toolbox : toolbox, 
         collapse : true, 
         comments : true, 
-        disable : false, 
+        disable : true, 
         maxBlocks : Infinity, 
         trashcan : true, 
         horizontalLayout : false, 
         toolboxPosition : 'start', 
         css : true, 
-        media: 'https://unpkg.com/blockly@latest/media/',
+        media : 'https://blockly-demo.appspot.com/static/media/', 
         rtl : false, 
         scrollbars : true, 
         sounds : true, 
@@ -41,14 +41,13 @@ Promise.all(
         }, 
         zoom : {
             controls : true, 
-            wheel : true, 
+            wheel : false, 
             startScale : 1, 
             maxScale : 3, 
             minScale : 0.3, 
             scaleSpeed : 1.2
         }
     };
-
     /* Inject your workspace */
     var workspace = Blockly.inject('jikko', options);
 
