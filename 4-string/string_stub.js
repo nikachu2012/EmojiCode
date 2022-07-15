@@ -22,10 +22,10 @@ Blockly.JavaScript[`string_renketu`] = function(block) {
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript['string_length'] = function(block) {
-  var value_text = Blockly.JavaScript.valueToCode(block, 'text', Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...';
+Blockly.JavaScript[`string_length`] = function(block) {
+  var value_text = Blockly.JavaScript.valueToCode(block, `text`, Blockly.JavaScript.ORDER_ATOMIC);
+
+  var code = `${value_text}.length`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
