@@ -68,6 +68,11 @@
     </block>
     <block type="hantei_boolean">
       <field name="select">even</field>
+      <value name="NAME">
+        <block type="math_number">
+          <field name="NUM">3</field>
+        </block>
+      </value>
     </block>
     <block type="rewrite_input">
       <field name="select">round</field>
@@ -75,7 +80,18 @@
     <block type="list_search">
       <field name="select">sum</field>
     </block>
-    <block type="random"></block>
+    <block type="random">
+      <value name="start">
+        <block type="math_number">
+          <field name="NUM">1</field>
+        </block>
+      </value>
+      <value name="end">
+        <block type="math_number">
+          <field name="NUM">10</field>
+        </block>
+      </value>
+    </block>
   </category>
   <category name="テキスト" colour="#5ba58c">
     <block type="string">
@@ -94,15 +110,63 @@
         </block>
       </value>
     </block>
-    <block type="string_length"></block>
+    <block type="string_length">
+      <value name="text">
+        <block type="string">
+          <field name="NAME">input</field>
+        </block>
+      </value>
+    </block>
     <block type="string_first_index">
       <field name="option">first</field>
+      <value name="a">
+        <block type="string">
+          <field name="NAME">input</field>
+        </block>
+      </value>
+      <value name="NAME">
+        <block type="string">
+          <field name="NAME">input</field>
+        </block>
+      </value>
     </block>
     <block type="string_input_char">
       <field name="option">first</field>
+      <value name="text">
+        <block type="string">
+          <field name="NAME">input</field>
+        </block>
+      </value>
+      <value name="search-index">
+        <block type="math_number">
+          <field name="NUM">1</field>
+        </block>
+      </value>
     </block>
-    <block type="string_random_char"></block>
-    <block type="string_input_string"></block>
+    <block type="string_random_char">
+      <value name="text">
+        <block type="string">
+          <field name="NAME">input</field>
+        </block>
+      </value>
+    </block>
+    <block type="string_input_string">
+      <value name="text">
+        <block type="string">
+          <field name="NAME">input</field>
+        </block>
+      </value>
+      <value name="startIndex">
+        <block type="math_number">
+          <field name="NUM">1</field>
+        </block>
+      </value>
+      <value name="endIndex">
+        <block type="math_number">
+          <field name="NUM">3</field>
+        </block>
+      </value>
+    </block>
     <block type="string_convert">
       <field name="option">upper</field>
     </block>
