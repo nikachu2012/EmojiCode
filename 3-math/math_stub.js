@@ -30,8 +30,28 @@ Blockly.JavaScript[`formula`] = function(block) {
 Blockly.JavaScript[`math_etc1`] = function(block) {
   var dropdown_select = block.getFieldValue(`select`);
   var value_input = Blockly.JavaScript.valueToCode(block, `input`, Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `...`;
+  
+  if(dropdown_select == "root"){
+    var code = `Math.sqrt(${value_input})`
+  }
+  else if(dropdown_select == "absolute"){
+    var code = `Math.abs(${value_input})`
+  }
+  else if(dropdown_select == "minus"){
+    var code = `-${value_input}`
+  }
+  else if(dropdown_select == "log"){
+    var code = `Math.log(${value_input})`
+  }
+  else if(dropdown_select == "log10"){
+    var code = `Math.log(${value_input}) / Math.log(10)`
+  }
+  else if(dropdown_select == "exp"){
+    var code = `Math.exp(${value_input})`
+  }
+  else if(dropdown_select == "10"){
+    var code = `Math.pow(${value_input})`
+  }
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
