@@ -127,8 +127,16 @@ Blockly.JavaScript[`hantei_boolean`] = function(block) {
 Blockly.JavaScript[`rewrite_input`] = function(block) {
   var dropdown_select = block.getFieldValue(`select`);
   var value_input = Blockly.JavaScript.valueToCode(block, `input`, Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `...`;
+
+  if(dropdown_select == "round"){
+    var code = `Math.round(${value_name})`
+  }
+  else if(dropdown_select == "roundup"){
+    var code = `Math.ceil(${value_name})`
+  }
+  else if(dropdown_select == "rounddown"){
+    var code = `Math.floor(${value_name})`
+  }
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
