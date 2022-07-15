@@ -177,8 +177,8 @@ Blockly.JavaScript[`list_search`] = function(block) {
 Blockly.JavaScript[`random`] = function(block) {
   var value_start = Blockly.JavaScript.valueToCode(block, `start`, Blockly.JavaScript.ORDER_ATOMIC);
   var value_end = Blockly.JavaScript.valueToCode(block, `end`, Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `...`;
+  
+  var code = `emoji.getRandom(${value_start}, ${value_end})`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };

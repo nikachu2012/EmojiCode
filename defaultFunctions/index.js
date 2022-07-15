@@ -103,3 +103,12 @@ emoji.randomList = arr => {
     return arr[Math.floor(Math.random() * arr.length)];
 }
 
+/**
+ * 指定範囲の乱数を返します。
+ * @param {number} min 
+ * @param {number} max
+ * @returns {number} 乱数
+ */
+emoji.getRandom = (min, max) => {
+    return Math.floor( Math.random() * (max + 1 - min) ) + min;
+}
