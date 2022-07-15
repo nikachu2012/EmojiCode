@@ -144,8 +144,32 @@ Blockly.JavaScript[`rewrite_input`] = function(block) {
 Blockly.JavaScript[`list_search`] = function(block) {
   var dropdown_select = block.getFieldValue(`select`);
   var value_name = Blockly.JavaScript.valueToCode(block, `NAME`, Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `...`;
+
+  if(dropdown_select == "sum"){
+    var code = `${value_name}.reduce(function(x, y) {return x + y;})`
+  }
+  else if(dropdown_select == "min"){
+    var code = `Math.min.apply(null, ${value_name})`
+  }
+  else if(dropdown_select == "max"){
+    var code = `Math.max.apply(null, ${value_name})`
+  }
+  else if(dropdown_select == "avg"){
+    var code = `emoji.listavg(${value_name})`
+  }
+  else if(dropdown_select == "median"){
+    var code = `emoji.listmedian(${value_name})`
+  }
+  else if(dropdown_select == "mode"){
+    var code = `emoji.mode(${value_name})`
+  }
+  else if(dropdown_select == "deviasion"){
+    var code = `emoji.deviasion(${value_name})`
+  }
+  else if(dropdown_select == "random"){
+    var code = `emoji.randomList(${value_name})`
+  }
+
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
