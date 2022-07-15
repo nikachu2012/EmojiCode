@@ -27,14 +27,6 @@ Blockly.JavaScript[`formula`] = function(block) {
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript[`string`] = function(block) {
-  var text_string = block.getFieldValue(`string`);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `...`;
-  // TODO: Change ORDER_NONE to the correct strength.
-  return [code, Blockly.JavaScript.ORDER_NONE];
-};
-
 Blockly.JavaScript[`math_etc1`] = function(block) {
   var dropdown_select = block.getFieldValue(`select`);
   var value_input = Blockly.JavaScript.valueToCode(block, `input`, Blockly.JavaScript.ORDER_ATOMIC);

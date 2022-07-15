@@ -78,21 +78,6 @@
   "helpUrl": "https://example.com"
 },
 {
-  "type": "string",
-  "message0": "%1",
-  "args0": [
-    {
-      "type": "field_input",
-      "name": "string",
-      "text": "123"
-    }
-  ],
-  "output": "Number",
-  "colour": 230,
-  "tooltip": "数字入力です。",
-  "helpUrl": "https://example.com"
-},
-{
   "type": "math_etc1",
   "message0": "%1 %2",
   "args0": [
@@ -136,7 +121,7 @@
         ],
         [
           "10^",
-          "OPTIONNAME"
+          "10"
         ]
       ]
     },
@@ -188,7 +173,7 @@
     {
       "type": "input_value",
       "name": "input",
-      "check": "String"
+      "check": "Number"
     }
   ],
   "output": "Number",
