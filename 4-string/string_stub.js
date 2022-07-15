@@ -11,6 +11,12 @@ Blockly.JavaScript['string_renketu'] = function(block) {
   var value_b = Blockly.JavaScript.valueToCode(block, 'b', Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
   var code = '...';
+Blockly.JavaScript[`print`] = function(block) {
+  var value_inputvalue = Blockly.JavaScript.valueToCode(block, `inputValue`, Blockly.JavaScript.ORDER_ATOMIC);
+
+  var code = `console.log(${value_inputvalue})`;
+  return code;
+};
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
