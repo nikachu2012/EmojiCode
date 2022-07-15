@@ -59,8 +59,24 @@ Blockly.JavaScript[`math_etc1`] = function(block) {
 Blockly.JavaScript[`math_etc2`] = function(block) {
   var dropdown_select = block.getFieldValue(`select`);
   var value_input = Blockly.JavaScript.valueToCode(block, `input`, Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `...`;
+  if(dropdown_select == "sin"){
+    var code = `Math.sin(${value_input} / 180 * Math.PI)`
+  }
+  else if(dropdown_select == "cos"){
+    var code = `Math.cos(${value_input} / 180 * Math.PI)`
+  }
+  else if(dropdown_select == "tan"){
+    var code = `Math.tan(${value_input} / 180 * Math.PI)`
+  }
+  else if(dropdown_select == "asin"){
+    var code = `Math.asin(${value_input} / 180 * Math.PI)`
+  }
+  else if(dropdown_select == "acos"){
+    var code = `Math.acos(${value_input} / 180 * Math.PI)`
+  }
+  else if(dropdown_select == "atan"){
+    var code = `Math.atan(${value_input} / 180 * Math.PI)`
+  }
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
