@@ -79,11 +79,15 @@ Blockly.JavaScript[`string_input_string`] = function(block) {
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript['string_convert'] = function(block) {
-  var dropdown_option = block.getFieldValue('option');
-  var value_text = Blockly.JavaScript.valueToCode(block, 'text', Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...';
+Blockly.JavaScript[`string_convert`] = function(block) {
+  var dropdown_option = block.getFieldValue(`option`);
+  var value_text = Blockly.JavaScript.valueToCode(block, `text`, Blockly.JavaScript.ORDER_ATOMIC);
+  if(dropdown_option == "upper"){
+    var code = `${value_text}.toUpperCase()`
+  }
+  else if(dropdown_option == "lower"){
+    var code = `${value_text}.toUpperCase()`
+  }
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
