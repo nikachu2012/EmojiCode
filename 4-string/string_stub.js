@@ -109,10 +109,9 @@ Blockly.JavaScript[`string_delete_space`] = function(block) {
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript['string_prompt'] = function(block) {
-  var value_because = Blockly.JavaScript.valueToCode(block, 'because', Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...';
+Blockly.JavaScript[`string_prompt`] = function(block) {
+  var value_because = Blockly.JavaScript.valueToCode(block, `because`, Blockly.JavaScript.ORDER_ATOMIC);
+  var code = `emoji.ask(${value_because})`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
