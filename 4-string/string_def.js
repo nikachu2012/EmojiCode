@@ -11,9 +11,9 @@
       "flipRtl": false
     },
     {
-      "type": "input_value",
-      "name": "input",
-      "check": "String"
+      "type": "field_input",
+      "name": "NAME",
+      "text": "input"
     },
     {
       "type": "field_image",
