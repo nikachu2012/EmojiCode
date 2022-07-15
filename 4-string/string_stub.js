@@ -1,7 +1,7 @@
 Blockly.JavaScript['string'] = function(block) {
-  var value_input = Blockly.JavaScript.valueToCode(block, 'input', Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...';
+  var text_name = block.getFieldValue('NAME');
+
+  var code = `\`${text_name}\``;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
