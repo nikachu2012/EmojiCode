@@ -30,12 +30,18 @@ Blockly.JavaScript[`string_length`] = function(block) {
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript['string_first_index'] = function(block) {
-  var value_a = Blockly.JavaScript.valueToCode(block, 'a', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC);
-  var dropdown_option = block.getFieldValue('option');
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...';
+Blockly.JavaScript[`string_first_index`] = function(block) {
+  var value_a = Blockly.JavaScript.valueToCode(block, `a`, Blockly.JavaScript.ORDER_ATOMIC);
+  var value_name = Blockly.JavaScript.valueToCode(block, `NAME`, Blockly.JavaScript.ORDER_ATOMIC);
+  var dropdown_option = block.getFieldValue(`option`);
+
+  if(dropdown_option == "first"){
+    var code = `${value_name}.indexOf(${value_a}) + 1`;
+  }
+  else if(dropdown_option == "last"){
+    var code = `${value_name}.lastIndexOf(${value_a}) + 1`;
+  }
+  
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
