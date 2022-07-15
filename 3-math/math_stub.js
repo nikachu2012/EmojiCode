@@ -102,8 +102,24 @@ Blockly.JavaScript[`const_return`] = function(block) {
 Blockly.JavaScript[`hantei_boolean`] = function(block) {
   var value_name = Blockly.JavaScript.valueToCode(block, `NAME`, Blockly.JavaScript.ORDER_ATOMIC);
   var dropdown_select = block.getFieldValue(`select`);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `...`;
+  if(dropdown_select == "even"){
+    var code = `${value_name} % 2 === 0`
+  }
+  else if(dropdown_select == "odd"){
+    var code = `${value_name} % 2 === 1`
+  }
+  else if(dropdown_select == "prime"){
+    var code = `emoji.isPrime(${value_name})`
+  }
+  else if(dropdown_select == "integer"){
+    var code = `${value_name} % 2 === 0`
+  }
+  else if(dropdown_select == "true"){
+    var code = `${value_name} > 0`
+  }
+  else if(dropdown_select == "false"){
+    var code = `${value_name} < 0`
+  }
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
