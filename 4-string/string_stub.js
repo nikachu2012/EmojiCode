@@ -69,12 +69,12 @@ Blockly.JavaScript[`string_random_char`] = function(block) {
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript['string_input_string'] = function(block) {
-  var value_text = Blockly.JavaScript.valueToCode(block, 'text', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_startindex = Blockly.JavaScript.valueToCode(block, 'startIndex', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_endindex = Blockly.JavaScript.valueToCode(block, 'endIndex', Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...';
+Blockly.JavaScript[`string_input_string`] = function(block) {
+  var value_text = Blockly.JavaScript.valueToCode(block, `text`, Blockly.JavaScript.ORDER_ATOMIC);
+  var value_startindex = Blockly.JavaScript.valueToCode(block, `startIndex`, Blockly.JavaScript.ORDER_ATOMIC);
+  var value_endindex = Blockly.JavaScript.valueToCode(block, `endIndex`, Blockly.JavaScript.ORDER_ATOMIC);
+  
+  var code = `${value_text}.slice(${value_startindex}, ${value_endindex})`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
