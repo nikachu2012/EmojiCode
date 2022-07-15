@@ -83,8 +83,18 @@ Blockly.JavaScript[`math_etc2`] = function(block) {
 
 Blockly.JavaScript[`const_return`] = function(block) {
   var dropdown_name = block.getFieldValue(`NAME`);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `...`;
+  if(dropdown_name == "pi"){
+    var code = `Math.PI`
+  }
+  else if(dropdown_name == "e"){
+    var code = `Math.E`
+  }
+  else if(dropdown_name == "phi"){
+    var code = `(1 + Math.sqrt(5)) / 2`
+  }
+  else if(dropdown_name == "infinity"){
+    var code = `Infinity`
+  }
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
