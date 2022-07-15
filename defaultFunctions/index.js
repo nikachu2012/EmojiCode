@@ -112,3 +112,13 @@ emoji.randomList = arr => {
 emoji.getRandom = (min, max) => {
     return Math.floor( Math.random() * (max + 1 - min) ) + min;
 }
+
+/**
+ * ユーザーに入力させます。
+ * @param {string} ask 
+ * @returns {string}
+ */
+emoji.ask = (ask) => {
+    // TODO: ユーザー入力の作成
+    return answer;
+}
