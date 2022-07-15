@@ -92,11 +92,19 @@ Blockly.JavaScript[`string_convert`] = function(block) {
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript['string_delete_space'] = function(block) {
-  var dropdown_option = block.getFieldValue('option');
-  var value_text = Blockly.JavaScript.valueToCode(block, 'text', Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...';
+Blockly.JavaScript[`string_delete_space`] = function(block) {
+  var dropdown_option = block.getFieldValue(`option`);
+  var value_text = Blockly.JavaScript.valueToCode(block, `text`, Blockly.JavaScript.ORDER_ATOMIC);
+  
+  if(dropdown_option == "both"){
+    var code = `${value_text}.trim()`
+  }
+  else if(dropdown_option == "left"){
+    var code = `${value_text}.replace(/^\s+/g,'')`
+  }
+  else if(dropdown_option == "right"){
+    var code = `${value_text}.replace(/\s*$/g,'')`
+  }
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
