@@ -37,12 +37,12 @@ Blockly.JavaScript[`list_insert`] = function(block) {
   return code;
 };
 
-Blockly.JavaScript['list_replace'] = function(block) {
-  var value_array = Blockly.JavaScript.valueToCode(block, 'array', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_index = Blockly.JavaScript.valueToCode(block, 'index', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_value = Blockly.JavaScript.valueToCode(block, 'value', Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+Blockly.JavaScript[`list_replace`] = function(block) {
+  var value_array = Blockly.JavaScript.valueToCode(block, `array`, Blockly.JavaScript.ORDER_ATOMIC);
+  var value_index = Blockly.JavaScript.valueToCode(block, `index`, Blockly.JavaScript.ORDER_ATOMIC);
+  var value_value = Blockly.JavaScript.valueToCode(block, `value`, Blockly.JavaScript.ORDER_ATOMIC);
+
+  var code = `${value_array}.splice(${value_index - 1}, 1, ${value_value})`;
   return code;
 };
 
