@@ -37,7 +37,7 @@
 },
 {
   "type": "list_delete",
-  "message0": "%1 の %2 %3 番目を削除する",
+  "message0": "%1 の %2 %3 から %4 %5 個を削除する",
   "args0": [
     {
       "type": "input_value",
@@ -52,7 +52,16 @@
     },
     {
       "type": "input_value",
-      "name": "NAME"
+      "name": "start",
+      "check": "Number"
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "kosuu",
+      "check": "Number"
     }
   ],
   "inputsInline": true,

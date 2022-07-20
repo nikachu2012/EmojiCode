@@ -12,11 +12,12 @@ Blockly.JavaScript[`list_push`] = function(block) {
   return code;
 };
 
-Blockly.JavaScript['list_delete'] = function(block) {
-  var value_value = Blockly.JavaScript.valueToCode(block, 'value', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+Blockly.JavaScript[`list_delete`] = function(block) {
+  var value_array = Blockly.JavaScript.valueToCode(block, `value`, Blockly.JavaScript.ORDER_ATOMIC);
+  var value_start = Blockly.JavaScript.valueToCode(block, `start`, Blockly.JavaScript.ORDER_ATOMIC);
+  var value_kosuu = Blockly.JavaScript.valueToCode(block, `kosuu`, Blockly.JavaScript.ORDER_ATOMIC);
+
+  var code = `${value_array}.splice(${value_start}, ${value_kosuu})`;
   return code;
 };
 
