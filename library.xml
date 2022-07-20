@@ -2124,7 +2124,7 @@
     </statement>
     <value name="TOOLTIP">
       <block type="text" id="oClbHYf:=+qXJkP/w*gM" deletable="false" movable="false">
-        <field name="TEXT">リストを作成します</field>
+        <field name="TEXT">リストの末尾に追加します。</field>
       </block>
     </value>
     <value name="HELPURL">
@@ -2151,19 +2151,11 @@
     <field name="CONNECTIONS">BOTH</field>
     <statement name="INPUTS">
       <block type="input_value" id="Wkc2:Co[ej^a9GqF!fi1">
-        <field name="INPUTNAME">value</field>
+        <field name="INPUTNAME">array</field>
         <field name="ALIGN">LEFT</field>
         <value name="TYPE">
           <shadow type="type_null" id="kC/A.whawo*TA#~#8.2b"></shadow>
-          <block type="type_group" id="sloTap/E9q%js1ph7,8D">
-            <mutation types="2"></mutation>
-            <value name="TYPE0">
-              <block type="type_string" id="$V(EwQfGDQOm:Z}eh/$W"></block>
-            </value>
-            <value name="TYPE1">
-              <block type="type_number" id="4w^{P|:k37D)Z9/k_uw."></block>
-            </value>
-          </block>
+          <block type="type_list" id="ar;tf}0Smasq=Zl^hQ4="></block>
         </value>
         <next>
           <block type="input_dummy" id="96OIkIlg,!vmFmJ8eM2~">
@@ -2175,19 +2167,40 @@
             </statement>
             <next>
               <block type="input_value" id="Z#qo22$NURH~jCz*BQ.N">
-                <field name="INPUTNAME">NAME</field>
+                <field name="INPUTNAME">start</field>
                 <field name="ALIGN">LEFT</field>
                 <value name="TYPE">
                   <shadow type="type_null" id=";V@tncv=!8I`hid(aK@L"></shadow>
+                  <block type="type_number" id="j,J18,P*g#[0)q5oi87b"></block>
                 </value>
                 <next>
-                  <block type="input_dummy" id="t2!/rT[BA,^O[EM1I[l,">
+                  <block type="input_dummy" id="fRBP+gGcPN?g]jITG`n3">
                     <field name="ALIGN">LEFT</field>
                     <statement name="FIELDS">
-                      <block type="field_static" id="/W7!_EYSe;GZC3E8/Rp{">
-                        <field name="TEXT">番目を削除する</field>
+                      <block type="field_static" id="zK}T({~Caaenxv7G2{zg">
+                        <field name="TEXT">から</field>
                       </block>
                     </statement>
+                    <next>
+                      <block type="input_value" id="cW[gc|=?nF)B;_x%4?x;">
+                        <field name="INPUTNAME">kosuu</field>
+                        <field name="ALIGN">LEFT</field>
+                        <value name="TYPE">
+                          <shadow type="type_null" id="eA[0(F/S3zaDtBjXihe!"></shadow>
+                          <block type="type_number" id="nlAVDq[$m:Od$+k{v6ii"></block>
+                        </value>
+                        <next>
+                          <block type="input_dummy" id="t2!/rT[BA,^O[EM1I[l,">
+                            <field name="ALIGN">LEFT</field>
+                            <statement name="FIELDS">
+                              <block type="field_static" id="/W7!_EYSe;GZC3E8/Rp{">
+                                <field name="TEXT">個を削除する</field>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
                   </block>
                 </next>
               </block>
@@ -2198,7 +2211,7 @@
     </statement>
     <value name="TOOLTIP">
       <block type="text" id="oClbHYf:=+qXJkP/w*gM" deletable="false" movable="false">
-        <field name="TEXT">リストを作成します</field>
+        <field name="TEXT">リストの指定場所を削除します</field>
       </block>
     </value>
     <value name="HELPURL">
@@ -2225,19 +2238,11 @@
     <field name="CONNECTIONS">BOTH</field>
     <statement name="INPUTS">
       <block type="input_value" id="Wkc2:Co[ej^a9GqF!fi1">
-        <field name="INPUTNAME">value</field>
+        <field name="INPUTNAME">array</field>
         <field name="ALIGN">LEFT</field>
         <value name="TYPE">
           <shadow type="type_null" id="kC/A.whawo*TA#~#8.2b"></shadow>
-          <block type="type_group" id="sloTap/E9q%js1ph7,8D">
-            <mutation types="2"></mutation>
-            <value name="TYPE0">
-              <block type="type_string" id="$V(EwQfGDQOm:Z}eh/$W"></block>
-            </value>
-            <value name="TYPE1">
-              <block type="type_number" id="4w^{P|:k37D)Z9/k_uw."></block>
-            </value>
-          </block>
+          <block type="type_list" id="Ki!$=N9):OZUC2|c*4vt"></block>
         </value>
         <next>
           <block type="input_dummy" id="96OIkIlg,!vmFmJ8eM2~">
@@ -2253,7 +2258,7 @@
     </statement>
     <value name="TOOLTIP">
       <block type="text" id="oClbHYf:=+qXJkP/w*gM" deletable="false" movable="false">
-        <field name="TEXT">リストを作成します</field>
+        <field name="TEXT">リストの全てを削除します</field>
       </block>
     </value>
     <value name="HELPURL">
@@ -2340,7 +2345,7 @@
     </statement>
     <value name="TOOLTIP">
       <block type="text" id="oClbHYf:=+qXJkP/w*gM" deletable="false" movable="false">
-        <field name="TEXT">リストの指定番目にテキストを挿入します</field>
+        <field name="TEXT">リストの指定番目に挿入します</field>
       </block>
     </value>
     <value name="HELPURL">
@@ -2394,7 +2399,7 @@
                     <field name="ALIGN">LEFT</field>
                     <statement name="FIELDS">
                       <block type="field_static" id="=vs7MlyA`kW1NO-sx.G@">
-                        <field name="TEXT">番目に</field>
+                        <field name="TEXT">番目を</field>
                       </block>
                     </statement>
                     <next>
@@ -2538,12 +2543,12 @@
             <field name="ALIGN">LEFT</field>
             <statement name="FIELDS">
               <block type="field_static" id="$G9zn$=LeT)E=SC;C~8]">
-                <field name="TEXT">の中の</field>
+                <field name="TEXT">の中に</field>
               </block>
             </statement>
             <next>
               <block type="input_value" id="Zru@aN]~Vn`kaItm:[AT">
-                <field name="INPUTNAME">valuie</field>
+                <field name="INPUTNAME">value</field>
                 <field name="ALIGN">LEFT</field>
                 <value name="TYPE">
                   <shadow type="type_null" id="?33[/lX{4@2oNk-kReW`"></shadow>
@@ -2554,9 +2559,29 @@
                     <field name="ALIGN">LEFT</field>
                     <statement name="FIELDS">
                       <block type="field_static" id="zY{`M,S~}JGB*lM?]*oG">
-                        <field name="TEXT">の場所</field>
+                        <field name="TEXT">が入る</field>
                       </block>
                     </statement>
+                    <next>
+                      <block type="input_dummy" id="rlO[c.YBZIAXCBmLNZiP">
+                        <field name="ALIGN">LEFT</field>
+                        <statement name="FIELDS">
+                          <block type="field_dropdown" id="%XIt3!:7TbjpkFJt{d2A">
+                            <mutation options="[&quot;text&quot;,&quot;text&quot;]"></mutation>
+                            <field name="FIELDNAME">select</field>
+                            <field name="USER0">最初</field>
+                            <field name="CPU0">first</field>
+                            <field name="USER1">最後</field>
+                            <field name="CPU1">last</field>
+                            <next>
+                              <block type="field_static" id="v[6$zF$n9a13y7Oo^?=1">
+                                <field name="TEXT">の場所</field>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
                   </block>
                 </next>
               </block>
