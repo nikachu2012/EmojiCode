@@ -126,7 +126,7 @@
 },
 {
   "type": "list_replace",
-  "message0": "%1 の %2 %3 番目に %4 %5 で置き換えする",
+  "message0": "%1 の %2 %3 番目を %4 %5 で置き換えする",
   "args0": [
     {
       "type": "input_value",
