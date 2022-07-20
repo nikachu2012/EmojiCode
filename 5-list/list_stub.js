@@ -21,10 +21,10 @@ Blockly.JavaScript[`list_delete`] = function(block) {
   return code;
 };
 
-Blockly.JavaScript['list_all_delete'] = function(block) {
-  var value_value = Blockly.JavaScript.valueToCode(block, 'value', Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+Blockly.JavaScript[`list_all_delete`] = function(block) {
+  var value_array = Blockly.JavaScript.valueToCode(block, `value`, Blockly.JavaScript.ORDER_ATOMIC);
+
+  var code = `${value_array}.splice(1,${value_array}.length)`;
   return code;
 };
 
