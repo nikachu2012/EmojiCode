@@ -57,9 +57,17 @@ Blockly.JavaScript[`list_index`] = function(block) {
 
 Blockly.JavaScript['list_str_index'] = function(block) {
   var value_array = Blockly.JavaScript.valueToCode(block, 'array', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_valuie = Blockly.JavaScript.valueToCode(block, 'valuie', Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...';
+  var value_value = Blockly.JavaScript.valueToCode(block, 'value', Blockly.JavaScript.ORDER_ATOMIC);
+  var dropdown_select = block.getFieldValue('select');
+
+  if(dropdown_select == 'first'){
+    //indexOf
+    var code = `${value_array}.indexOf(${value_value})`
+  }
+  else if(dropdown_select == 'last'){
+    //lastIndexOf
+    var code = `${value_array}.lastIndexOf(${value_value})`
+  }
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };

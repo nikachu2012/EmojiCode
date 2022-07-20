@@ -186,7 +186,7 @@
 },
 {
   "type": "list_str_index",
-  "message0": "%1 の中の %2 %3 の場所",
+  "message0": "%1 の中に %2 %3 が入る %4 %5 の場所",
   "args0": [
     {
       "type": "input_value",
@@ -200,6 +200,23 @@
       "type": "input_value",
       "name": "valuie",
       "check": "String"
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "field_dropdown",
+      "name": "select",
+      "options": [
+        [
+          "最初",
+          "first"
+        ],
+        [
+          "最後",
+          "last"
+        ]
+      ]
     }
   ],
   "inputsInline": true,
