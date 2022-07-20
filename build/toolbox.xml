@@ -1,4 +1,35 @@
 <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+  <category name="動き" colour="#9fa55b">
+    <block type="sprite_sayuu"></block>
+    <block type="sprite_rotate_right"></block>
+    <block type="sprite_rotate_left"></block>
+    <block type="sprite_move"></block>
+    <block type="sprite_move_seconds"></block>
+    <block type="sprite_rotate"></block>
+    <block type="sprite_move_xdake"></block>
+    <block type="sprite_move_xdutu"></block>
+    <block type="sprite_move_ydake"></block>
+    <block type="sprite_move_ydutu"></block>
+    <block type="sprite_end"></block>
+    <block type="sprite_rotate_houhou">
+      <field name="NAME">left-right</field>
+    </block>
+    <block type="sprite_const_xpos"></block>
+    <block type="sprite_const_ypos"></block>
+    <block type="sprite_const_rotate"></block>
+  </category>
+  <category name="音" colour="#995ba5">
+    <block type="sound_play"></block>
+    <block type="sound_pause"></block>
+    <block type="sound_effect_select">
+      <field name="select">pitch</field>
+    </block>
+    <block type="sound_effect_dutu">
+      <field name="select">pitch</field>
+    </block>
+    <block type="sound_volume_select"></block>
+    <block type="sound_volume_dutu"></block>
+  </category>
   <category name="制御" colour="#5b80a5">
     <block type="if"></block>
     <block type="if_else"></block>
@@ -24,7 +55,7 @@
       </value>
     </block>
     <block type="repeat_true">
-      <field name="narumade">continue</field>
+      <field name="boolean">true</field>
     </block>
     <block type="repeat_setting">
       <field name="various" id="JKT,LXU/E+$@J0Ln4az5">i</field>
@@ -94,48 +125,34 @@
     </block>
   </category>
   <category name="テキスト" colour="#5ba58c">
-    <block type="string">
-      <field name="NAME">input</field>
-    </block>
+    <block type="string"></block>
     <block type="print"></block>
     <block type="string_renketu">
       <value name="a">
-        <block type="string">
-          <field name="NAME">input</field>
-        </block>
+        <block type="string"></block>
       </value>
       <value name="b">
-        <block type="string">
-          <field name="NAME">input</field>
-        </block>
+        <block type="string"></block>
       </value>
     </block>
     <block type="string_length">
       <value name="text">
-        <block type="string">
-          <field name="NAME">input</field>
-        </block>
+        <block type="string"></block>
       </value>
     </block>
     <block type="string_first_index">
       <field name="option">first</field>
       <value name="a">
-        <block type="string">
-          <field name="NAME">input</field>
-        </block>
+        <block type="string"></block>
       </value>
       <value name="NAME">
-        <block type="string">
-          <field name="NAME">input</field>
-        </block>
+        <block type="string"></block>
       </value>
     </block>
     <block type="string_input_char">
       <field name="option">first</field>
       <value name="text">
-        <block type="string">
-          <field name="NAME">input</field>
-        </block>
+        <block type="string"></block>
       </value>
       <value name="search-index">
         <block type="math_number">
@@ -145,16 +162,12 @@
     </block>
     <block type="string_random_char">
       <value name="text">
-        <block type="string">
-          <field name="NAME">input</field>
-        </block>
+        <block type="string"></block>
       </value>
     </block>
     <block type="string_input_string">
       <value name="text">
-        <block type="string">
-          <field name="NAME">input</field>
-        </block>
+        <block type="string"></block>
       </value>
       <value name="startIndex">
         <block type="math_number">
@@ -179,18 +192,10 @@
     <block type="list_create"></block>
     <block type="list_push">
       <value name="value">
-        <block type="string">
-          <field name="NAME">input</field>
-        </block>
+        <block type="string"></block>
       </value>
     </block>
-    <block type="list_delete">
-      <value name="NAME">
-        <block type="math_number">
-          <field name="NUM">0</field>
-        </block>
-      </value>
-    </block>
+    <block type="list_delete"></block>
     <block type="list_all_delete"></block>
     <block type="list_insert">
       <value name="index">
@@ -199,9 +204,7 @@
         </block>
       </value>
       <value name="data">
-        <block type="string">
-          <field name="NAME">input</field>
-        </block>
+        <block type="string"></block>
       </value>
     </block>
     <block type="list_replace">
@@ -211,9 +214,7 @@
         </block>
       </value>
       <value name="value">
-        <block type="string">
-          <field name="NAME">input</field>
-        </block>
+        <block type="string"></block>
       </value>
     </block>
     <block type="list_index">
@@ -224,18 +225,12 @@
       </value>
     </block>
     <block type="list_str_index">
-      <value name="valuie">
-        <block type="string">
-          <field name="NAME">input</field>
-        </block>
-      </value>
+      <field name="select">first</field>
     </block>
     <block type="list_length"></block>
     <block type="list_boolean_insert">
       <value name="value">
-        <block type="string">
-          <field name="NAME">input</field>
-        </block>
+        <block type="string"></block>
       </value>
     </block>
   </category>
