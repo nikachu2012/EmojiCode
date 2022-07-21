@@ -42,3 +42,11 @@ Blockly.JavaScript['sound_volume_dutu'] = function(block) {
   var code = '...;\n';
   return code;
 };
+
+Blockly.JavaScript['sound_tone'] = function(block) {
+  var value_onkai = Blockly.JavaScript.valueToCode(block, 'onkai', Blockly.JavaScript.ORDER_ATOMIC);
+  var dropdown_select = block.getFieldValue('select');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '...;\n';
+  return code;
+};

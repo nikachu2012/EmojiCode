@@ -192,4 +192,57 @@
   "colour": 290,
   "tooltip": "音量を変更します。",
   "helpUrl": "https://example.com"
+},
+{
+  "type": "sound_tone",
+  "message0": "%1 %2 %3 の音を %4 分音符鳴らす",
+  "args0": [
+    {
+      "type": "field_image",
+      "src": "https://img.icons8.com/ios-filled/50/000000/piano.png",
+      "width": 16,
+      "height": 16,
+      "alt": "*",
+      "flipRtl": false
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "onkai"
+    },
+    {
+      "type": "field_dropdown",
+      "name": "select",
+      "options": [
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ],
+        [
+          "4",
+          "4"
+        ],
+        [
+          "8",
+          "8"
+        ],
+        [
+          "16",
+          "16"
+        ]
+      ]
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 290,
+  "tooltip": "指定トーンの音を入れます",
+  "helpUrl": "https://example.com"
 }]
