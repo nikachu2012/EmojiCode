@@ -110,7 +110,7 @@ emoji.randomList = arr => {
  * @returns {number} 乱数
  */
 emoji.getRandom = (min, max) => {
-    return Math.floor( Math.random() * (max + 1 - min) ) + min;
+    return Math.floor(Math.random() * (max + 1 - min)) + min;
 }
 
 /**
