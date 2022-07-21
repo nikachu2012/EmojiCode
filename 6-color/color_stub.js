@@ -1,7 +1,7 @@
-Blockly.JavaScript['color_selector'] = function(block) {
-  var colour_select = block.getFieldValue('select');
+Blockly.JavaScript[`color_selector`] = function(block) {
+  var colour_select = block.getFieldValue(`select`);
   // TODO: Assemble JavaScript into code variable.
-  var code = '...';
+  var code = `${colour_select}`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
