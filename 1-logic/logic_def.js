@@ -260,51 +260,19 @@
   "helpUrl": "https://example.com"
 },
 {
-  "type": "test",
-  "message0": "%1 %2 %3 %4 %5 %6",
+  "type": "delay",
+  "message0": "%1 秒待つ",
   "args0": [
     {
-      "type": "field_image",
-      "src": "https://img.icons8.com/fluency/48/000000/test.png",
-      "width": 16,
-      "height": 16,
-      "alt": "*",
-      "flipRtl": false
-    },
-    {
       "type": "input_value",
-      "name": "test",
-      "check": "Boolean"
-    },
-    {
-      "type": "field_image",
-      "src": "https://img.icons8.com/material-outlined/48/000000/filled-circle--v2.png",
-      "width": 16,
-      "height": 16,
-      "alt": "*",
-      "flipRtl": false
-    },
-    {
-      "type": "input_value",
-      "name": "if true",
-      "check": "Boolean"
-    },
-    {
-      "type": "field_image",
-      "src": "https://img.icons8.com/material-outlined/48/000000/delete-sign.png",
-      "width": 16,
-      "height": 16,
-      "alt": "*",
-      "flipRtl": false
-    },
-    {
-      "type": "input_value",
-      "name": "if false",
-      "check": "Boolean"
+      "name": "wait",
+      "check": "Number"
     }
   ],
-  "output": "Boolean",
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
   "colour": 210,
-  "tooltip": "何もない(null)を返します。",
+  "tooltip": "指定秒待ちます。",
   "helpUrl": "https://example.com"
 }]

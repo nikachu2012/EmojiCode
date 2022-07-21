@@ -121,4 +121,14 @@ emoji.getRandom = (min, max) => {
 emoji.ask = (ask) => {
     // TODO: ユーザー入力の作成
     return answer;
+/**
+ * 秒数分待機します。
+ * @param {string} seconds 
+ */
+emoji.delay = (seconds) => {
+    var start = new Date().getTime();
+    var end = 0;
+    while ((end - start) < seconds * 1000) {
+        end = new Date().getTime();
+    }
 }
