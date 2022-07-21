@@ -13,12 +13,12 @@ Blockly.JavaScript[`color_random`] = function(block) {
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript['color_option'] = function(block) {
-  var value_red = Blockly.JavaScript.valueToCode(block, 'red', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_green = Blockly.JavaScript.valueToCode(block, 'green', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_blue = Blockly.JavaScript.valueToCode(block, 'blue', Blockly.JavaScript.ORDER_ATOMIC);
+Blockly.JavaScript[`color_option`] = function(block) {
+  var value_red = Blockly.JavaScript.valueToCode(block, `red`, Blockly.JavaScript.ORDER_ATOMIC);
+  var value_green = Blockly.JavaScript.valueToCode(block, `green`, Blockly.JavaScript.ORDER_ATOMIC);
+  var value_blue = Blockly.JavaScript.valueToCode(block, `blue`, Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
-  var code = '...';
+  var code = `#${emoji.dec_hex(parseInt(value_red))}${emoji.dec_hex(parseInt(value_green))}${emoji.dec_hex(parseInt(value_blue))}`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
