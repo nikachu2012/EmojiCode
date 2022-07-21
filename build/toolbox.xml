@@ -1,15 +1,90 @@
 <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
   <category name="動き" colour="#9fa55b">
-    <block type="sprite_sayuu"></block>
-    <block type="sprite_rotate_right"></block>
-    <block type="sprite_rotate_left"></block>
-    <block type="sprite_move"></block>
-    <block type="sprite_move_seconds"></block>
-    <block type="sprite_rotate"></block>
-    <block type="sprite_move_xdake"></block>
-    <block type="sprite_move_xdutu"></block>
-    <block type="sprite_move_ydake"></block>
-    <block type="sprite_move_ydutu"></block>
+    <block type="sprite_sayuu">
+      <value name="value">
+        <block type="math_number">
+          <field name="NUM">10</field>
+        </block>
+      </value>
+    </block>
+    <block type="sprite_rotate_right">
+      <value name="rotate">
+        <block type="math_number">
+          <field name="NUM">5</field>
+        </block>
+      </value>
+    </block>
+    <block type="sprite_rotate_left">
+      <value name="value">
+        <block type="math_number">
+          <field name="NUM">5</field>
+        </block>
+      </value>
+    </block>
+    <block type="sprite_move">
+      <value name="x">
+        <block type="math_number">
+          <field name="NUM">0</field>
+        </block>
+      </value>
+      <value name="y">
+        <block type="math_number">
+          <field name="NUM">0</field>
+        </block>
+      </value>
+    </block>
+    <block type="sprite_move_seconds">
+      <value name="x">
+        <block type="math_number">
+          <field name="NUM">0</field>
+        </block>
+      </value>
+      <value name="y">
+        <block type="math_number">
+          <field name="NUM">0</field>
+        </block>
+      </value>
+      <value name="seconds">
+        <block type="math_number">
+          <field name="NUM">1</field>
+        </block>
+      </value>
+    </block>
+    <block type="sprite_rotate">
+      <value name="value">
+        <block type="math_number">
+          <field name="NUM">5</field>
+        </block>
+      </value>
+    </block>
+    <block type="sprite_move_xdake">
+      <value name="x">
+        <block type="math_number">
+          <field name="NUM">0</field>
+        </block>
+      </value>
+    </block>
+    <block type="sprite_move_xdutu">
+      <value name="x">
+        <block type="math_number">
+          <field name="NUM">10</field>
+        </block>
+      </value>
+    </block>
+    <block type="sprite_move_ydake">
+      <value name="y">
+        <block type="math_number">
+          <field name="NUM">0</field>
+        </block>
+      </value>
+    </block>
+    <block type="sprite_move_ydutu">
+      <value name="y">
+        <block type="math_number">
+          <field name="NUM">10</field>
+        </block>
+      </value>
+    </block>
     <block type="sprite_end"></block>
     <block type="sprite_rotate_houhou">
       <field name="NAME">left-right</field>
@@ -23,14 +98,51 @@
     <block type="sound_pause"></block>
     <block type="sound_effect_select">
       <field name="select">pitch</field>
+      <value name="effect_level">
+        <block type="math_number">
+          <field name="NUM">10</field>
+        </block>
+      </value>
     </block>
     <block type="sound_effect_dutu">
       <field name="select">pitch</field>
+      <value name="effect_level">
+        <block type="math_number">
+          <field name="NUM">10</field>
+        </block>
+      </value>
     </block>
-    <block type="sound_volume_select"></block>
-    <block type="sound_volume_dutu"></block>
+    <block type="sound_volume_select">
+      <value name="volume">
+        <block type="math_number">
+          <field name="NUM">100</field>
+        </block>
+      </value>
+    </block>
+    <block type="sound_volume_dutu">
+      <value name="volume">
+        <block type="math_number">
+          <field name="NUM">10</field>
+        </block>
+      </value>
+    </block>
+    <block type="sound_tone">
+      <field name="select">2</field>
+      <value name="onkai">
+        <block type="string">
+          <field name="input">C4</field>
+        </block>
+      </value>
+    </block>
   </category>
   <category name="制御" colour="#5b80a5">
+    <block type="delay">
+      <value name="wait">
+        <block type="math_number">
+          <field name="NUM">1</field>
+        </block>
+      </value>
+    </block>
     <block type="if"></block>
     <block type="if_else"></block>
     <block type="equals_return_boolean">
@@ -125,34 +237,48 @@
     </block>
   </category>
   <category name="テキスト" colour="#5ba58c">
-    <block type="string"></block>
+    <block type="string">
+      <field name="input">input</field>
+    </block>
     <block type="print"></block>
     <block type="string_renketu">
       <value name="a">
-        <block type="string"></block>
+        <block type="string">
+          <field name="input">input</field>
+        </block>
       </value>
       <value name="b">
-        <block type="string"></block>
+        <block type="string">
+          <field name="input">input</field>
+        </block>
       </value>
     </block>
     <block type="string_length">
       <value name="text">
-        <block type="string"></block>
+        <block type="string">
+          <field name="input">input</field>
+        </block>
       </value>
     </block>
     <block type="string_first_index">
       <field name="option">first</field>
       <value name="a">
-        <block type="string"></block>
+        <block type="string">
+          <field name="input">input</field>
+        </block>
       </value>
       <value name="NAME">
-        <block type="string"></block>
+        <block type="string">
+          <field name="input">input</field>
+        </block>
       </value>
     </block>
     <block type="string_input_char">
       <field name="option">first</field>
       <value name="text">
-        <block type="string"></block>
+        <block type="string">
+          <field name="input">input</field>
+        </block>
       </value>
       <value name="search-index">
         <block type="math_number">
@@ -162,12 +288,16 @@
     </block>
     <block type="string_random_char">
       <value name="text">
-        <block type="string"></block>
+        <block type="string">
+          <field name="input">input</field>
+        </block>
       </value>
     </block>
     <block type="string_input_string">
       <value name="text">
-        <block type="string"></block>
+        <block type="string">
+          <field name="input">input</field>
+        </block>
       </value>
       <value name="startIndex">
         <block type="math_number">
@@ -182,9 +312,19 @@
     </block>
     <block type="string_convert">
       <field name="option">upper</field>
+      <value name="text">
+        <block type="string">
+          <field name="input">input</field>
+        </block>
+      </value>
     </block>
     <block type="string_delete_space">
       <field name="option">both</field>
+      <value name="text">
+        <block type="string">
+          <field name="input">input</field>
+        </block>
+      </value>
     </block>
     <block type="string_prompt"></block>
   </category>
@@ -192,7 +332,9 @@
     <block type="list_create"></block>
     <block type="list_push">
       <value name="value">
-        <block type="string"></block>
+        <block type="string">
+          <field name="input">input</field>
+        </block>
       </value>
     </block>
     <block type="list_delete"></block>
@@ -204,7 +346,9 @@
         </block>
       </value>
       <value name="data">
-        <block type="string"></block>
+        <block type="string">
+          <field name="input">input</field>
+        </block>
       </value>
     </block>
     <block type="list_replace">
@@ -214,7 +358,9 @@
         </block>
       </value>
       <value name="value">
-        <block type="string"></block>
+        <block type="string">
+          <field name="input">input</field>
+        </block>
       </value>
     </block>
     <block type="list_index">
@@ -226,11 +372,18 @@
     </block>
     <block type="list_str_index">
       <field name="select">first</field>
+      <value name="value">
+        <block type="string">
+          <field name="input">input</field>
+        </block>
+      </value>
     </block>
     <block type="list_length"></block>
     <block type="list_boolean_insert">
       <value name="value">
-        <block type="string"></block>
+        <block type="string">
+          <field name="input">input</field>
+        </block>
       </value>
     </block>
   </category>
