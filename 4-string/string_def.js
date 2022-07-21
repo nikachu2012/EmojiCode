@@ -12,7 +12,7 @@
     },
     {
       "type": "field_input",
-      "name": "NAME",
+      "name": "input",
       "text": "input"
     },
     {

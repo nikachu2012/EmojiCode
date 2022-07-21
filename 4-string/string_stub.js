@@ -1,7 +1,7 @@
 Blockly.JavaScript['string'] = function(block) {
-  var text_name = block.getFieldValue('NAME');
+  var text_input = block.getFieldValue('input');
 
-  var code = `\`${text_name}\``;
+  var code = `\`${text_input}\``;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
