@@ -121,6 +121,31 @@ emoji.getRandom = (min, max) => {
 emoji.ask = (ask) => {
     // TODO: ユーザー入力の作成
     return answer;
+}
+
+/**
+ * 10進数を16進数に変換します
+ * @param {number} dec
+ * @returns {string} hex
+ */
+emoji.dec_hex = (dec) => {
+    const a = dec.toString(16).toUpperCase();
+    if(a.length == 1){
+        return '0'+ a
+    }
+    else{
+        return a
+    }
+}
+
+/**
+ * 16進数を10進数に変換します
+ * @param {string} hex 
+ * @returns {string} dec
+ */
+emoji.hex_dec = (hex) => {
+    return parseInt(hex, 16)
+}
 /**
  * 秒数分待機します。
  * @param {string} seconds 
