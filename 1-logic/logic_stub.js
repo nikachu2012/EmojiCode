@@ -94,9 +94,8 @@ Blockly.JavaScript[`test`] = function(block) {
 };
 
 Blockly.JavaScript['delay'] = function(block) {
-  var value_wait = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_wait = Blockly.JavaScript.valueToCode(block, 'wait', Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
   var code = `emoji.delay(${value_wait})`;
-  // TODO: Change ORDER_NONE to the correct strength.
-  return [code, Blockly.JavaScript.ORDER_NONE];
+  return code;
 };
