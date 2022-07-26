@@ -99,3 +99,10 @@ Blockly.JavaScript['delay'] = function(block) {
   var code = `emoji.delay(${value_wait})`;
   return code;
 };
+
+Blockly.JavaScript['start'] = function(block) {
+  var statements_runcode = Blockly.JavaScript.statementToCode(block, 'runcode');
+  // TODO: Assemble JavaScript into code variable.
+  var code = `${statements_runcode}`;
+  return code;
+};

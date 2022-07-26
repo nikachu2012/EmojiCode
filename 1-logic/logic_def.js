@@ -275,4 +275,28 @@
   "colour": 210,
   "tooltip": "指定秒待ちます。",
   "helpUrl": "https://example.com"
+},
+{
+  "type": "start",
+  "message0": "%1 初めに実行 %2 %3",
+  "args0": [
+    {
+      "type": "field_image",
+      "src": "https://img.icons8.com/fluency/48/FFFFFF/circled-right.png",
+      "width": 16,
+      "height": 16,
+      "alt": "*",
+      "flipRtl": false
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_statement",
+      "name": "runcode"
+    }
+  ],
+  "colour": 210,
+  "tooltip": "初めに実行するコードを入れます",
+  "helpUrl": "https://example.com"
 }]
