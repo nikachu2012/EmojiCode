@@ -4496,4 +4496,53 @@
         <field name="HUE">290</field>
       </block>
     </value>
+  </block><block type="factory_base" id="mL|6:N9Jn#^z=]G[w1u," deletable="false" movable="false" x="10" y="10">
+    <mutation connections="NONE"></mutation>
+    <field name="NAME">start</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">NONE</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="?~dwpdSWPC6Ee^J]KfGG">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_image" id="sA1Hg]+{DN,/+t+vgHq]">
+            <field name="SRC">https://img.icons8.com/fluency/48/FFFFFF/circled-right.png</field>
+            <field name="WIDTH">16</field>
+            <field name="HEIGHT">16</field>
+            <field name="ALT">*</field>
+            <field name="FLIP_RTL">FALSE</field>
+            <next>
+              <block type="field_static" id="rO8ek5lyXx37]yOt.:W1">
+                <field name="TEXT">初めに実行</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="input_statement" id=".A9=ragi(:eUF7zYv)Od">
+            <field name="INPUTNAME">runcode</field>
+            <field name="ALIGN">LEFT</field>
+            <value name="TYPE">
+              <shadow type="type_null" id="XoBaH#!0JF.l%bAjM4Dd"></shadow>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="J1q$YqI_Yd5|iy4/LK3n" deletable="false" movable="false">
+        <field name="TEXT">初めに実行するコードを入れます</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="T20AKR#AtsyuthE@RNM/" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="hkos(H0{up??vTg#MeHm">
+        <mutation colour="#5b80a5"></mutation>
+        <field name="HUE">210</field>
+      </block>
+    </value>
   </block></xml>
