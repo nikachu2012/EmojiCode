@@ -138,7 +138,7 @@
     {
       "type": "input_value",
       "name": "start",
-      "check": "String"
+      "check": "Number"
     },
     {
       "type": "input_dummy"
@@ -146,7 +146,7 @@
     {
       "type": "input_value",
       "name": "end",
-      "check": "String"
+      "check": "Number"
     },
     {
       "type": "input_dummy"
@@ -154,7 +154,7 @@
     {
       "type": "input_value",
       "name": "dutu",
-      "check": "String"
+      "check": "Number"
     },
     {
       "type": "input_dummy"
