@@ -12,109 +12,147 @@ Blockly.Blocks['string'] = {
   }
 };
 
-Blockly.Blocks['formula'] = {
+Blockly.Blocks['string_renketu'] = {
   init: function() {
     this.appendValueInput("a")
-        .setCheck("Number");
+        .setCheck("String");
     this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([[{"src":"https://img.icons8.com/color/48/000000/plus-math.png","width":16,"height":16,"alt":"+"},"plus"], [{"src":"https://img.icons8.com/color/48/000000/minus-math.png","width":16,"height":16,"alt":"-"},"minus"], [{"src":"https://img.icons8.com/color/48/000000/multiply.png","width":16,"height":16,"alt":"*"},"times"], [{"src":"https://img.icons8.com/color/48/000000/divide.png","width":16,"height":16,"alt":"/"},"divided"], [{"src":"https://img.icons8.com/color/48/000000/superscript.png","width":16,"height":16,"alt":"^"},"super"], ["あまり","remainder"]]), "calc-type");
+        .appendField(new Blockly.FieldImage("https://img.icons8.com/color/48/228BE6/plus-math.png", 16, 16, { alt: "+", flipRtl: "FALSE" }));
     this.appendValueInput("b")
-        .setCheck("Number");
-    this.setInputsInline(true);
-    this.setOutput(true, "Number");
-    this.setColour(230);
- this.setTooltip("計算処理をします。四則演算及び乗法に対応しています。");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['math_etc1'] = {
-  init: function() {
-    this.appendValueInput("input")
-        .setCheck("Number")
-        .appendField(new Blockly.FieldDropdown([[{"src":"https://img.icons8.com/color/48/000000/square-root.png","width":16,"height":16,"alt":"ルート"},"root"], ["絶対値","absolute"], [{"src":"https://img.icons8.com/color/48/000000/minus-math.png","width":16,"height":16,"alt":"*"},"minus"], ["ln","log"], ["log10","log10"], ["e^","exp"], ["10^","OPTIONNAME"]]), "select");
-    this.setOutput(true, "Number");
-    this.setColour(230);
- this.setTooltip("数学のいろいろな計算が簡単にできます。");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['math_etc2'] = {
-  init: function() {
-    this.appendValueInput("input")
-        .setCheck("String")
-        .appendField(new Blockly.FieldDropdown([["sin","sin"], ["cos","cos"], ["tan","tan"], ["asin","asin"], ["acos","acos"], ["atan","atan"]]), "select");
-    this.setOutput(true, "Number");
-    this.setColour(230);
- this.setTooltip("数学のいろいろな計算が簡単にできます。");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['const_return'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([["π","pi"], ["e","e"], ["φ","phi"], ["∞","infinity"]]), "NAME");
+        .setCheck("String");
     this.setOutput(true, "String");
-    this.setColour(230);
- this.setTooltip("いろいろな定数を返します");
+    this.setColour(160);
+ this.setTooltip("文字列を連結します");
  this.setHelpUrl("https://example.com");
   }
 };
 
-Blockly.Blocks['hantei_boolean'] = {
+Blockly.Blocks['string_length'] = {
   init: function() {
+    this.appendValueInput("text")
+        .setCheck("String");
+    this.appendDummyInput()
+        .appendField("の長さ");
+    this.setOutput(true, "Number");
+    this.setColour(160);
+ this.setTooltip("文字列の長さを返します");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['string_first_index'] = {
+  init: function() {
+    this.appendValueInput("a")
+        .setCheck("String");
+    this.appendDummyInput()
+        .appendField("が");
     this.appendValueInput("NAME")
+        .setCheck(null);
+    this.appendDummyInput()
+        .appendField("で")
+        .appendField(new Blockly.FieldDropdown([["最初","first"], ["最後","last"]]), "option")
+        .appendField("に出現する位置");
+    this.setInputsInline(true);
+    this.setOutput(true, "Number");
+    this.setColour(160);
+ this.setTooltip("指定のテキストがどこで出現するか調べます／ない場合は0");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['string_input_char'] = {
+  init: function() {
+    this.appendValueInput("text")
+        .setCheck("String");
+    this.appendDummyInput()
+        .appendField("の")
+        .appendField(new Blockly.FieldDropdown([["最初","first"], ["最後","last"]]), "option")
+        .appendField("から");
+    this.appendValueInput("search-index")
         .setCheck("Number");
     this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([["は偶数","even"], ["は奇数","odd"], ["は素数","prime"], ["は整数","integer"], ["は正","true"], ["は負","false"]]), "select");
+        .appendField("文字目");
     this.setInputsInline(true);
-    this.setOutput(true, "Boolean");
-    this.setColour(230);
- this.setTooltip("入力に対する判定を変える");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['rewrite_input'] = {
-  init: function() {
-    this.appendValueInput("input")
-        .setCheck("Number")
-        .appendField(new Blockly.FieldDropdown([["四捨五入","round"], ["切り上げ","roundup"], ["切り下げ","rounddown"]]), "select");
-    this.setOutput(true, "Boolean");
-    this.setColour(230);
- this.setTooltip("入力を変換します。");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['list_search'] = {
-  init: function() {
-    this.appendValueInput("NAME")
-        .setCheck("Array")
-        .appendField("リストの")
-        .appendField(new Blockly.FieldDropdown([["合計","sum"], ["最小値","min"], ["最大値","max"], ["平均","avg"], ["中央値","median"], ["最頻値","mode"], ["標準偏差","deviasion"], ["ランダムの項目","random"]]), "select");
     this.setOutput(true, "Number");
-    this.setColour(230);
- this.setTooltip("リストの中で指定された条件を返します。");
+    this.setColour(160);
+ this.setTooltip("テキストの指定文字目を取得します");
  this.setHelpUrl("https://example.com");
   }
 };
 
-Blockly.Blocks['random'] = {
+Blockly.Blocks['string_random_char'] = {
   init: function() {
-    this.appendValueInput("start")
+    this.appendValueInput("text")
+        .setCheck("String");
+    this.appendDummyInput()
+        .appendField("のどれかの文字");
+    this.setInputsInline(true);
+    this.setOutput(true, "Number");
+    this.setColour(160);
+ this.setTooltip("テキストのどれかの文字を取得します");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['string_input_string'] = {
+  init: function() {
+    this.appendValueInput("text")
+        .setCheck("String");
+    this.appendDummyInput()
+        .appendField("の");
+    this.appendValueInput("startIndex")
         .setCheck("Number");
     this.appendDummyInput()
         .appendField("から");
-    this.appendValueInput("end")
+    this.appendValueInput("endIndex")
         .setCheck("Number");
     this.appendDummyInput()
-        .appendField("までの乱数");
-    this.setOutput(true, "Number");
-    this.setColour(230);
- this.setTooltip("指定範囲の乱数");
+        .appendField("までを取得");
+    this.setInputsInline(true);
+    this.setOutput(true, "String");
+    this.setColour(160);
+ this.setTooltip("テキストの指定範囲のテキストを取得します。");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['string_convert'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldDropdown([["小文字に","upper"], ["大文字に","lower"]]), "option");
+    this.appendValueInput("text")
+        .setCheck("String");
+    this.setInputsInline(true);
+    this.setOutput(true, "String");
+    this.setColour(160);
+ this.setTooltip("テキストの指定範囲のテキストを取得します。");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['string_delete_space'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldDropdown([[{"src":"https://img.icons8.com/fluency/48/000000/data-in-both-directions.png","width":16,"height":16,"alt":"両方"},"both"], [{"src":"https://img.icons8.com/fluency/48/000000/left.png","width":16,"height":16,"alt":"左"},"left"], [{"src":"https://img.icons8.com/fluency/48/000000/right.png","width":16,"height":16,"alt":"右"},"right"]]), "option")
+        .appendField("の空白を削除");
+    this.appendValueInput("text")
+        .setCheck("String");
+    this.setInputsInline(true);
+    this.setOutput(true, "String");
+    this.setColour(160);
+ this.setTooltip("指定方向の空白を削除");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['string_prompt'] = {
+  init: function() {
+    this.appendValueInput("because")
+        .setCheck("String")
+        .appendField("尋ねる");
+    this.setOutput(true, "String");
+    this.setColour(160);
+ this.setTooltip("入力を要求できます／質問文の入力可");
  this.setHelpUrl("https://example.com");
   }
 };
