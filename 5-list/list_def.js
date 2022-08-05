@@ -1,106 +1,185 @@
-Blockly.Blocks['formula'] = {
+Blockly.Blocks['list_create'] = {
   init: function() {
-    this.appendValueInput("a")
-        .setCheck("Number");
     this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([[{"src":"https://img.icons8.com/color/48/000000/plus-math.png","width":16,"height":16,"alt":"+"},"plus"], [{"src":"https://img.icons8.com/color/48/000000/minus-math.png","width":16,"height":16,"alt":"-"},"minus"], [{"src":"https://img.icons8.com/color/48/000000/multiply.png","width":16,"height":16,"alt":"*"},"times"], [{"src":"https://img.icons8.com/color/48/000000/divide.png","width":16,"height":16,"alt":"/"},"divided"], [{"src":"https://img.icons8.com/color/48/000000/superscript.png","width":16,"height":16,"alt":"^"},"super"], ["あまり","remainder"]]), "calc-type");
-    this.appendValueInput("b")
-        .setCheck("Number");
+        .appendField("リストの作成");
     this.setInputsInline(true);
-    this.setOutput(true, "Number");
-    this.setColour(230);
- this.setTooltip("計算処理をします。四則演算及び乗法に対応しています。");
+    this.setOutput(true, "Array");
+    this.setColour(260);
+ this.setTooltip("リストを作成します");
  this.setHelpUrl("https://example.com");
   }
 };
 
-Blockly.Blocks['math_etc1'] = {
+Blockly.Blocks['list_push'] = {
   init: function() {
-    this.appendValueInput("input")
-        .setCheck("Number")
-        .appendField(new Blockly.FieldDropdown([[{"src":"https://img.icons8.com/color/48/000000/square-root.png","width":16,"height":16,"alt":"ルート"},"root"], ["絶対値","absolute"], [{"src":"https://img.icons8.com/color/48/000000/minus-math.png","width":16,"height":16,"alt":"*"},"minus"], ["ln","log"], ["log10","log10"], ["e^","exp"], ["10^","OPTIONNAME"]]), "select");
-    this.setOutput(true, "Number");
-    this.setColour(230);
- this.setTooltip("数学のいろいろな計算が簡単にできます。");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['math_etc2'] = {
-  init: function() {
-    this.appendValueInput("input")
-        .setCheck("String")
-        .appendField(new Blockly.FieldDropdown([["sin","sin"], ["cos","cos"], ["tan","tan"], ["asin","asin"], ["acos","acos"], ["atan","atan"]]), "select");
-    this.setOutput(true, "Number");
-    this.setColour(230);
- this.setTooltip("数学のいろいろな計算が簡単にできます。");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['const_return'] = {
-  init: function() {
+    this.appendValueInput("value")
+        .setCheck(["String", "Number"]);
     this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([["π","pi"], ["e","e"], ["φ","phi"], ["∞","infinity"]]), "NAME");
-    this.setOutput(true, "String");
-    this.setColour(230);
- this.setTooltip("いろいろな定数を返します");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['hantei_boolean'] = {
-  init: function() {
-    this.appendValueInput("NAME")
-        .setCheck("Number");
+        .appendField("を");
+    this.appendValueInput("array")
+        .setCheck("Array");
     this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([["は偶数","even"], ["は奇数","odd"], ["は素数","prime"], ["は整数","integer"], ["は正","true"], ["は負","false"]]), "select");
+        .appendField("に追加する");
     this.setInputsInline(true);
-    this.setOutput(true, "Boolean");
-    this.setColour(230);
- this.setTooltip("入力に対する判定を変える");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(260);
+ this.setTooltip("リストの末尾に追加します。");
  this.setHelpUrl("https://example.com");
   }
 };
 
-Blockly.Blocks['rewrite_input'] = {
+Blockly.Blocks['list_delete'] = {
   init: function() {
-    this.appendValueInput("input")
-        .setCheck("Number")
-        .appendField(new Blockly.FieldDropdown([["四捨五入","round"], ["切り上げ","roundup"], ["切り下げ","rounddown"]]), "select");
-    this.setOutput(true, "Boolean");
-    this.setColour(230);
- this.setTooltip("入力を変換します。");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['list_search'] = {
-  init: function() {
-    this.appendValueInput("NAME")
-        .setCheck("Array")
-        .appendField("リストの")
-        .appendField(new Blockly.FieldDropdown([["合計","sum"], ["最小値","min"], ["最大値","max"], ["平均","avg"], ["中央値","median"], ["最頻値","mode"], ["標準偏差","deviasion"], ["ランダムの項目","random"]]), "select");
-    this.setOutput(true, "Number");
-    this.setColour(230);
- this.setTooltip("リストの中で指定された条件を返します。");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['random'] = {
-  init: function() {
+    this.appendValueInput("array")
+        .setCheck("Array");
+    this.appendDummyInput()
+        .appendField("の");
     this.appendValueInput("start")
         .setCheck("Number");
     this.appendDummyInput()
         .appendField("から");
-    this.appendValueInput("end")
+    this.appendValueInput("kosuu")
         .setCheck("Number");
     this.appendDummyInput()
-        .appendField("までの乱数");
+        .appendField("個を削除する");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(260);
+ this.setTooltip("リストの指定場所を削除します");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['list_all_delete'] = {
+  init: function() {
+    this.appendValueInput("array")
+        .setCheck("Array");
+    this.appendDummyInput()
+        .appendField("のすべてを削除");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(260);
+ this.setTooltip("リストの全てを削除します");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['list_insert'] = {
+  init: function() {
+    this.appendValueInput("array")
+        .setCheck("Array");
+    this.appendDummyInput()
+        .appendField("の");
+    this.appendValueInput("index")
+        .setCheck("Number");
+    this.appendDummyInput()
+        .appendField("番目に");
+    this.appendValueInput("data")
+        .setCheck("String");
+    this.appendDummyInput()
+        .appendField("を挿入する");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(260);
+ this.setTooltip("リストの指定番目に挿入します");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['list_replace'] = {
+  init: function() {
+    this.appendValueInput("array")
+        .setCheck("Array");
+    this.appendDummyInput()
+        .appendField("の");
+    this.appendValueInput("index")
+        .setCheck("Number");
+    this.appendDummyInput()
+        .appendField("番目を");
+    this.appendValueInput("value")
+        .setCheck("String");
+    this.appendDummyInput()
+        .appendField("で置き換えする");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(260);
+ this.setTooltip("リストの指定番目を置き換えします。");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['list_index'] = {
+  init: function() {
+    this.appendValueInput("array")
+        .setCheck("Array");
+    this.appendDummyInput()
+        .appendField("の");
+    this.appendValueInput("index")
+        .setCheck("Number");
+    this.appendDummyInput()
+        .appendField("番目");
+    this.setInputsInline(true);
+    this.setOutput(true, ["Number", "String"]);
+    this.setColour(260);
+ this.setTooltip("リストの指定番目を取得します");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['list_str_index'] = {
+  init: function() {
+    this.appendValueInput("array")
+        .setCheck("Array");
+    this.appendDummyInput()
+        .appendField("の中に");
+    this.appendValueInput("value")
+        .setCheck("String");
+    this.appendDummyInput()
+        .appendField("が入る");
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldDropdown([["最初","first"], ["最後","last"]]), "select")
+        .appendField("の場所");
+    this.setInputsInline(true);
     this.setOutput(true, "Number");
-    this.setColour(230);
- this.setTooltip("指定範囲の乱数");
+    this.setColour(260);
+ this.setTooltip("リストに指定文字が入っている場所を取得します");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['list_length'] = {
+  init: function() {
+    this.appendValueInput("array")
+        .setCheck("Array");
+    this.appendDummyInput()
+        .appendField("の長さ");
+    this.setInputsInline(true);
+    this.setOutput(true, "Number");
+    this.setColour(260);
+ this.setTooltip("リストの長さを取得します");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['list_boolean_insert'] = {
+  init: function() {
+    this.appendValueInput("array")
+        .setCheck("Array");
+    this.appendDummyInput()
+        .appendField("の中に");
+    this.appendValueInput("value")
+        .setCheck("String");
+    this.appendDummyInput()
+        .appendField("が入っているか");
+    this.setInputsInline(true);
+    this.setOutput(true, "Boolean");
+    this.setColour(260);
+ this.setTooltip("リストに指定文字が入っている場所を取得します");
  this.setHelpUrl("https://example.com");
   }
 };
