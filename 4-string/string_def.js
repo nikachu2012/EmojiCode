@@ -1,3 +1,17 @@
+Blockly.Blocks['string'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldImage("https://img.icons8.com/color/48/000000/quote-left.png", 16, 16, { alt: "*", flipRtl: "FALSE" }))
+        .appendField(new Blockly.FieldTextInput("input"), "input")
+        .appendField(new Blockly.FieldImage("https://img.icons8.com/color/48/000000/quote-left.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
+    this.setInputsInline(true);
+    this.setOutput(true, "String");
+    this.setColour(160);
+ this.setTooltip("文字列を入力できます");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
 Blockly.Blocks['formula'] = {
   init: function() {
     this.appendValueInput("a")
