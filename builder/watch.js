@@ -44,7 +44,7 @@ build = () => {
     Create time: ${new Date()}
 */\n
 
-import Blockly from 'Blockly'\n`;
+import Blockly from 'blockly'\n`;
         fileList.forEach(element => {
             try {
                 alldata += `${fs.readFileSync(element)} \n`;
@@ -75,7 +75,7 @@ import Blockly from 'Blockly'\n`;
     Create time: ${new Date()}
 */\n
 
-import Blockly from 'Blockly'\n`;
+import Blockly from 'blockly'\n`;
         fileList.forEach(element => {
             try {
                 alldata += `${fs.readFileSync(element)} \n`;
