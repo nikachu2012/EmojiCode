@@ -118,3 +118,16 @@ Blockly.Blocks['random'] = {
  this.setHelpUrl("https://example.com");
   }
 };
+
+Blockly.Blocks['print'] = {
+  init: function() {
+    this.appendValueInput("inputValue")
+        .setCheck("String")
+        .appendField(new Blockly.FieldImage("https://img.icons8.com/color/48/000000/print.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(160);
+ this.setTooltip("コンソール部分に文字を出力します。");
+ this.setHelpUrl("https://example.com");
+  }
+};
