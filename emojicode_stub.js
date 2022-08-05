@@ -1,11 +1,11 @@
 /* 
     EmojiCode Block Stub
     Created by nikachu2012(https://github.com/nikachu2012)
-    Create time: Fri Aug 05 2022 21:06:46 GMT+0900 (日本標準時)
+    Create time: Fri Aug 05 2022 21:09:03 GMT+0900 (日本標準時)
 */
 
 
-import Blockly from 'Blockly'
+import Blockly from 'blockly'
 Blockly.JavaScript[`if`] = function(block) {
   var value_formula = Blockly.JavaScript.valueToCode(block, `formula`, Blockly.JavaScript.ORDER_ATOMIC);
   var statements_true = Blockly.JavaScript.statementToCode(block, `true`);
