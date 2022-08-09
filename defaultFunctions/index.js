@@ -17,7 +17,7 @@ emoji.isPrime = (n) => {
 
 /**
  * リストの平均値を返します
- * @param {Array} l 
+ * @param {Array}
  * @returns {number}
  */
 emoji.listavg = (l) => {
