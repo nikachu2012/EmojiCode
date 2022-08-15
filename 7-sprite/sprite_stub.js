@@ -1,3 +1,11 @@
+Blockly.JavaScript['sprite_select'] = function(block) {
+  var dropdown_selector = block.getFieldValue('selector');
+  // TODO: Assemble JavaScript into code variable.
+  var code = dropdown_selector;
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
 Blockly.JavaScript['sprite_sayuu'] = function(block) {
   var value_spritename = Blockly.JavaScript.valueToCode(block, 'spriteName', Blockly.JavaScript.ORDER_ATOMIC);
   var value_value = Blockly.JavaScript.valueToCode(block, 'value', Blockly.JavaScript.ORDER_ATOMIC);
