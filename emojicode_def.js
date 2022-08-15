@@ -1,7 +1,7 @@
 /* 
     EmojiCode Block Define
     Created by nikachu2012(https://github.com/nikachu2012)
-    Create time: Sat Aug 06 2022 00:06:47 GMT+0900 (日本標準時)
+    Create time: Mon Aug 15 2022 10:57:05 GMT+0900 (日本標準時)
 */
 
 
@@ -9,7 +9,7 @@ import Blockly from 'blockly'
 Blockly.Blocks['if'] = {
   init: function() {
     this.appendValueInput("formula")
-        .setCheck(null)
+        .setCheck("Boolean")
         .appendField(new Blockly.FieldImage("https://img.icons8.com/fluency/48/000000/split.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
     this.appendStatementInput("true")
         .setCheck(null)
@@ -25,7 +25,7 @@ Blockly.Blocks['if'] = {
 Blockly.Blocks['if_else'] = {
   init: function() {
     this.appendValueInput("formula")
-        .setCheck(null)
+        .setCheck("Boolean")
         .appendField(new Blockly.FieldImage("https://img.icons8.com/fluency/48/000000/split.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
     this.appendStatementInput("true")
         .setCheck(null)
