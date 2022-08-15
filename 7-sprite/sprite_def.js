@@ -2,7 +2,7 @@ Blockly.Blocks['sprite_select'] = {
   init: function() {
     this.appendDummyInput()
         .appendField(new Blockly.FieldImage("https://img.icons8.com/stickers/100/000000/cat.png", 22, 22, { alt: "*", flipRtl: "FALSE" }))
-        .appendField(new Blockly.FieldDropdown([["sprite","sprite"]]), "selector");
+        .appendField(new Blockly.FieldDropdown([["sprite","sprite"]]), "sprite_selector");
     this.setInputsInline(true);
     this.setOutput(true, "sprite_ID");
     this.setColour(65);
