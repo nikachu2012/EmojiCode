@@ -1,7 +1,7 @@
 Blockly.Blocks['if'] = {
   init: function() {
     this.appendValueInput("formula")
-        .setCheck(null)
+        .setCheck("Boolean")
         .appendField(new Blockly.FieldImage("https://img.icons8.com/fluency/48/000000/split.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
     this.appendStatementInput("true")
         .setCheck(null)
@@ -17,7 +17,7 @@ Blockly.Blocks['if'] = {
 Blockly.Blocks['if_else'] = {
   init: function() {
     this.appendValueInput("formula")
-        .setCheck(null)
+        .setCheck("Boolean")
         .appendField(new Blockly.FieldImage("https://img.icons8.com/fluency/48/000000/split.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
     this.appendStatementInput("true")
         .setCheck(null)
