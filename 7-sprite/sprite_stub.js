@@ -1,7 +1,7 @@
 Blockly.JavaScript['sprite_select'] = function(block) {
-  var dropdown_selector = block.getFieldValue('selector');
+  var text_spritename = block.getFieldValue('spriteName');
   // TODO: Assemble JavaScript into code variable.
-  var code = dropdown_selector;
+  var code = text_spritename;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
