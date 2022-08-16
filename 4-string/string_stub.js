@@ -1,7 +1,7 @@
 Blockly.JavaScript['string'] = function(block) {
   var text_input = block.getFieldValue('input');
 
-  var code = `\`${text_input}\``;
+  var code = `\`${text_input}\`\n`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
@@ -9,7 +9,7 @@ Blockly.JavaScript['string'] = function(block) {
 Blockly.JavaScript[`print`] = function(block) {
   var value_inputvalue = Blockly.JavaScript.valueToCode(block, `inputValue`, Blockly.JavaScript.ORDER_ATOMIC);
 
-  var code = `console.log(${value_inputvalue})`;
+  var code = `console.log(${value_inputvalue})\n`;
   return code;
 };
 
@@ -17,7 +17,7 @@ Blockly.JavaScript[`string_renketu`] = function(block) {
   var value_a = Blockly.JavaScript.valueToCode(block, `a`, Blockly.JavaScript.ORDER_ATOMIC);
   var value_b = Blockly.JavaScript.valueToCode(block, `b`, Blockly.JavaScript.ORDER_ATOMIC);
   
-  var code = `${value_a} + ${value_b}`;
+  var code = `${value_a} + ${value_b}\n`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
@@ -25,7 +25,7 @@ Blockly.JavaScript[`string_renketu`] = function(block) {
 Blockly.JavaScript[`string_length`] = function(block) {
   var value_text = Blockly.JavaScript.valueToCode(block, `text`, Blockly.JavaScript.ORDER_ATOMIC);
 
-  var code = `${value_text}.length`;
+  var code = `${value_text}.length\n`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
@@ -36,10 +36,10 @@ Blockly.JavaScript[`string_first_index`] = function(block) {
   var dropdown_option = block.getFieldValue(`option`);
 
   if(dropdown_option == "first"){
-    var code = `${value_name}.indexOf(${value_a}) + 1`;
+    var code = `${value_name}.indexOf(${value_a}) + 1\n`;
   }
   else if(dropdown_option == "last"){
-    var code = `${value_name}.lastIndexOf(${value_a}) + 1`;
+    var code = `${value_name}.lastIndexOf(${value_a}) + 1\n`;
   }
   
   // TODO: Change ORDER_NONE to the correct strength.
@@ -64,7 +64,7 @@ Blockly.JavaScript[`string_input_char`] = function(block) {
 Blockly.JavaScript[`string_random_char`] = function(block) {
   var value_text = Blockly.JavaScript.valueToCode(block, `text`, Blockly.JavaScript.ORDER_ATOMIC);
 
-  var code = `${value_text}.charAt(emoji.getRandom(1,${value_text}.length) - 1)`;
+  var code = `${value_text}.charAt(emoji.getRandom(1,${value_text}.length) - 1)\n`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
@@ -74,7 +74,7 @@ Blockly.JavaScript[`string_input_string`] = function(block) {
   var value_startindex = Blockly.JavaScript.valueToCode(block, `startIndex`, Blockly.JavaScript.ORDER_ATOMIC);
   var value_endindex = Blockly.JavaScript.valueToCode(block, `endIndex`, Blockly.JavaScript.ORDER_ATOMIC);
   
-  var code = `${value_text}.slice(${value_startindex}, ${value_endindex})`;
+  var code = `${value_text}.slice(${value_startindex}, ${value_endindex})\n`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
@@ -111,7 +111,7 @@ Blockly.JavaScript[`string_delete_space`] = function(block) {
 
 Blockly.JavaScript[`string_prompt`] = function(block) {
   var value_because = Blockly.JavaScript.valueToCode(block, `because`, Blockly.JavaScript.ORDER_ATOMIC);
-  var code = `emoji.ask(${value_because})`;
+  var code = `emoji.ask(${value_because})\n`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };

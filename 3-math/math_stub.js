@@ -178,7 +178,7 @@ Blockly.JavaScript[`random`] = function(block) {
   var value_start = Blockly.JavaScript.valueToCode(block, `start`, Blockly.JavaScript.ORDER_ATOMIC);
   var value_end = Blockly.JavaScript.valueToCode(block, `end`, Blockly.JavaScript.ORDER_ATOMIC);
   
-  var code = `emoji.getRandom(${value_start}, ${value_end})`;
+  var code = `emoji.getRandom(${value_start}, ${value_end})\n`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };

@@ -2,7 +2,7 @@ Blockly.JavaScript[`if`] = function(block) {
   var value_formula = Blockly.JavaScript.valueToCode(block, `formula`, Blockly.JavaScript.ORDER_ATOMIC);
   var statements_true = Blockly.JavaScript.statementToCode(block, `true`);
 
-  var code = `if(${value_formula}){${statements_true}}`;
+  var code = `if(${value_formula}){${statements_true}}\n`;
   return code;
 };
 
@@ -11,7 +11,7 @@ Blockly.JavaScript[`if_else`] = function(block) {
   var statements_true = Blockly.JavaScript.statementToCode(block, `true`);
   var statements_false = Blockly.JavaScript.statementToCode(block, `false`);
   
-  var code = `if(${value_formula}){${statements_true}}else{${statements_false}}`;
+  var code = `if(${value_formula}){${statements_true}}else{${statements_false}}\n`;
   return code;
 };
 
@@ -21,22 +21,22 @@ Blockly.JavaScript[`equals_return_boolean`] = function(block) {
   var value_b = Blockly.JavaScript.valueToCode(block, `b`, Blockly.JavaScript.ORDER_ATOMIC);
 
   if (dropdown_select_equal == "equals") {
-    var code = `${value_a} == ${value_b}`;
+    var code = `${value_a} == ${value_b}\n`;
   }
   else if (dropdown_select_equal == "not-equal") {
-    var code = `${value_a} !== ${value_b}`;
+    var code = `${value_a} !== ${value_b}\n`;
   }
   else if (dropdown_select_equal == "less-than") {
-    var code = `${value_a} < ${value_b}`;
+    var code = `${value_a} < ${value_b}\n`;
   }
   else if (dropdown_select_equal == "less-or-equal-than") {
-    var code = `${value_a} <= ${value_b}`;
+    var code = `${value_a} <= ${value_b}\n`;
   }
   else if (dropdown_select_equal == "more-than") {
-    var code = `${value_a} > ${value_b}`;
+    var code = `${value_a} > ${value_b}\n`;
   }
   else if (dropdown_select_equal == "more-or-equal-than") {
-    var code = `${value_a} >= ${value_b}`;
+    var code = `${value_a} >= ${value_b}\n`;
   }
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
@@ -45,7 +45,7 @@ Blockly.JavaScript[`equals_return_boolean`] = function(block) {
 Blockly.JavaScript[`not`] = function(block) {
   var value_name = Blockly.JavaScript.valueToCode(block, `NAME`, Blockly.JavaScript.ORDER_ATOMIC);
 
-  var code = `!(${value_name})`;
+  var code = `!(${value_name})\n`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
@@ -79,7 +79,7 @@ Blockly.JavaScript[`true_false_return`] = function(block) {
 };
 
 Blockly.JavaScript[`null`] = function(block) {
-  var code = `null`;
+  var code = `null\n`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
@@ -88,7 +88,7 @@ Blockly.JavaScript[`test`] = function(block) {
   var value_test = Blockly.JavaScript.valueToCode(block, `test`, Blockly.JavaScript.ORDER_ATOMIC);
   var value_if_true = Blockly.JavaScript.valueToCode(block, `if true`, Blockly.JavaScript.ORDER_ATOMIC);
   var value_if_false = Blockly.JavaScript.valueToCode(block, `if false`, Blockly.JavaScript.ORDER_ATOMIC);
-  var code = `${value_test} ? ${value_if_true} : ${value_if_false}`;
+  var code = `${value_test} ? ${value_if_true} : ${value_if_false}\n`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
@@ -96,13 +96,13 @@ Blockly.JavaScript[`test`] = function(block) {
 Blockly.JavaScript['delay'] = function(block) {
   var value_wait = Blockly.JavaScript.valueToCode(block, 'wait', Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
-  var code = `emoji.delay(${value_wait})`;
+  var code = `emoji.delay(${value_wait})\n`;
   return code;
 };
 
 Blockly.JavaScript['start'] = function(block) {
   var statements_runcode = Blockly.JavaScript.statementToCode(block, 'runcode');
   // TODO: Assemble JavaScript into code variable.
-  var code = `${statements_runcode}`;
+  var code = `${statements_runcode}\n`;
   return code;
 };

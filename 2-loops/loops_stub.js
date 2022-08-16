@@ -1,7 +1,7 @@
 Blockly.JavaScript[`repeat_infinity`] = function(block) {
   var statements_do = Blockly.JavaScript.statementToCode(block, `do`);
 
-  var code = `while(true){${statements_do}}`;
+  var code = `while(true){${statements_do}}\n`;
   return code;
 };
 
@@ -9,7 +9,7 @@ Blockly.JavaScript[`repeat`] = function(block) {
   var value_index = Blockly.JavaScript.valueToCode(block, `index`, Blockly.JavaScript.ORDER_ATOMIC);
   var statements_do = Blockly.JavaScript.statementToCode(block, `do`);
 
-  var code = `for (let index = 0; index < ${value_index}; index++) {${statements_do}}`;
+  var code = `for (let index = 0; index < ${value_index}; index++) {${statements_do}}\n`;
   
   return code;
 };
@@ -37,7 +37,7 @@ Blockly.JavaScript[`repeat_setting`] = function(block) {
   var value_dutu = Blockly.JavaScript.valueToCode(block, `dutu`, Blockly.JavaScript.ORDER_ATOMIC);
   var statements_do = Blockly.JavaScript.statementToCode(block, `do`);
   
-  var code = `for (let ${variable_various} = ${value_start}; ${variable_various} < ${value_end}; ${variable_various}+= ${value_dutu}) {${statements_do}}`;
+  var code = `for (let ${variable_various} = ${value_start}; ${variable_various} < ${value_end}; ${variable_various}+= ${value_dutu}) {${statements_do}}\n`;
   return code;
 };
 
@@ -46,19 +46,19 @@ Blockly.JavaScript[`repeat_list`] = function(block) {
   var variable_various = Blockly.JavaScript.nameDB_.getName(block.getFieldValue(`various`), Blockly.Variables.NAME_TYPE);
   var statements_do = Blockly.JavaScript.statementToCode(block, `do`);
   
-  var code = `${value_list}.forEach((${variable_various}) => {${statements_do}})`;
+  var code = `${value_list}.forEach((${variable_various}) => {${statements_do}})\n`;
 
   return code;
 };
 
 Blockly.JavaScript[`break`] = function(block) {
   // TODO: Assemble JavaScript into code variable.
-  var code = `break;`;
+  var code = `break;\n`;
   return code;
 };
 
 Blockly.JavaScript[`continue`] = function(block) {
   // TODO: Assemble JavaScript into code variable.
-  var code = `continue;`;
+  var code = `continue;\n`;
   return code;
 };
