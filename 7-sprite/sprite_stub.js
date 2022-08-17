@@ -45,7 +45,7 @@ Blockly.JavaScript[`sprite_move_seconds`] = function(block) {
   var value_y = Blockly.JavaScript.valueToCode(block, `y`, Blockly.JavaScript.ORDER_ATOMIC);
   var value_seconds = Blockly.JavaScript.valueToCode(block, `seconds`, Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.posxytime(${value_spritename}, ${value_x}, ${value_y});\n`;
+  var code = `emojisp.posxytime(${value_spritename}, ${value_x}, ${value_y}, ${value_seconds});\n`;
   return code;
 };
 
