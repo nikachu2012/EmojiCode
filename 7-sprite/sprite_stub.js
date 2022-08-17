@@ -26,7 +26,7 @@ Blockly.JavaScript[`sprite_rotate_left`] = function(block) {
   var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
   var value_value = Blockly.JavaScript.valueToCode(block, `value`, Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.rotateplus(${value_spritename}, ${-(value_rotate)});\n`;
+  var code = `emojisp.rotateplus(${value_spritename}, ${-(value_value)});\n`;
   return code;
 };
 
