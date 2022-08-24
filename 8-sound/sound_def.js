@@ -113,7 +113,7 @@ Blockly.Blocks['sound_tone'] = {
     this.appendDummyInput()
         .appendField(new Blockly.FieldImage("https://img.icons8.com/ios-filled/50/000000/piano.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
     this.appendValueInput("onkai")
-        .setCheck(null);
+        .setCheck("String");
     this.appendDummyInput()
         .appendField("の音を")
         .appendField(new Blockly.FieldDropdown([["1","1"], ["2","2"], ["4","4"], ["8","8"], ["16","16"]]), "select")
