@@ -50,3 +50,11 @@ Blockly.JavaScript['sound_tone'] = function(block) {
   var code = '...;\n';
   return code;
 };
+
+Blockly.JavaScript['sound_tone_second'] = function(block) {
+  var value_onkai = Blockly.JavaScript.valueToCode(block, 'onkai', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_second = Blockly.JavaScript.valueToCode(block, 'second', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = '...;\n';
+  return code;
+};

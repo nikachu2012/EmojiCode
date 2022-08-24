@@ -999,8 +999,7 @@
     <field name="INLINE">INT</field>
     <field name="CONNECTIONS">LEFT</field>
     <statement name="INPUTS">
-      <block type="input_value" id="L1TH/_5|Uy5mxBLi2/Q3">
-        <field name="INPUTNAME">input</field>
+      <block type="input_dummy" id="#IrQ%FUgHvw7m]tnqa?~">
         <field name="ALIGN">LEFT</field>
         <statement name="FIELDS">
           <block type="field_image" id="KsA^3(9U8O2bK={ViM#{">
@@ -1009,26 +1008,23 @@
             <field name="HEIGHT">16</field>
             <field name="ALT">*</field>
             <field name="FLIP_RTL">FALSE</field>
+            <next>
+              <block type="field_input" id="!hQ67LHNIHFZnrSB)5Xb">
+                <field name="TEXT">テキストを入力</field>
+                <field name="FIELDNAME">input</field>
+                <next>
+                  <block type="field_image" id="%}_=pY~$B%pS$PaV//BN">
+                    <field name="SRC">https://img.icons8.com/color/48/000000/quote-left.png</field>
+                    <field name="WIDTH">16</field>
+                    <field name="HEIGHT">16</field>
+                    <field name="ALT">*</field>
+                    <field name="FLIP_RTL">FALSE</field>
+                  </block>
+                </next>
+              </block>
+            </next>
           </block>
         </statement>
-        <value name="TYPE">
-          <shadow type="type_null" id="I@`D5ZG9E*`[yV`6(,iC"></shadow>
-          <block type="type_string" id="pqQe/xd1pH-R}8F#*!x3"></block>
-        </value>
-        <next>
-          <block type="input_dummy" id="#IrQ%FUgHvw7m]tnqa?~">
-            <field name="ALIGN">LEFT</field>
-            <statement name="FIELDS">
-              <block type="field_image" id="%}_=pY~$B%pS$PaV//BN">
-                <field name="SRC">https://img.icons8.com/color/48/000000/quote-left.png</field>
-                <field name="WIDTH">16</field>
-                <field name="HEIGHT">16</field>
-                <field name="ALT">*</field>
-                <field name="FLIP_RTL">FALSE</field>
-              </block>
-            </statement>
-          </block>
-        </next>
       </block>
     </statement>
     <value name="TOOLTIP">
@@ -4599,6 +4595,87 @@
       <block type="colour_hue" id="+P2:~4SaK+R@{!Mn}y^t">
         <mutation colour="#5b80a5"></mutation>
         <field name="HUE">210</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="W?w~jKnzM3r~9w(R[C3Q" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">sound_tone_second</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id=".y%0GUKpUTan8XyjZ*~[">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_image" id="5n}*PjJ=JM2]_V|1jSkb">
+            <field name="SRC">https://img.icons8.com/ios-filled/50/000000/piano.png</field>
+            <field name="WIDTH">16</field>
+            <field name="HEIGHT">16</field>
+            <field name="ALT">*</field>
+            <field name="FLIP_RTL">FALSE</field>
+          </block>
+        </statement>
+        <next>
+          <block type="input_value" id="JiWR9.:fq6o:*(#1LzSw">
+            <field name="INPUTNAME">onkai</field>
+            <field name="ALIGN">LEFT</field>
+            <value name="TYPE">
+              <shadow type="type_null" id="1vg%W{bT.=@vbcUdw%TT"></shadow>
+              <block type="type_string" id="IZ#2^{|vO7@0nY{d,-#+"></block>
+            </value>
+            <next>
+              <block type="input_dummy" id="*q/wSAL#i@]M=GMDi6.n">
+                <field name="ALIGN">LEFT</field>
+                <statement name="FIELDS">
+                  <block type="field_static" id=";F+t[v3HOhHlC}BjexnM">
+                    <field name="TEXT">の音を</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="input_value" id="~5op]=n=q6JupDXxO3Xs">
+                    <field name="INPUTNAME">second</field>
+                    <field name="ALIGN">LEFT</field>
+                    <value name="TYPE">
+                      <shadow type="type_null" id="Y(MNSdj^|O-hnJiusJ/+"></shadow>
+                      <block type="type_number" id="5n)14fEmQ2Ot9,H%Alez"></block>
+                    </value>
+                    <next>
+                      <block type="input_dummy" id="K(U}7dbCYyxXhZMY5r06">
+                        <field name="ALIGN">LEFT</field>
+                        <statement name="FIELDS">
+                          <block type="field_static" id="#9oD|[u;:0IW4i`scRgd">
+                            <field name="TEXT">秒間鳴らす</field>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="$;:(y4CM~V~~O]-Zy:OM" deletable="false" movable="false">
+        <field name="TEXT">指定トーンの音を出します</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="]W2P)S;YdJ+r2jHx;*w{" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="GMEiay?RhJOcJ{n@;aBt"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="n`zR#e-g/g2acF2iCDd;"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="%%msQmsJT*Xp|9OQ%bq`">
+        <mutation colour="#995ba5"></mutation>
+        <field name="HUE">290</field>
       </block>
     </value>
   </block></xml>

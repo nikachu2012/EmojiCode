@@ -98,9 +98,20 @@
   </category>
   <category name="音" colour="#995ba5">
     <block type="sound_play"></block>
-    <block type="sound_pause"></block>
+    <block type="sound_tone_second">
+      <value name="onkai">
+        <block type="string">
+          <field name="input">C4</field>
+        </block>
+      </value>
+      <value name="second">
+        <block type="math_number">
+          <field name="NUM">1</field>
+        </block>
+      </value>
+    </block>
     <block type="sound_tone">
-      <field name="select">2</field>
+      <field name="select">1</field>
       <value name="onkai">
         <block type="string">
           <field name="input">C4</field>
