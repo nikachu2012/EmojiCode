@@ -1,7 +1,7 @@
 /* 
     EmojiCode Block Define
     Created by nikachu2012(https://github.com/nikachu2012)
-    Create time: Wed Aug 17 2022 16:17:05 GMT+0900 (日本標準時)
+    Create time: Wed Aug 24 2022 18:48:38 GMT+0900 (日本標準時)
 */
 
 
@@ -1171,7 +1171,7 @@ Blockly.Blocks['sound_tone'] = {
     this.appendDummyInput()
         .appendField(new Blockly.FieldImage("https://img.icons8.com/ios-filled/50/000000/piano.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
     this.appendValueInput("onkai")
-        .setCheck(null);
+        .setCheck("String");
     this.appendDummyInput()
         .appendField("の音を")
         .appendField(new Blockly.FieldDropdown([["1","1"], ["2","2"], ["4","4"], ["8","8"], ["16","16"]]), "select")
@@ -1180,7 +1180,8 @@ Blockly.Blocks['sound_tone'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(290);
- this.setTooltip("指定トーンの音を入れます");
+ this.setTooltip("指定トーンの音を出します");
  this.setHelpUrl("https://example.com");
   }
-}; 
+};
+ 
