@@ -1,7 +1,7 @@
 /* 
     EmojiCode Block Define
     Created by nikachu2012(https://github.com/nikachu2012)
-    Create time: Wed Aug 24 2022 18:48:38 GMT+0900 (日本標準時)
+    Create time: Wed Aug 24 2022 19:02:42 GMT+0900 (日本標準時)
 */
 
 
@@ -373,7 +373,7 @@ Blockly.Blocks['string'] = {
   init: function() {
     this.appendDummyInput()
         .appendField(new Blockly.FieldImage("https://img.icons8.com/color/48/000000/quote-left.png", 16, 16, { alt: "*", flipRtl: "FALSE" }))
-        .appendField(new Blockly.FieldTextInput("input"), "input")
+        .appendField(new Blockly.FieldTextInput("テキストを入力"), "input")
         .appendField(new Blockly.FieldImage("https://img.icons8.com/color/48/000000/quote-left.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
     this.setInputsInline(true);
     this.setOutput(true, "String");
@@ -539,7 +539,8 @@ Blockly.Blocks['print'] = {
  this.setTooltip("コンソール部分に文字を出力します。");
  this.setHelpUrl("https://example.com");
   }
-}; 
+};
+ 
 Blockly.Blocks['list_create'] = {
   init: function() {
     this.appendDummyInput()
