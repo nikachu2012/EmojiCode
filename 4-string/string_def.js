@@ -2,7 +2,7 @@ Blockly.Blocks['string'] = {
   init: function() {
     this.appendDummyInput()
         .appendField(new Blockly.FieldImage("https://img.icons8.com/color/48/000000/quote-left.png", 16, 16, { alt: "*", flipRtl: "FALSE" }))
-        .appendField(new Blockly.FieldTextInput("input"), "input")
+        .appendField(new Blockly.FieldTextInput("テキストを入力"), "input")
         .appendField(new Blockly.FieldImage("https://img.icons8.com/color/48/000000/quote-left.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
     this.setInputsInline(true);
     this.setOutput(true, "String");
