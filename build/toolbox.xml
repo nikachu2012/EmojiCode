@@ -1,7 +1,7 @@
 <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
   <category name="動き" colour="#9fa55b">
     <block type="sprite_select">
-      <field name="spriteName">スプライト名</field>
+      <field name="selector">sprite</field>
     </block>
     <block type="sprite_sayuu">
       <value name="value">
@@ -99,36 +99,6 @@
   <category name="音" colour="#995ba5">
     <block type="sound_play"></block>
     <block type="sound_pause"></block>
-    <block type="sound_effect_select">
-      <field name="select">pitch</field>
-      <value name="effect_level">
-        <block type="math_number">
-          <field name="NUM">10</field>
-        </block>
-      </value>
-    </block>
-    <block type="sound_effect_dutu">
-      <field name="select">pitch</field>
-      <value name="effect_level">
-        <block type="math_number">
-          <field name="NUM">10</field>
-        </block>
-      </value>
-    </block>
-    <block type="sound_volume_select">
-      <value name="volume">
-        <block type="math_number">
-          <field name="NUM">100</field>
-        </block>
-      </value>
-    </block>
-    <block type="sound_volume_dutu">
-      <value name="volume">
-        <block type="math_number">
-          <field name="NUM">10</field>
-        </block>
-      </value>
-    </block>
     <block type="sound_tone">
       <field name="select">2</field>
       <value name="onkai">
@@ -242,25 +212,25 @@
   </category>
   <category name="テキスト" colour="#5ba58c">
     <block type="string">
-      <field name="input">input</field>
+      <field name="input">テキストを入力</field>
     </block>
     <block type="print"></block>
     <block type="string_renketu">
       <value name="a">
         <block type="string">
-          <field name="input">input</field>
+          <field name="input">テキストを入力</field>
         </block>
       </value>
       <value name="b">
         <block type="string">
-          <field name="input">input</field>
+          <field name="input">テキストを入力</field>
         </block>
       </value>
     </block>
     <block type="string_length">
       <value name="text">
         <block type="string">
-          <field name="input">input</field>
+          <field name="input">テキストを入力</field>
         </block>
       </value>
     </block>
@@ -268,12 +238,12 @@
       <field name="option">first</field>
       <value name="a">
         <block type="string">
-          <field name="input">input</field>
+          <field name="input">テキストを入力</field>
         </block>
       </value>
       <value name="NAME">
         <block type="string">
-          <field name="input">input</field>
+          <field name="input">テキストを入力</field>
         </block>
       </value>
     </block>
@@ -281,7 +251,7 @@
       <field name="option">first</field>
       <value name="text">
         <block type="string">
-          <field name="input">input</field>
+          <field name="input">テキストを入力</field>
         </block>
       </value>
       <value name="search-index">
@@ -293,14 +263,14 @@
     <block type="string_random_char">
       <value name="text">
         <block type="string">
-          <field name="input">input</field>
+          <field name="input">テキストを入力</field>
         </block>
       </value>
     </block>
     <block type="string_input_string">
       <value name="text">
         <block type="string">
-          <field name="input">input</field>
+          <field name="input">テキストを入力</field>
         </block>
       </value>
       <value name="startIndex">
@@ -318,7 +288,7 @@
       <field name="option">upper</field>
       <value name="text">
         <block type="string">
-          <field name="input">input</field>
+          <field name="input">テキストを入力</field>
         </block>
       </value>
     </block>
@@ -326,7 +296,7 @@
       <field name="option">both</field>
       <value name="text">
         <block type="string">
-          <field name="input">input</field>
+          <field name="input">テキストを入力</field>
         </block>
       </value>
     </block>
@@ -337,7 +307,7 @@
     <block type="list_push">
       <value name="value">
         <block type="string">
-          <field name="input">input</field>
+          <field name="input">テキストを入力</field>
         </block>
       </value>
     </block>
@@ -351,7 +321,7 @@
       </value>
       <value name="data">
         <block type="string">
-          <field name="input">input</field>
+          <field name="input">テキストを入力</field>
         </block>
       </value>
     </block>
@@ -363,7 +333,7 @@
       </value>
       <value name="value">
         <block type="string">
-          <field name="input">input</field>
+          <field name="input">テキストを入力</field>
         </block>
       </value>
     </block>
@@ -378,7 +348,7 @@
       <field name="select">first</field>
       <value name="value">
         <block type="string">
-          <field name="input">input</field>
+          <field name="input">テキストを入力</field>
         </block>
       </value>
     </block>
@@ -386,7 +356,7 @@
     <block type="list_boolean_insert">
       <value name="value">
         <block type="string">
-          <field name="input">input</field>
+          <field name="input">テキストを入力</field>
         </block>
       </value>
     </block>
