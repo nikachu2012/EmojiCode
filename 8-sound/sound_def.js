@@ -122,7 +122,7 @@ Blockly.Blocks['sound_tone'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(290);
- this.setTooltip("指定トーンの音を入れます");
+ this.setTooltip("指定トーンの音を出します");
  this.setHelpUrl("https://example.com");
   }
 };
