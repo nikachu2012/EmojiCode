@@ -1,7 +1,7 @@
 /* 
     EmojiCode Block Define
     Created by nikachu2012(https://github.com/nikachu2012)
-    Create time: Sat Aug 27 2022 14:55:28 GMT+0900 (日本標準時)
+    Create time: Sat Aug 27 2022 15:21:40 GMT+0900 (日本標準時)
 */
 
 
