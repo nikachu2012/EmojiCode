@@ -4454,19 +4454,19 @@
                       <block type="field_dropdown" id="HVd?|aA81FpL_j/uD{L:">
                         <mutation options="[&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;]"></mutation>
                         <field name="FIELDNAME">select</field>
-                        <field name="USER0">1</field>
+                        <field name="USER0">全音符</field>
                         <field name="CPU0">1</field>
-                        <field name="USER1">2</field>
+                        <field name="USER1">２分音符</field>
                         <field name="CPU1">2</field>
-                        <field name="USER2">4</field>
+                        <field name="USER2">４分音符</field>
                         <field name="CPU2">4</field>
-                        <field name="USER3">8</field>
+                        <field name="USER3">８分音符</field>
                         <field name="CPU3">8</field>
-                        <field name="USER4">16</field>
+                        <field name="USER4">１６分音符</field>
                         <field name="CPU4">16</field>
                         <next>
                           <block type="field_static" id="#9oD|[u;:0IW4i`scRgd">
-                            <field name="TEXT">分音符鳴らす</field>
+                            <field name="TEXT">鳴らす</field>
                           </block>
                         </next>
                       </block>
