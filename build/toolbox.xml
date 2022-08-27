@@ -97,6 +97,9 @@
     <block type="sprite_const_rotate"></block>
   </category>
   <category name="音" colour="#995ba5">
+    <block type="sound_inputid">
+      <field name="soundID">音名</field>
+    </block>
     <block type="sound_play"></block>
     <block type="sound_tone_second">
       <value name="onkai">
