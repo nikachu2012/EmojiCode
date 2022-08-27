@@ -4678,4 +4678,51 @@
         <field name="HUE">290</field>
       </block>
     </value>
+  </block><block type="factory_base" id="2[$st06Ny}fHV+fk(9oW" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"></mutation>
+    <field name="NAME">sound_inputID</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="KnDozijq$%fWD/l7@PhT">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_image" id="dAm^4Nnln.14Gdf?:96f">
+            <field name="SRC">https://img.icons8.com/material/48/000000/low-volume--v1.png</field>
+            <field name="WIDTH">16</field>
+            <field name="HEIGHT">16</field>
+            <field name="ALT">*</field>
+            <field name="FLIP_RTL">FALSE</field>
+            <next>
+              <block type="field_input" id="2o=|w!3uU:j?QJFjjDPp">
+                <field name="TEXT">音名</field>
+                <field name="FIELDNAME">soundID</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="m)=Tr|(s1h]@Pb-g0.T8" deletable="false" movable="false">
+        <field name="TEXT">音名のIDを指定できます</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="=jU8Fj,4d;Gm~KaK1K}^" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="K|FxQDq|UAV)iF?{WR%U"></shadow>
+      <block type="type_other" id="~yNE*NOTnMH5dCR}.U,M">
+        <field name="TYPE">sound_ID</field>
+      </block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="U:.T?2:A[thf/1QLj5I]">
+        <mutation colour="#995ba5"></mutation>
+        <field name="HUE">290</field>
+      </block>
+    </value>
   </block></xml>
