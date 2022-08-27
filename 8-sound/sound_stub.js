@@ -1,3 +1,11 @@
+Blockly.JavaScript['sound_inputid'] = function(block) {
+  var text_soundid = block.getFieldValue('soundID');
+  // TODO: Assemble JavaScript into code variable.
+  var code = text_soundid;
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
 Blockly.JavaScript[`sound_play`] = function(block) {
   var value_soundname = Blockly.JavaScript.valueToCode(block, `soundName`, Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.

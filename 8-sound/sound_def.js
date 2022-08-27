@@ -1,3 +1,15 @@
+Blockly.Blocks['sound_inputid'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldImage("https://img.icons8.com/material/48/000000/low-volume--v1.png", 16, 16, { alt: "*", flipRtl: "FALSE" }))
+        .appendField(new Blockly.FieldTextInput("音名"), "soundID");
+    this.setOutput(true, "sound_ID");
+    this.setColour(290);
+ this.setTooltip("音名のIDを指定できます");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
 Blockly.Blocks['sound_play'] = {
   init: function() {
     this.appendValueInput("soundName")
