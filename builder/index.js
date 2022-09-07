@@ -15,9 +15,7 @@ glob('../**/*', (err, files) => {
     EmojiCode Block Define
     Created by nikachu2012(https://github.com/nikachu2012)
     Create time: ${new Date()}
-*/\n
-
-import Blockly from 'blockly'\n`;
+*/\n`;
         fileList.forEach(element => {
             try {
                 alldata += `${fs.readFileSync(element)} \n`;
@@ -46,9 +44,7 @@ import Blockly from 'blockly'\n`;
     EmojiCode Block Stub
     Created by nikachu2012(https://github.com/nikachu2012)
     Create time: ${new Date()}
-*/\n
-
-import Blockly from 'blockly'\n`;
+*/\n`;
         fileList.forEach(element => {
             try {
                 alldata += `${fs.readFileSync(element)} \n`;
