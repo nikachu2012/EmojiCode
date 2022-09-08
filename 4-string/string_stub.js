@@ -9,7 +9,7 @@ Blockly.JavaScript['string'] = function(block) {
 Blockly.JavaScript[`print`] = function(block) {
   var value_inputvalue = Blockly.JavaScript.valueToCode(block, `inputValue`, Blockly.JavaScript.ORDER_ATOMIC);
 
-  var code = `run(${value_inputvalue})\n`;
+  var code = `log(${value_inputvalue})\n`;
   return code;
 };
 
