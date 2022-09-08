@@ -1,7 +1,7 @@
 /* 
     EmojiCode Block Define
     Created by nikachu2012(https://github.com/nikachu2012)
-    Create time: Wed Sep 07 2022 16:44:44 GMT+0900 (日本標準時)
+    Create time: Fri Sep 09 2022 00:10:27 GMT+0900 (日本標準時)
 */
 Blockly.Blocks['if'] = {
   init: function() {
@@ -528,7 +528,7 @@ Blockly.Blocks['string_prompt'] = {
 Blockly.Blocks['print'] = {
   init: function() {
     this.appendValueInput("inputValue")
-        .setCheck("String")
+        .setCheck(["String", "Number"])
         .appendField(new Blockly.FieldImage("https://img.icons8.com/color/48/000000/print.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);

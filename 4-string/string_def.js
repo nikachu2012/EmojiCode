@@ -160,7 +160,7 @@ Blockly.Blocks['string_prompt'] = {
 Blockly.Blocks['print'] = {
   init: function() {
     this.appendValueInput("inputValue")
-        .setCheck("String")
+        .setCheck(["String", "Number"])
         .appendField(new Blockly.FieldImage("https://img.icons8.com/color/48/000000/print.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
