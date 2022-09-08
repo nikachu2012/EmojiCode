@@ -1,7 +1,7 @@
 /* 
     EmojiCode Block Stub
     Created by nikachu2012(https://github.com/nikachu2012)
-    Create time: Fri Sep 09 2022 00:10:27 GMT+0900 (日本標準時)
+    Create time: Fri Sep 09 2022 00:12:33 GMT+0900 (日本標準時)
 */
 Blockly.JavaScript[`if`] = function(block) {
   var value_formula = Blockly.JavaScript.valueToCode(block, `formula`, Blockly.JavaScript.ORDER_ATOMIC);
@@ -373,7 +373,7 @@ Blockly.JavaScript['string'] = function(block) {
 Blockly.JavaScript[`print`] = function(block) {
   var value_inputvalue = Blockly.JavaScript.valueToCode(block, `inputValue`, Blockly.JavaScript.ORDER_ATOMIC);
 
-  var code = `console.log(${value_inputvalue})\n`;
+  var code = `run(${value_inputvalue})\n`;
   return code;
 };
 
