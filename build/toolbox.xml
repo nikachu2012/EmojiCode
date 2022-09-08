@@ -146,7 +146,6 @@
     <block type="null"></block>
   </category>
   <category name="繰り返し" colour="#5ba55b">
-    <block type="repeat_infinity"></block>
     <block type="repeat">
       <value name="index">
         <block type="math_number">
