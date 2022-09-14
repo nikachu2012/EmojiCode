@@ -119,8 +119,7 @@ emoji.getRandom = (min, max) => {
  * @returns {string}
  */
 emoji.ask = (ask) => {
-    // TODO: ユーザー入力の作成
-    return answer;
+    return window.prompt(ask);
 }
 
 /**
