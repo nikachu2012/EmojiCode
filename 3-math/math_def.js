@@ -58,7 +58,7 @@ Blockly.Blocks['hantei_boolean'] = {
     this.setInputsInline(true);
     this.setOutput(true, "Boolean");
     this.setColour(230);
- this.setTooltip("入力に対する判定を変える");
+ this.setTooltip("入力に対する判定を返します");
  this.setHelpUrl("https://example.com");
   }
 };
@@ -100,7 +100,7 @@ Blockly.Blocks['random'] = {
         .appendField("までの乱数");
     this.setOutput(true, "Number");
     this.setColour(230);
- this.setTooltip("指定範囲の乱数");
+ this.setTooltip("指定範囲の乱数を返します");
  this.setHelpUrl("https://example.com");
   }
 };

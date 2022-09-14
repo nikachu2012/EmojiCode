@@ -125,7 +125,7 @@ Blockly.Blocks['string_convert'] = {
     this.setInputsInline(true);
     this.setOutput(true, "String");
     this.setColour(160);
- this.setTooltip("テキストの指定範囲のテキストを取得します。");
+ this.setTooltip("文字列を変換します");
  this.setHelpUrl("https://example.com");
   }
 };

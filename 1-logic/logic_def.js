@@ -83,7 +83,7 @@ Blockly.Blocks['true_false_return'] = {
         .appendField(new Blockly.FieldDropdown([[{"src":"https://img.icons8.com/material-outlined/48/000000/filled-circle--v2.png","width":16,"height":16,"alt":"*"},"true"], [{"src":"https://img.icons8.com/material-outlined/48/000000/delete-sign.png","width":16,"height":16,"alt":"*"},"false"]]), "truefalse");
     this.setOutput(true, "Boolean");
     this.setColour(210);
- this.setTooltip("判定を逆にします。");
+ this.setTooltip("○か×を返します。");
  this.setHelpUrl("https://example.com");
   }
 };

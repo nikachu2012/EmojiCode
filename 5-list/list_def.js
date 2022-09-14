@@ -62,7 +62,7 @@ Blockly.Blocks['list_all_delete'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(260);
- this.setTooltip("リストの全てを削除します");
+ this.setTooltip("リストの中身全てを削除します");
  this.setHelpUrl("https://example.com");
   }
 };
@@ -167,19 +167,19 @@ Blockly.Blocks['list_length'] = {
 };
 
 Blockly.Blocks['list_boolean_insert'] = {
-  init: function() {
-    this.appendValueInput("array")
-        .setCheck("Array");
-    this.appendDummyInput()
-        .appendField("の中に");
-    this.appendValueInput("value")
-        .setCheck("String");
-    this.appendDummyInput()
-        .appendField("が入っているか");
-    this.setInputsInline(true);
-    this.setOutput(true, "Boolean");
-    this.setColour(260);
- this.setTooltip("リストに指定文字が入っている場所を取得します");
- this.setHelpUrl("https://example.com");
-  }
+    init: function() {
+      this.appendValueInput("array")
+          .setCheck("Array");
+      this.appendDummyInput()
+          .appendField("の中に");
+      this.appendValueInput("value")
+          .setCheck(["String", "Number"]);
+      this.appendDummyInput()
+          .appendField("が入っているか");
+      this.setInputsInline(true);
+      this.setOutput(true, "Boolean");
+      this.setColour(260);
+   this.setTooltip("リストの中に指定のものが入っているかを○×で判定します");
+   this.setHelpUrl("https://example.com");
+    }
 };
