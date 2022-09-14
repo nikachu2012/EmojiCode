@@ -1,7 +1,7 @@
 /* 
     EmojiCode Block Define
     Created by nikachu2012(https://github.com/nikachu2012)
-    Create time: Fri Sep 09 2022 00:14:42 GMT+0900 (日本標準時)
+    Create time: Wed Sep 14 2022 22:29:08 GMT+0900 (日本標準時)
 */
 Blockly.Blocks['if'] = {
   init: function() {
@@ -88,7 +88,7 @@ Blockly.Blocks['true_false_return'] = {
         .appendField(new Blockly.FieldDropdown([[{"src":"https://img.icons8.com/material-outlined/48/000000/filled-circle--v2.png","width":16,"height":16,"alt":"*"},"true"], [{"src":"https://img.icons8.com/material-outlined/48/000000/delete-sign.png","width":16,"height":16,"alt":"*"},"false"]]), "truefalse");
     this.setOutput(true, "Boolean");
     this.setColour(210);
- this.setTooltip("判定を逆にします。");
+ this.setTooltip("○か×を返します。");
  this.setHelpUrl("https://example.com");
   }
 };
@@ -130,7 +130,8 @@ Blockly.Blocks['start'] = {
  this.setTooltip("初めに実行するコードを入れます");
  this.setHelpUrl("https://example.com");
   }
-}; 
+};
+ 
 Blockly.Blocks['repeat_infinity'] = {
   init: function() {
     this.appendDummyInput()
@@ -320,7 +321,7 @@ Blockly.Blocks['hantei_boolean'] = {
     this.setInputsInline(true);
     this.setOutput(true, "Boolean");
     this.setColour(230);
- this.setTooltip("入力に対する判定を変える");
+ this.setTooltip("入力に対する判定を返します");
  this.setHelpUrl("https://example.com");
   }
 };
@@ -362,10 +363,11 @@ Blockly.Blocks['random'] = {
         .appendField("までの乱数");
     this.setOutput(true, "Number");
     this.setColour(230);
- this.setTooltip("指定範囲の乱数");
+ this.setTooltip("指定範囲の乱数を返します");
  this.setHelpUrl("https://example.com");
   }
-}; 
+};
+ 
 Blockly.Blocks['string'] = {
   init: function() {
     this.appendDummyInput()
@@ -493,7 +495,7 @@ Blockly.Blocks['string_convert'] = {
     this.setInputsInline(true);
     this.setOutput(true, "String");
     this.setColour(160);
- this.setTooltip("テキストの指定範囲のテキストを取得します。");
+ this.setTooltip("文字列を変換します");
  this.setHelpUrl("https://example.com");
   }
 };
@@ -602,7 +604,7 @@ Blockly.Blocks['list_all_delete'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(260);
- this.setTooltip("リストの全てを削除します");
+ this.setTooltip("リストの中身全てを削除します");
  this.setHelpUrl("https://example.com");
   }
 };
@@ -707,22 +709,23 @@ Blockly.Blocks['list_length'] = {
 };
 
 Blockly.Blocks['list_boolean_insert'] = {
-  init: function() {
-    this.appendValueInput("array")
-        .setCheck("Array");
-    this.appendDummyInput()
-        .appendField("の中に");
-    this.appendValueInput("value")
-        .setCheck("String");
-    this.appendDummyInput()
-        .appendField("が入っているか");
-    this.setInputsInline(true);
-    this.setOutput(true, "Boolean");
-    this.setColour(260);
- this.setTooltip("リストに指定文字が入っている場所を取得します");
- this.setHelpUrl("https://example.com");
-  }
-}; 
+    init: function() {
+      this.appendValueInput("array")
+          .setCheck("Array");
+      this.appendDummyInput()
+          .appendField("の中に");
+      this.appendValueInput("value")
+          .setCheck(["String", "Number"]);
+      this.appendDummyInput()
+          .appendField("が入っているか");
+      this.setInputsInline(true);
+      this.setOutput(true, "Boolean");
+      this.setColour(260);
+   this.setTooltip("リストの中に指定のものが入っているかを○×で判定します");
+   this.setHelpUrl("https://example.com");
+    }
+};
+ 
 Blockly.Blocks['color_selector'] = {
   init: function() {
     this.appendDummyInput()
@@ -766,7 +769,8 @@ Blockly.Blocks['color_option'] = {
  this.setTooltip("色を細かく数字で指定できます。");
  this.setHelpUrl("https://example.com");
   }
-}; 
+};
+ 
 Blockly.Blocks['sprite_select'] = {
   init: function() {
     this.appendDummyInput()

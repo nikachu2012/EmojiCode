@@ -1,7 +1,7 @@
 /* 
     EmojiCode Block Stub
     Created by nikachu2012(https://github.com/nikachu2012)
-    Create time: Fri Sep 09 2022 00:14:42 GMT+0900 (日本標準時)
+    Create time: Wed Sep 14 2022 22:29:08 GMT+0900 (日本標準時)
 */
 Blockly.JavaScript[`if`] = function(block) {
   var value_formula = Blockly.JavaScript.valueToCode(block, `formula`, Blockly.JavaScript.ORDER_ATOMIC);
@@ -308,13 +308,13 @@ Blockly.JavaScript[`rewrite_input`] = function(block) {
   var value_input = Blockly.JavaScript.valueToCode(block, `input`, Blockly.JavaScript.ORDER_ATOMIC);
 
   if(dropdown_select == "round"){
-    var code = `Math.round(${value_name})`
+    var code = `Math.round(${value_input})`
   }
   else if(dropdown_select == "roundup"){
-    var code = `Math.ceil(${value_name})`
+    var code = `Math.ceil(${value_input})`
   }
   else if(dropdown_select == "rounddown"){
-    var code = `Math.floor(${value_name})`
+    var code = `Math.floor(${value_input})`
   }
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
