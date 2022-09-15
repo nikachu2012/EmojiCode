@@ -103,6 +103,6 @@ Blockly.JavaScript['delay'] = function(block) {
 Blockly.JavaScript['start'] = function(block) {
   var statements_runcode = Blockly.JavaScript.statementToCode(block, 'runcode');
   // TODO: Assemble JavaScript into code variable.
-  var code = `${statements_runcode}\n`;
+  var code = `function start() {${statements_runcode}}\n`;
   return code;
 };
