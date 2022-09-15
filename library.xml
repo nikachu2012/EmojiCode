@@ -441,7 +441,7 @@
     </statement>
     <value name="TOOLTIP">
       <block type="text" id="bMD#%[6L^pVJBGlth-st" deletable="false" movable="false">
-        <field name="TEXT">判定を逆にします。</field>
+        <field name="TEXT">○か×を返します。</field>
       </block>
     </value>
     <value name="HELPURL">
@@ -1419,7 +1419,7 @@
     </statement>
     <value name="TOOLTIP">
       <block type="text" id="dn#:Qh@5`+4dQ!!,IK/S" deletable="false" movable="false">
-        <field name="TEXT">指定範囲の乱数</field>
+        <field name="TEXT">指定範囲の乱数を返します</field>
       </block>
     </value>
     <value name="HELPURL">
@@ -2006,7 +2006,15 @@
         </statement>
         <value name="TYPE">
           <shadow type="type_null" id="355?snQDgdPMSLZmW{R9"></shadow>
-          <block type="type_string" id="aVbb?/6FQD+s!`Nw%IM|"></block>
+          <block type="type_group" id="k`3z|QH5ovdga)v]$Kk|">
+            <mutation types="2"></mutation>
+            <value name="TYPE0">
+              <block type="type_string" id="aVbb?/6FQD+s!`Nw%IM|"></block>
+            </value>
+            <value name="TYPE1">
+              <block type="type_number" id="YwY2]WFP}tQ7Zn8Ztxx%"></block>
+            </value>
+          </block>
         </value>
       </block>
     </statement>
@@ -2256,7 +2264,7 @@
     </statement>
     <value name="TOOLTIP">
       <block type="text" id="oClbHYf:=+qXJkP/w*gM" deletable="false" movable="false">
-        <field name="TEXT">リストの全てを削除します</field>
+        <field name="TEXT">リストの内容全てを削除します</field>
       </block>
     </value>
     <value name="HELPURL">
@@ -2680,7 +2688,15 @@
                 <field name="ALIGN">LEFT</field>
                 <value name="TYPE">
                   <shadow type="type_null" id="?33[/lX{4@2oNk-kReW`"></shadow>
-                  <block type="type_string" id="@N!FQrIfvtjJyGG|bs;D"></block>
+                  <block type="type_group" id="Fabml.33?aWt1V?|17GG">
+                    <mutation types="2"></mutation>
+                    <value name="TYPE0">
+                      <block type="type_string" id="@N!FQrIfvtjJyGG|bs;D"></block>
+                    </value>
+                    <value name="TYPE1">
+                      <block type="type_number" id="rU}(=TZ99,aGJ^jv0.M1"></block>
+                    </value>
+                  </block>
                 </value>
                 <next>
                   <block type="input_dummy" id="L59KyG|r-;;+r}]VL*rZ">
@@ -2700,7 +2716,7 @@
     </statement>
     <value name="TOOLTIP">
       <block type="text" id="oClbHYf:=+qXJkP/w*gM" deletable="false" movable="false">
-        <field name="TEXT">リストに指定文字が入っている場所を取得します</field>
+        <field name="TEXT">リストの中に指定のものが入っているかを○×で判定します</field>
       </block>
     </value>
     <value name="HELPURL">
@@ -4386,11 +4402,9 @@
             <field name="ALT">*</field>
             <field name="FLIP_RTL">FALSE</field>
             <next>
-              <block type="field_dropdown" id="[O88sMX(]h3:FW/m|2LI">
-                <mutation options="[&quot;text&quot;]"></mutation>
-                <field name="FIELDNAME">selector</field>
-                <field name="USER0">sprite</field>
-                <field name="CPU0">sprite</field>
+              <block type="field_input" id="%F:jDg^X[4EJe!_A)zr#">
+                <field name="TEXT">スプライト名</field>
+                <field name="FIELDNAME">spriteName</field>
               </block>
             </next>
           </block>
