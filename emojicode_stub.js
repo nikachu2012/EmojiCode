@@ -1,7 +1,7 @@
 /* 
     EmojiCode Block Stub
     Created by nikachu2012(https://github.com/nikachu2012)
-    Create time: Mon Sep 19 2022 02:56:11 GMT+0900 (日本標準時)
+    Create time: Mon Sep 19 2022 03:25:04 GMT+0900 (日本標準時)
 */
 Blockly.JavaScript[`if`] = function(block) {
   var value_formula = Blockly.JavaScript.valueToCode(block, `formula`, Blockly.JavaScript.ORDER_ATOMIC);
@@ -735,11 +735,25 @@ Blockly.JavaScript[`sprite_const_rotate`] = function(block) {
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript['sprite_onclick'] = function(block) {
-  var text_id = block.getFieldValue('id');
-  var statements_run = Blockly.JavaScript.statementToCode(block, 'run');
+Blockly.JavaScript[`sprite_onclick`] = function(block) {
+  var text_id = block.getFieldValue(`id`);
+  var statements_run = Blockly.JavaScript.statementToCode(block, `run`);
   // TODO: Assemble JavaScript into code variable.
   var code = `document.getElementById('emojiSprite_${text_id}').addEventListener('click', function() {${statements_run}});\n`;
+  return code;
+};
+
+Blockly.JavaScript[`sprite_hide`] = function(block) {
+  var value_sprite = Blockly.JavaScript.valueToCode(block, `sprite`, Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emojisp.hide(${value_sprite});\n`;
+  return code;
+};
+
+Blockly.JavaScript[`sprite_show`] = function(block) {
+  var value_sprite = Blockly.JavaScript.valueToCode(block, `sprite`, Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emojisp.hide(${value_sprite});\n`;
   return code;
 };
  
