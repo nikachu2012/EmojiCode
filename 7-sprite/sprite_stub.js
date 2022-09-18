@@ -136,10 +136,18 @@ Blockly.JavaScript[`sprite_const_rotate`] = function(block) {
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript['sprite_onclick'] = function(block) {
-  var text_id = block.getFieldValue('id');
-  var statements_run = Blockly.JavaScript.statementToCode(block, 'run');
+Blockly.JavaScript[`sprite_onclick`] = function(block) {
+  var text_id = block.getFieldValue(`id`);
+  var statements_run = Blockly.JavaScript.statementToCode(block, `run`);
   // TODO: Assemble JavaScript into code variable.
   var code = `document.getElementById('emojiSprite_${text_id}').addEventListener('click', function() {${statements_run}});\n`;
   return code;
 };
+
+Blockly.JavaScript[`sprite_hide`] = function(block) {
+  var value_sprite = Blockly.JavaScript.valueToCode(block, `sprite`, Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emojisp.hide(${value_sprite});\n`;
+  return code;
+};
+
