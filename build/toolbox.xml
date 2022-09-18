@@ -98,6 +98,8 @@
     <block type="sprite_const_xpos"></block>
     <block type="sprite_const_ypos"></block>
     <block type="sprite_const_rotate"></block>
+    <block type="sprite_hide"></block>
+    <block type="sprite_show"></block>
   </category>
   <category name="音" colour="#995ba5">
     <block type="sound_inputid">
