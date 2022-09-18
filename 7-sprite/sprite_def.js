@@ -317,3 +317,17 @@ Blockly.Blocks['sprite_hide'] = {
   }
 };
 
+Blockly.Blocks['sprite_show'] = {
+  init: function() {
+    this.appendValueInput("sprite")
+        .setCheck("sprite_ID");
+    this.appendDummyInput()
+        .appendField("を表示する");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(65);
+ this.setTooltip("スプライトを表示します");
+ this.setHelpUrl("https://example.com");
+  }
+};
