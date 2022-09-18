@@ -4739,4 +4739,65 @@
         <field name="HUE">290</field>
       </block>
     </value>
+  </block><block type="factory_base" id="?L`|-80|KSb](FCqLHDK" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">sprite_onclick</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="~/ICSL$DGW)a-H*mZ`#6">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_image" id="[WawfZL]/IyIYcuv:4wS">
+            <field name="SRC">https://img.icons8.com/stickers/100/000000/cat.png</field>
+            <field name="WIDTH">16</field>
+            <field name="HEIGHT">16</field>
+            <field name="ALT">*</field>
+            <field name="FLIP_RTL">FALSE</field>
+            <next>
+              <block type="field_input" id="m$aw$7qD_Mg5xbT4b`lE">
+                <field name="TEXT">スプライト名</field>
+                <field name="FIELDNAME">id</field>
+                <next>
+                  <block type="field_static" id="nnJNGBTb0UAa)~+zn%W1">
+                    <field name="TEXT">がクリックされた時</field>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="input_statement" id="X%!]3Yj49Igs@m)|W54H">
+            <field name="INPUTNAME">run</field>
+            <field name="ALIGN">LEFT</field>
+            <value name="TYPE">
+              <shadow type="type_null" id="Pe)0WO:~XR1(;|o~[q=t"></shadow>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="cLtJuV^D{!T9l~bI$L1z" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="#ye22hO*Q3YX6G_A[]Ov" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="/;26X}nc!-m~T:x7v,OE"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="`]qO(6@m34tSE:6C+9wH"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="R^mdE7|Ky+!Xm71|$aQ[">
+        <mutation colour="#9fa55b"></mutation>
+        <field name="HUE">65</field>
+      </block>
+    </value>
   </block></xml>
