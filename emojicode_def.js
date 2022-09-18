@@ -1,7 +1,7 @@
 /* 
     EmojiCode Block Define
     Created by nikachu2012(https://github.com/nikachu2012)
-    Create time: Sun Sep 18 2022 13:03:58 GMT+0900 (日本標準時)
+    Create time: Mon Sep 19 2022 02:42:34 GMT+0900 (日本標準時)
 */
 Blockly.Blocks['if'] = {
   init: function() {
@@ -1070,8 +1070,8 @@ Blockly.Blocks['sprite_onclick'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(65);
- this.setTooltip("");
- this.setHelpUrl("");
+ this.setTooltip("スプライトがクリックされた時の処理を追加");
+ this.setHelpUrl("https://example.com");
   }
 };
  
