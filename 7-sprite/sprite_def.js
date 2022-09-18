@@ -297,7 +297,7 @@ Blockly.Blocks['sprite_onclick'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(65);
- this.setTooltip("");
- this.setHelpUrl("");
+ this.setTooltip("スプライトがクリックされた時の処理を追加");
+ this.setHelpUrl("https://example.com");
   }
 };
