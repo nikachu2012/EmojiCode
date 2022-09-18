@@ -1,7 +1,10 @@
 <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
   <category name="動き" colour="#9fa55b">
     <block type="sprite_select">
-      <field name="selector">sprite</field>
+      <field name="spriteName">スプライト名</field>
+    </block>
+    <block type="sprite_onclick">
+      <field name="id">スプライト名</field>
     </block>
     <block type="sprite_sayuu">
       <value name="value">
