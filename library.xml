@@ -4780,12 +4780,12 @@
     </statement>
     <value name="TOOLTIP">
       <block type="text" id="cLtJuV^D{!T9l~bI$L1z" deletable="false" movable="false">
-        <field name="TEXT"></field>
+        <field name="TEXT">スプライトがクリックされた時の処理を追加</field>
       </block>
     </value>
     <value name="HELPURL">
       <block type="text" id="#ye22hO*Q3YX6G_A[]Ov" deletable="false" movable="false">
-        <field name="TEXT"></field>
+        <field name="TEXT">https://example.com</field>
       </block>
     </value>
     <value name="TOPTYPE">
@@ -4796,6 +4796,104 @@
     </value>
     <value name="COLOUR">
       <block type="colour_hue" id="R^mdE7|Ky+!Xm71|$aQ[">
+        <mutation colour="#9fa55b"></mutation>
+        <field name="HUE">65</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="Lq=hYk%OAv9s!2CX-]dO" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">sprite_hide</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="LiDuu8(`,i+4`NJo*.YV">
+        <field name="INPUTNAME">sprite</field>
+        <field name="ALIGN">LEFT</field>
+        <value name="TYPE">
+          <shadow type="type_null" id="l+XCk9iu2x]jJ!Ay{W|/"></shadow>
+          <block type="type_other" id="-[^f~K^OAREY:n=Exxyf">
+            <field name="TYPE">sprite_ID</field>
+          </block>
+        </value>
+        <next>
+          <block type="input_dummy" id="J63nIy[R,D_#o-*Vh=[L">
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="Q:wHRLtc|q`T2nn~O*qe">
+                <field name="TEXT">を隠す</field>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="E[H3WGda;o3pBRvb@l8p" deletable="false" movable="false">
+        <field name="TEXT">スプライトを隠します</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="A2PJ2p45I1[W6kfW1j,}" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="CKWXv0iyLUF002s=:T3%"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="XiLPc`1i)wUr=AU+7Vee"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="%169TWV(v}X3B^rV$EIm">
+        <mutation colour="#9fa55b"></mutation>
+        <field name="HUE">65</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="Lq=hYk%OAv9s!2CX-]dO" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">sprite_show</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="LiDuu8(`,i+4`NJo*.YV">
+        <field name="INPUTNAME">sprite</field>
+        <field name="ALIGN">LEFT</field>
+        <value name="TYPE">
+          <shadow type="type_null" id="l+XCk9iu2x]jJ!Ay{W|/"></shadow>
+          <block type="type_other" id="-[^f~K^OAREY:n=Exxyf">
+            <field name="TYPE">sprite_ID</field>
+          </block>
+        </value>
+        <next>
+          <block type="input_dummy" id="J63nIy[R,D_#o-*Vh=[L">
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="Q:wHRLtc|q`T2nn~O*qe">
+                <field name="TEXT">を表示する</field>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="E[H3WGda;o3pBRvb@l8p" deletable="false" movable="false">
+        <field name="TEXT">スプライトを表示します</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="A2PJ2p45I1[W6kfW1j,}" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="CKWXv0iyLUF002s=:T3%"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="XiLPc`1i)wUr=AU+7Vee"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="%169TWV(v}X3B^rV$EIm">
         <mutation colour="#9fa55b"></mutation>
         <field name="HUE">65</field>
       </block>
