@@ -1,7 +1,7 @@
 /* 
     EmojiCode Block Define
     Created by nikachu2012(https://github.com/nikachu2012)
-    Create time: Fri Sep 16 2022 00:26:32 GMT+0900 (日本標準時)
+    Create time: Sun Sep 18 2022 13:03:58 GMT+0900 (日本標準時)
 */
 Blockly.Blocks['if'] = {
   init: function() {
@@ -1055,6 +1055,23 @@ Blockly.Blocks['sprite_const_rotate'] = {
     this.setColour(65);
  this.setTooltip("指定したスプライトの向きを取得します。");
  this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['sprite_onclick'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldImage("https://img.icons8.com/stickers/100/000000/cat.png", 16, 16, { alt: "*", flipRtl: "FALSE" }))
+        .appendField(new Blockly.FieldTextInput("スプライト名"), "id")
+        .appendField("がクリックされた時");
+    this.appendStatementInput("run")
+        .setCheck(null);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(65);
+ this.setTooltip("");
+ this.setHelpUrl("");
   }
 };
  

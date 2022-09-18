@@ -1,7 +1,7 @@
 /* 
     EmojiCode Block Stub
     Created by nikachu2012(https://github.com/nikachu2012)
-    Create time: Fri Sep 16 2022 00:26:32 GMT+0900 (日本標準時)
+    Create time: Sun Sep 18 2022 13:03:58 GMT+0900 (日本標準時)
 */
 Blockly.JavaScript[`if`] = function(block) {
   var value_formula = Blockly.JavaScript.valueToCode(block, `formula`, Blockly.JavaScript.ORDER_ATOMIC);
@@ -733,6 +733,14 @@ Blockly.JavaScript[`sprite_const_rotate`] = function(block) {
   var code = `emojisp.accessSpriteData(${value_spritename}).deg`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript['sprite_onclick'] = function(block) {
+  var text_id = block.getFieldValue('id');
+  var statements_run = Blockly.JavaScript.statementToCode(block, 'run');
+  // TODO: Assemble JavaScript into code variable.
+  var code = `const emojisp_click_${text_id} = () => {\n${statements_run}\n};\n`;
+  return code;
 };
  
 Blockly.JavaScript['sound_inputid'] = function(block) {
