@@ -135,3 +135,11 @@ Blockly.JavaScript[`sprite_const_rotate`] = function(block) {
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
+
+Blockly.JavaScript['sprite_onclick'] = function(block) {
+  var text_id = block.getFieldValue('id');
+  var statements_run = Blockly.JavaScript.statementToCode(block, 'run');
+  // TODO: Assemble JavaScript into code variable.
+  var code = `const emojisp_click_${text_id} = () => {\n${statements_run}\n};\n`;
+  return code;
+};

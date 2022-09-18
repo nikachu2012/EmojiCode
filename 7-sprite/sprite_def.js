@@ -284,3 +284,20 @@ Blockly.Blocks['sprite_const_rotate'] = {
  this.setHelpUrl("https://example.com");
   }
 };
+
+Blockly.Blocks['sprite_onclick'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldImage("https://img.icons8.com/stickers/100/000000/cat.png", 16, 16, { alt: "*", flipRtl: "FALSE" }))
+        .appendField(new Blockly.FieldTextInput("スプライト名"), "id")
+        .appendField("がクリックされた時");
+    this.appendStatementInput("run")
+        .setCheck(null);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(65);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
