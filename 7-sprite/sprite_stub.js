@@ -140,6 +140,6 @@ Blockly.JavaScript['sprite_onclick'] = function(block) {
   var text_id = block.getFieldValue('id');
   var statements_run = Blockly.JavaScript.statementToCode(block, 'run');
   // TODO: Assemble JavaScript into code variable.
-  var code = `const emojisp_click_${text_id} = () => {\n${statements_run}\n};\n`;
+  var code = `document.getElementById('emojiSprite_${text_id}').addEventListener('click', () => {\n${statements_run}\n};\n`;
   return code;
 };
