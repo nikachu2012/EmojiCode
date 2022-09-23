@@ -21,11 +21,11 @@ Blockly.JavaScript['repeat_true'] = function(block) {
 
   if(dropdown_narumade == "continue"){
     //なるまで続ける
-    var code = `while(${value_formula}){${dropdown_narumade}}`
+    var code = `while(${value_formula}){${statements_do}}`
   }
   else if(dropdown_narumade == "stop"){
     //なったら終わる
-    var code = `while(!(${value_formula})){${dropdown_narumade}}`
+    var code = `while(!(${value_formula})){${statements_do}`
   }
   return code;
 };
