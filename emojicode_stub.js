@@ -1,7 +1,7 @@
 /* 
     EmojiCode Block Stub
     Created by nikachu2012(https://github.com/nikachu2012)
-    Create time: Fri Sep 23 2022 16:14:30 GMT+0900 (日本標準時)
+    Create time: Fri Sep 23 2022 16:29:05 GMT+0900 (日本標準時)
 */
 Blockly.JavaScript[`if`] = function(block) {
   var value_formula = Blockly.JavaScript.valueToCode(block, `formula`, Blockly.JavaScript.ORDER_ATOMIC);
@@ -135,11 +135,11 @@ Blockly.JavaScript['repeat_true'] = function(block) {
 
   if(dropdown_narumade == "continue"){
     //なるまで続ける
-    var code = `while(${value_formula}){${dropdown_narumade}}`
+    var code = `while(${value_formula}){${statements_do}}`
   }
   else if(dropdown_narumade == "stop"){
     //なったら終わる
-    var code = `while(!(${value_formula})){${dropdown_narumade}}`
+    var code = `while(!(${value_formula})){${statements_do}`
   }
   return code;
 };
@@ -151,7 +151,7 @@ Blockly.JavaScript[`repeat_setting`] = function(block) {
   var value_dutu = Blockly.JavaScript.valueToCode(block, `dutu`, Blockly.JavaScript.ORDER_ATOMIC);
   var statements_do = Blockly.JavaScript.statementToCode(block, `do`);
   
-  var code = `for (let ${variable_various} = ${value_start}; ${variable_various} < ${value_end}; ${variable_various}+= ${value_dutu}) {${statements_do}}\n`;
+  var code = `for (let ${variable_various} = ${value_start}; ${variable_various} <= ${value_end}; ${variable_various}+= ${value_dutu}) {${statements_do}}\n`;
   return code;
 };
 
@@ -505,7 +505,7 @@ Blockly.JavaScript[`list_delete`] = function(block) {
 };
 
 Blockly.JavaScript[`list_all_delete`] = function(block) {
-  var value_array = Blockly.JavaScript.valueToCode(block, `value`, Blockly.JavaScript.ORDER_ATOMIC);
+  var value_array = Blockly.JavaScript.valueToCode(block, `array`, Blockly.JavaScript.ORDER_ATOMIC);
 
   var code = `${value_array}.splice(1,${value_array}.length)\n`;
   return code;
