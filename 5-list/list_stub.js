@@ -24,7 +24,7 @@ Blockly.JavaScript[`list_delete`] = function(block) {
 Blockly.JavaScript[`list_all_delete`] = function(block) {
   var value_array = Blockly.JavaScript.valueToCode(block, `array`, Blockly.JavaScript.ORDER_ATOMIC);
 
-  var code = `${value_array}.splice(1,${value_array}.length)\n`;
+  var code = `${value_array}.splice(0,${value_array}.length)\n`;
   return code;
 };
 
