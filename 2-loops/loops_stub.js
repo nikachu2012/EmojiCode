@@ -37,7 +37,7 @@ Blockly.JavaScript[`repeat_setting`] = function(block) {
   var value_dutu = Blockly.JavaScript.valueToCode(block, `dutu`, Blockly.JavaScript.ORDER_ATOMIC);
   var statements_do = Blockly.JavaScript.statementToCode(block, `do`);
   
-  var code = `for (let ${variable_various} = ${value_start}; ${variable_various} < ${value_end}; ${variable_various}+= ${value_dutu}) {${statements_do}}\n`;
+  var code = `for (let ${variable_various} = ${value_start}; ${variable_various} <= ${value_end}; ${variable_various}+= ${value_dutu}) {${statements_do}}\n`;
   return code;
 };
 
