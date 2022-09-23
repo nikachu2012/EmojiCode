@@ -154,7 +154,7 @@
     <block type="repeat">
       <value name="index">
         <block type="math_number">
-          <field name="NUM">0</field>
+          <field name="NUM">1</field>
         </block>
       </value>
     </block>
@@ -165,17 +165,17 @@
       <field name="various" id="JKT,LXU/E+$@J0Ln4az5">i</field>
       <value name="start">
         <block type="math_number">
-          <field name="NUM">0</field>
+          <field name="NUM">1</field>
         </block>
       </value>
       <value name="end">
         <block type="math_number">
-          <field name="NUM">0</field>
+          <field name="NUM">10</field>
         </block>
       </value>
       <value name="dutu">
         <block type="math_number">
-          <field name="NUM">0</field>
+          <field name="NUM">1</field>
         </block>
       </value>
     </block>
@@ -232,7 +232,13 @@
     <block type="string">
       <field name="input">テキストを入力</field>
     </block>
-    <block type="print"></block>
+    <block type="print">
+      <value name="inputValue">
+        <block type="string">
+          <field name="input">テキストを入力</field>
+        </block>
+      </value>
+    </block>
     <block type="string_renketu">
       <value name="a">
         <block type="string">
@@ -329,7 +335,18 @@
         </block>
       </value>
     </block>
-    <block type="list_delete"></block>
+    <block type="list_delete">
+      <value name="start">
+        <block type="math_number">
+          <field name="NUM">1</field>
+        </block>
+      </value>
+      <value name="kosuu">
+        <block type="math_number">
+          <field name="NUM">1</field>
+        </block>
+      </value>
+    </block>
     <block type="list_all_delete"></block>
     <block type="list_insert">
       <value name="index">
@@ -375,6 +392,13 @@
       <value name="value">
         <block type="string">
           <field name="input">テキストを入力</field>
+        </block>
+      </value>
+    </block>
+    <block type="list_join">
+      <value name="value">
+        <block type="string">
+          <field name="input">,</field>
         </block>
       </value>
     </block>
