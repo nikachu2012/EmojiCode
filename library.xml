@@ -4740,10 +4740,10 @@
       </block>
     </value>
   </block><block type="factory_base" id="?L`|-80|KSb](FCqLHDK" deletable="false" movable="false" x="10" y="10">
-    <mutation connections="BOTH"></mutation>
+    <mutation connections="NONE"></mutation>
     <field name="NAME">sprite_onclick</field>
     <field name="INLINE">INT</field>
-    <field name="CONNECTIONS">BOTH</field>
+    <field name="CONNECTIONS">NONE</field>
     <statement name="INPUTS">
       <block type="input_dummy" id="~/ICSL$DGW)a-H*mZ`#6">
         <field name="ALIGN">LEFT</field>
@@ -4787,12 +4787,6 @@
       <block type="text" id="#ye22hO*Q3YX6G_A[]Ov" deletable="false" movable="false">
         <field name="TEXT">https://example.com</field>
       </block>
-    </value>
-    <value name="TOPTYPE">
-      <shadow type="type_null" id="/;26X}nc!-m~T:x7v,OE"></shadow>
-    </value>
-    <value name="BOTTOMTYPE">
-      <shadow type="type_null" id="`]qO(6@m34tSE:6C+9wH"></shadow>
     </value>
     <value name="COLOUR">
       <block type="colour_hue" id="R^mdE7|Ky+!Xm71|$aQ[">
@@ -4896,6 +4890,79 @@
       <block type="colour_hue" id="%169TWV(v}X3B^rV$EIm">
         <mutation colour="#9fa55b"></mutation>
         <field name="HUE">65</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="DvGr{d)n_c3-Y3=6ZV@5" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"></mutation>
+    <field name="NAME">list-join</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="FmUb_GRoPE{On6=DJNP0">
+        <field name="INPUTNAME">array</field>
+        <field name="ALIGN">LEFT</field>
+        <value name="TYPE">
+          <shadow type="type_null" id="`kcOaX#{6iXyK`Lm.f%z"></shadow>
+          <block type="type_list" id="e9t#IoQiJ]:pymJsPODg"></block>
+        </value>
+        <next>
+          <block type="input_dummy" id="2z+tK|^k*dEx^cB}25O*">
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="$G9zn$=LeT)E=SC;C~8]">
+                <field name="TEXT">を全て</field>
+              </block>
+            </statement>
+            <next>
+              <block type="input_value" id="Zru@aN]~Vn`kaItm:[AT">
+                <field name="INPUTNAME">value</field>
+                <field name="ALIGN">LEFT</field>
+                <value name="TYPE">
+                  <shadow type="type_null" id="?33[/lX{4@2oNk-kReW`"></shadow>
+                  <block type="type_group" id="Fabml.33?aWt1V?|17GG">
+                    <mutation types="2"></mutation>
+                    <value name="TYPE0">
+                      <block type="type_string" id="@N!FQrIfvtjJyGG|bs;D"></block>
+                    </value>
+                    <value name="TYPE1">
+                      <block type="type_number" id="rU}(=TZ99,aGJ^jv0.M1"></block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="input_dummy" id="L59KyG|r-;;+r}]VL*rZ">
+                    <field name="ALIGN">LEFT</field>
+                    <statement name="FIELDS">
+                      <block type="field_static" id="zY{`M,S~}JGB*lM?]*oG">
+                        <field name="TEXT">で区切って出力</field>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="oClbHYf:=+qXJkP/w*gM" deletable="false" movable="false">
+        <field name="TEXT">リストを指定文字で区切って文字列として出力します。</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="#Hou:Eh=;7dUI_Oo8r,I" deletable="false" movable="false">
+        <field name="TEXT">https://example.com</field>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="}8CN=`hJK7I](^DWhUM{"></shadow>
+      <block type="type_string" id="*/Qq{tTN5M,?Pumle_7K"></block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="awy[)$m~mP^_,CZVi:,]">
+        <mutation colour="#745ba5"></mutation>
+        <field name="HUE">260</field>
       </block>
     </value>
   </block></xml>
