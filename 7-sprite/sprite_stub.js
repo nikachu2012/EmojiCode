@@ -154,6 +154,6 @@ Blockly.JavaScript[`sprite_hide`] = function(block) {
 Blockly.JavaScript[`sprite_show`] = function(block) {
   var value_sprite = Blockly.JavaScript.valueToCode(block, `sprite`, Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.hide(${value_sprite});\n`;
+  var code = `emojisp.show(${value_sprite});\n`;
   return code;
 };
