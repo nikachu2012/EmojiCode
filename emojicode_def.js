@@ -1,7 +1,7 @@
 /* 
     EmojiCode Block Define
     Created by nikachu2012(https://github.com/nikachu2012)
-    Create time: Fri Sep 30 2022 22:02:16 GMT+0900 (日本標準時)
+    Create time: Wed Oct 19 2022 21:56:40 GMT+0900 (日本標準時)
 */
 Blockly.Blocks['if'] = {
   init: function() {
