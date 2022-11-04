@@ -1,4 +1,4 @@
-<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none;">
   <category name="動き" colour="#9fa55b">
     <block type="sprite_select">
       <field name="spriteName">スプライト名</field>
