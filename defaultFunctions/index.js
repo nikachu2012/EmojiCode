@@ -188,3 +188,12 @@ emoji.infinityLoop.create = (id, fn) => {
     }
 }
 
+emoji.loop.stop = (id) => {
+    if (Object.keys(emoji.loop.data).includes(id)) {
+        clearInterval(emoji.loop.data[id])
+        delete emoji.loop.data[id];
+    }
+    else {
+        alert('ループが存在していません。')
+    }
+}
