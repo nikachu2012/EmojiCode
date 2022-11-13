@@ -156,3 +156,23 @@ emoji.delay = (seconds) => {
         end = new Date().getTime();
     }
 }
+emoji.loop = {};
+emoji.loop.data = {};
+emoji.loop.create = (id, fn, count) => {
+    let counter = 0;
+    if (!Object.keys(emoji.loop.data).includes(id)) {
+        emoji.loop.data[id] = setInterval(() => {
+            fn();
+            counter++;
+            if (counter == count) {
+                clearInterval(emoji.loop.data[id]);
+                delete emoji.loop.data[id];
+            }
+        }, 33);
+    }
+    else {
+        alert('すでにループが作成されています')
+    }
+
+}
+
