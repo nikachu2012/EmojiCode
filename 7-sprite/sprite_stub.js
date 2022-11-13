@@ -115,7 +115,7 @@ Blockly.JavaScript[`sprite_rotate_houhou`] = function(block) {
 Blockly.JavaScript[`sprite_const_xpos`] = function(block) {
   var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.accessSpriteData(${value_spritename}).x`;
+  var code = `emojisp.spriteData['${value_spritename}'].x`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
@@ -123,7 +123,7 @@ Blockly.JavaScript[`sprite_const_xpos`] = function(block) {
 Blockly.JavaScript[`sprite_const_ypos`] = function(block) {
   var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.accessSpriteData(${value_spritename}).y`;
+  var code = `emojisp.spriteData['${value_spritename}'].y`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
@@ -131,7 +131,7 @@ Blockly.JavaScript[`sprite_const_ypos`] = function(block) {
 Blockly.JavaScript[`sprite_const_rotate`] = function(block) {
   var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.accessSpriteData(${value_spritename}).deg`;
+  var code = `emojisp.spriteData['${value_spritename}'].deg`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
