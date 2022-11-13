@@ -129,10 +129,10 @@ emoji.ask = (ask) => {
  */
 emoji.dec_hex = (dec) => {
     const a = dec.toString(16).toUpperCase();
-    if(a.length == 1){
-        return '0'+ a
+    if (a.length == 1) {
+        return '0' + a
     }
-    else{
+    else {
         return a
     }
 }
