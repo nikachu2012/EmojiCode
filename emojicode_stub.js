@@ -1,7 +1,7 @@
 /* 
     EmojiCode Block Stub
     Created by nikachu2012(https://github.com/nikachu2012)
-    Create time: Wed Oct 19 2022 21:56:40 GMT+0900 (日本標準時)
+    Create time: Mon Nov 14 2022 00:17:43 GMT+0900 (日本標準時)
 */
 Blockly.JavaScript[`if`] = function(block) {
   var value_formula = Blockly.JavaScript.valueToCode(block, `formula`, Blockly.JavaScript.ORDER_ATOMIC);
@@ -723,7 +723,7 @@ Blockly.JavaScript[`sprite_rotate_houhou`] = function(block) {
 Blockly.JavaScript[`sprite_const_xpos`] = function(block) {
   var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.accessSpriteData(${value_spritename}).x`;
+  var code = `emojisp.spriteData['${value_spritename}'].x`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
@@ -731,7 +731,7 @@ Blockly.JavaScript[`sprite_const_xpos`] = function(block) {
 Blockly.JavaScript[`sprite_const_ypos`] = function(block) {
   var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.accessSpriteData(${value_spritename}).y`;
+  var code = `emojisp.spriteData['${value_spritename}'].y`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
@@ -739,7 +739,7 @@ Blockly.JavaScript[`sprite_const_ypos`] = function(block) {
 Blockly.JavaScript[`sprite_const_rotate`] = function(block) {
   var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.accessSpriteData(${value_spritename}).deg`;
+  var code = `emojisp.spriteData['${value_spritename}'].deg`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
@@ -748,7 +748,7 @@ Blockly.JavaScript[`sprite_onclick`] = function(block) {
   var text_id = block.getFieldValue(`id`);
   var statements_run = Blockly.JavaScript.statementToCode(block, `run`);
   // TODO: Assemble JavaScript into code variable.
-  var code = `document.getElementById('emojiSprite_${text_id}').addEventListener('click', function() {${statements_run}});\n`;
+  var code = `emojisp.spriteData['${text_id}'].on('pointertap',()=>{${statements_run}})\n`
   return code;
 };
 
@@ -764,6 +764,15 @@ Blockly.JavaScript[`sprite_show`] = function(block) {
   // TODO: Assemble JavaScript into code variable.
   var code = `emojisp.show(${value_sprite});\n`;
   return code;
+};
+
+Blockly.JavaScript['sprite_collision_boolean'] = function(block) {
+  var value_sprite1 = Blockly.JavaScript.valueToCode(block, 'sprite1', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_sprite2 = Blockly.JavaScript.valueToCode(block, 'sprite2', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emojisp.collision(\`${value_sprite1}\`,\`${value_sprite2}\`)\n`;
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.JavaScript.ORDER_NONE];
 };
  
 Blockly.JavaScript['sound_inputid'] = function(block) {
