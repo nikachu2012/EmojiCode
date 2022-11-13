@@ -156,8 +156,11 @@ emoji.delay = (seconds) => {
         end = new Date().getTime();
     }
 }
+
 emoji.loop = {};
+emoji.infinityLoop = {};
 emoji.loop.data = {};
+
 emoji.loop.create = (id, fn, count) => {
     let counter = 0;
     if (!Object.keys(emoji.loop.data).includes(id)) {
@@ -174,5 +177,14 @@ emoji.loop.create = (id, fn, count) => {
         alert('すでにループが作成されています')
     }
 
+}
+
+emoji.infinityLoop.create = (id, fn) => {
+    if (!Object.keys(emoji.loop.data).includes(id)) {
+        emoji.loop.data[id] = setInterval(fn, 33);
+    }
+    else {
+        alert('すでにループが作成されています')
+    }
 }
 
