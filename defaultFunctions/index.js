@@ -160,6 +160,7 @@ emoji.delay = (seconds) => {
 emoji.loop = {};
 emoji.infinityLoop = {};
 emoji.loop.data = {};
+emoji.while = {};
 
 emoji.loop.create = (id, fn, count) => {
     let counter = 0;
@@ -195,5 +196,20 @@ emoji.loop.stop = (id) => {
     }
     else {
         alert('ループが存在していません。')
+    }
+}
+
+emoji.while.create = (id, fn, bool) => {
+    if (!Object.keys(emoji.loop.data).includes(id)) {
+        emoji.loop.data[id] = setInterval(() => {
+            fn();
+            if (eval(bool)) {
+                clearInterval(emoji.loop.data[id]);
+                delete emoji.loop.data[id];
+            }
+        }, 33);
+    }
+    else {
+        alert('すでにループが作成されています')
     }
 }
