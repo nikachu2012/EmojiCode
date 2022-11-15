@@ -161,7 +161,12 @@ emoji.loop = {};
 emoji.infinityLoop = {};
 emoji.loop.data = {};
 emoji.while = {};
-
+/**
+ * 回数指定ループの作成
+ * @param {String} id 
+ * @param {Function} fn 
+ * @param {Number} count 
+ */
 emoji.loop.create = (id, fn, count) => {
     let counter = 0;
     if (!Object.keys(emoji.loop.data).includes(id)) {
@@ -179,7 +184,11 @@ emoji.loop.create = (id, fn, count) => {
     }
 
 }
-
+/**
+ * 無限ループの作成
+ * @param {String} id 
+ * @param {Function} fn 
+ */
 emoji.infinityLoop.create = (id, fn) => {
     if (!Object.keys(emoji.loop.data).includes(id)) {
         emoji.loop.data[id] = setInterval(fn, 33);
@@ -188,7 +197,10 @@ emoji.infinityLoop.create = (id, fn) => {
         alert('すでにループが作成されています')
     }
 }
-
+/**
+ * ループの強制停止
+ * @param {String} id 
+ */
 emoji.loop.stop = (id) => {
     if (Object.keys(emoji.loop.data).includes(id)) {
         clearInterval(emoji.loop.data[id])
@@ -198,12 +210,17 @@ emoji.loop.stop = (id) => {
         alert('ループが存在していません。')
     }
 }
-
+/**
+ * whileループの作成
+ * @param {String} id 
+ * @param {Function} fn 
+ * @param {String} bool 判定式を文字列で入力
+ */
 emoji.while.create = (id, fn, bool) => {
     if (!Object.keys(emoji.loop.data).includes(id)) {
         emoji.loop.data[id] = setInterval(() => {
             fn();
-            if (eval(bool)) {
+            if (!eval(bool)) {
                 clearInterval(emoji.loop.data[id]);
                 delete emoji.loop.data[id];
             }
