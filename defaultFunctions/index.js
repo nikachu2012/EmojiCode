@@ -230,3 +230,13 @@ emoji.while.create = (id, fn, bool) => {
         alert('すでにループが作成されています')
     }
 }
+
+/**
+ * 現在実行されているすべてのループを無条件で停止
+ */
+emoji.loop.allStop = () => {
+    Object.keys(emoji.loop.data).forEach((e,i)=>{
+        emoji.loop.stop(e);
+        delete emoji.loop.data[e];
+    })
+}
