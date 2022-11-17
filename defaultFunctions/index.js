@@ -214,7 +214,7 @@ emoji.loop.stop = (id) => {
  * whileループの作成
  * @param {String} id 
  * @param {Function} fn 
- * @param {String} bool 判定式を文字列で入力
+ * @param {String} bool 判定式を文字列で入力 
  */
 emoji.while.create = (id, fn, bool) => {
     if (!Object.keys(emoji.loop.data).includes(id)) {
