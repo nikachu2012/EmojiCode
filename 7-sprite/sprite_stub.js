@@ -131,7 +131,7 @@ Blockly.JavaScript[`sprite_const_ypos`] = function(block) {
 Blockly.JavaScript[`sprite_const_rotate`] = function(block) {
   var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.spriteData['${value_spritename}'].deg`;
+  var code = `emojisp.accessSpriteData(\`${value_spritename}\`).deg`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
