@@ -2,7 +2,7 @@ Blockly.JavaScript['repeat_infinity'] = function(block) {
   var value_loopid = Blockly.JavaScript.valueToCode(block, 'loopID', Blockly.JavaScript.ORDER_ATOMIC);
   var statements_do = Blockly.JavaScript.statementToCode(block, 'do');
   // TODO: Assemble JavaScript into code variable.
-  var code = `emoji.infinityLoop.create(\`${value_loopid}\`, function(){${statements_do}});\n`;
+  var code = `emoji.infinityLoop.create(${value_loopid}, function(){${statements_do}});\n`;
   return code;
 };
 
@@ -11,7 +11,7 @@ Blockly.JavaScript['repeat'] = function(block) {
   var value_index = Blockly.JavaScript.valueToCode(block, 'index', Blockly.JavaScript.ORDER_ATOMIC);
   var statements_do = Blockly.JavaScript.statementToCode(block, 'do');
   // TODO: Assemble JavaScript into code variable.
-  var code = `emoji.loop.create(\`${value_loopid}\`, function(){${statements_do}}, \`${value_index}\`);\n`;
+  var code = `emoji.loop.create(${value_loopid}, function(){${statements_do}}, ${value_index});\n`;
   return code;
 };
 
@@ -22,10 +22,10 @@ Blockly.JavaScript['repeat_true'] = function(block) {
   var statements_do = Blockly.JavaScript.statementToCode(block, 'do');
   // TODO: Assemble JavaScript into code variable.
   if(dropdown_boolean == true){
-    var code = `emoji.while.create(\`${value_name}\`, function(){${statements_do}}, \`${value_formula}\`);\n`;
+    var code = `emoji.while.create(${value_name}, function(){${statements_do}}, \`${value_formula}\`);\n`;
   }
   else{
-    var code = `emoji.while.create(\`${value_name}\`, function(){${statements_do}}, \`!${value_formula}\`);\n`;
+    var code = `emoji.while.create(${value_name}, function(){${statements_do}}, \`!${value_formula}\`);\n`;
   }
   return code;
 };
@@ -55,6 +55,6 @@ Blockly.JavaScript[`continue`] = function(block) {
 Blockly.JavaScript['repeat_delete'] = function(block) {
   var value_loopid = Blockly.JavaScript.valueToCode(block, 'loopID', Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
-  var code = `emoji.loop.stop(\`${value_loopid}\`);\n`;
+  var code = `emoji.loop.stop(${value_loopid});\n`;
   return code;
 };
