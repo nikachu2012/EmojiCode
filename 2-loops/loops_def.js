@@ -16,26 +16,6 @@ Blockly.Blocks['repeat_infinity'] = {
     }
   };
 
-Blockly.Blocks['repeat_true'] = {
-  init: function() {
-    this.appendValueInput("formula")
-        .setCheck("Boolean")
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(new Blockly.FieldImage("https://img.icons8.com/material-outlined/48/000000/update-left-rotation.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
-    this.appendDummyInput()
-        .appendField("が")
-        .appendField(new Blockly.FieldDropdown([[{"src":"https://img.icons8.com/material-outlined/48/000000/filled-circle--v2.png","width":16,"height":16,"alt":"*"},"true"], [{"src":"https://img.icons8.com/material-outlined/48/000000/delete-sign.png","width":16,"height":16,"alt":"*"},"false"]]), "boolean")
-        .appendField("になるまで");
-    this.appendStatementInput("do")
-        .setCheck(null);
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(120);
- this.setTooltip("指定回数分繰り返します。");
- this.setHelpUrl("https://example.com");
-  }
-};
   Blockly.Blocks['repeat'] = {
     init: function() {
       this.appendValueInput("loopID")
@@ -85,6 +65,29 @@ Blockly.Blocks['repeat_setting'] = {
  this.setHelpUrl("https://example.com");
   }
 };
+  Blockly.Blocks['repeat_true'] = {
+    init: function() {
+      this.appendValueInput("NAME")
+          .setCheck("String")
+          .appendField(new Blockly.FieldImage("https://img.icons8.com/material-outlined/48/000000/update-left-rotation.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
+      this.appendValueInput("formula")
+          .setCheck("Boolean")
+          .setAlign(Blockly.ALIGN_RIGHT)
+          .appendField("で");
+      this.appendDummyInput()
+          .appendField("が")
+          .appendField(new Blockly.FieldDropdown([[{"src":"https://img.icons8.com/material-outlined/48/000000/filled-circle--v2.png","width":16,"height":16,"alt":"*"},"true"], [{"src":"https://img.icons8.com/material-outlined/48/000000/delete-sign.png","width":16,"height":16,"alt":"*"},"false"]]), "boolean")
+          .appendField("になるまで");
+      this.appendStatementInput("do")
+          .setCheck(null);
+      this.setInputsInline(true);
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour(120);
+   this.setTooltip("指定回数分繰り返します。");
+   this.setHelpUrl("https://example.com");
+    }
+  };
 
 Blockly.Blocks['repeat_list'] = {
   init: function() {
