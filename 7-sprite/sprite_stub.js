@@ -162,7 +162,7 @@ Blockly.JavaScript['sprite_collision_boolean'] = function(block) {
   var value_sprite1 = Blockly.JavaScript.valueToCode(block, 'sprite1', Blockly.JavaScript.ORDER_ATOMIC);
   var value_sprite2 = Blockly.JavaScript.valueToCode(block, 'sprite2', Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.collision(\`${value_sprite1}\`,\`${value_sprite2}\`)\n`;
+  var code = `emojisp.collision(${value_sprite1}, ${value_sprite2})\n`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
