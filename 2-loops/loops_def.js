@@ -105,3 +105,19 @@ Blockly.Blocks['continue'] = {
  this.setHelpUrl("https://example.com");
   }
 };
+
+Blockly.Blocks['repeat_delete'] = {
+    init: function() {
+      this.appendValueInput("loopID")
+          .setCheck("String")
+          .appendField(new Blockly.FieldImage("https://img.icons8.com/material-outlined/48/000000/update-left-rotation.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
+      this.appendDummyInput()
+          .appendField("のループを削除");
+      this.setInputsInline(true);
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour(120);
+   this.setTooltip("ループを削除します。");
+   this.setHelpUrl("https://example.com");
+    }
+  };
