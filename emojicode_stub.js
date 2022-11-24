@@ -1,7 +1,7 @@
 /* 
     EmojiCode Block Stub
     Created by nikachu2012(https://github.com/nikachu2012)
-    Create time: Thu Nov 17 2022 23:41:29 GMT+0900 (日本標準時)
+    Create time: Thu Nov 24 2022 19:30:01 GMT+0900 (日本標準時)
 */
 Blockly.JavaScript[`if`] = function(block) {
   var value_formula = Blockly.JavaScript.valueToCode(block, `formula`, Blockly.JavaScript.ORDER_ATOMIC);
@@ -112,46 +112,35 @@ Blockly.JavaScript['start'] = function(block) {
   return code;
 };
  
-Blockly.JavaScript[`repeat_infinity`] = function(block) {
-  var statements_do = Blockly.JavaScript.statementToCode(block, `do`);
-
-  var code = `while(true){${statements_do}}\n`;
+Blockly.JavaScript['repeat_infinity'] = function(block) {
+  var value_loopid = Blockly.JavaScript.valueToCode(block, 'loopID', Blockly.JavaScript.ORDER_ATOMIC);
+  var statements_do = Blockly.JavaScript.statementToCode(block, 'do');
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emoji.infinityLoop.create(\`${value_loopid}\`, function(){${statements_do}});\n`;
   return code;
 };
 
-Blockly.JavaScript[`repeat`] = function(block) {
-  var value_index = Blockly.JavaScript.valueToCode(block, `index`, Blockly.JavaScript.ORDER_ATOMIC);
-  var statements_do = Blockly.JavaScript.statementToCode(block, `do`);
-
-  var code = `for (let index = 0; index < ${value_index}; index++) {${statements_do}}\n`;
-  
+Blockly.JavaScript['repeat'] = function(block) {
+  var value_loopid = Blockly.JavaScript.valueToCode(block, 'loopID', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_index = Blockly.JavaScript.valueToCode(block, 'index', Blockly.JavaScript.ORDER_ATOMIC);
+  var statements_do = Blockly.JavaScript.statementToCode(block, 'do');
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emoji.loop.create(\`${value_loopid}\`, function(){${statements_do}}, \`${value_index}\`);\n`;
   return code;
 };
 
 Blockly.JavaScript['repeat_true'] = function(block) {
+  var value_name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC);
   var value_formula = Blockly.JavaScript.valueToCode(block, 'formula', Blockly.JavaScript.ORDER_ATOMIC);
-  var dropdown_narumade = block.getFieldValue('narumade');
+  var dropdown_boolean = block.getFieldValue('boolean');
   var statements_do = Blockly.JavaScript.statementToCode(block, 'do');
-
-  if(dropdown_narumade == "continue"){
-    //なるまで続ける
-    var code = `while(${value_formula}){${statements_do}}`
+  // TODO: Assemble JavaScript into code variable.
+  if(dropdown_boolean == true){
+    var code = `emoji.while.create(\`${value_name}\`, function(){${statements_do}}, \`${value_formula}\`);\n`;
   }
-  else if(dropdown_narumade == "stop"){
-    //なったら終わる
-    var code = `while(!(${value_formula})){${statements_do}`
+  else{
+    var code = `emoji.while.create(\`${value_name}\`, function(){${statements_do}}, \`!${value_formula}\`);\n`;
   }
-  return code;
-};
-
-Blockly.JavaScript[`repeat_setting`] = function(block) {
-  var variable_various = Blockly.JavaScript.nameDB_.getName(block.getFieldValue(`various`), Blockly.Variables.NAME_TYPE);
-  var value_start = Blockly.JavaScript.valueToCode(block, `start`, Blockly.JavaScript.ORDER_ATOMIC);
-  var value_end = Blockly.JavaScript.valueToCode(block, `end`, Blockly.JavaScript.ORDER_ATOMIC);
-  var value_dutu = Blockly.JavaScript.valueToCode(block, `dutu`, Blockly.JavaScript.ORDER_ATOMIC);
-  var statements_do = Blockly.JavaScript.statementToCode(block, `do`);
-  
-  var code = `for (let ${variable_various} = ${value_start}; ${variable_various} <= ${value_end}; ${variable_various}+= ${value_dutu}) {${statements_do}}\n`;
   return code;
 };
 
@@ -174,6 +163,13 @@ Blockly.JavaScript[`break`] = function(block) {
 Blockly.JavaScript[`continue`] = function(block) {
   // TODO: Assemble JavaScript into code variable.
   var code = `continue;\n`;
+  return code;
+};
+
+Blockly.JavaScript['repeat_delete'] = function(block) {
+  var value_loopid = Blockly.JavaScript.valueToCode(block, 'loopID', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emoji.loop.stop(\`${value_loopid}\`);\n`;
   return code;
 };
  
