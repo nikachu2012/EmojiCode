@@ -16,24 +16,6 @@ Blockly.Blocks['repeat_infinity'] = {
     }
   };
 
-Blockly.Blocks['repeat'] = {
-  init: function() {
-    this.appendValueInput("index")
-        .setCheck("Number")
-        .appendField(new Blockly.FieldImage("https://img.icons8.com/material-outlined/48/000000/update-left-rotation.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
-    this.appendDummyInput()
-        .appendField("回");
-    this.appendStatementInput("do")
-        .setCheck(null);
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(120);
- this.setTooltip("指定回数分繰り返します。");
- this.setHelpUrl("https://example.com");
-  }
-};
-
 Blockly.Blocks['repeat_true'] = {
   init: function() {
     this.appendValueInput("formula")
@@ -54,6 +36,26 @@ Blockly.Blocks['repeat_true'] = {
  this.setHelpUrl("https://example.com");
   }
 };
+  Blockly.Blocks['repeat'] = {
+    init: function() {
+      this.appendValueInput("loopID")
+          .setCheck("String")
+          .appendField(new Blockly.FieldImage("https://img.icons8.com/material-outlined/48/000000/update-left-rotation.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
+      this.appendValueInput("index")
+          .setCheck(null)
+          .appendField("で");
+      this.appendDummyInput()
+          .appendField("回のループ");
+      this.appendStatementInput("do")
+          .setCheck(null);
+      this.setInputsInline(true);
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour(120);
+   this.setTooltip("指定回数分繰り返します。");
+   this.setHelpUrl("https://example.com");
+    }
+  };
 
 Blockly.Blocks['repeat_setting'] = {
   init: function() {
