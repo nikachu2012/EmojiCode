@@ -100,6 +100,19 @@ Blockly.JavaScript['delay'] = function(block) {
   return code;
 };
 
+Blockly.JavaScript['delay_bool'] = function(block) {
+  var value_wait = Blockly.JavaScript.valueToCode(block, 'wait', Blockly.JavaScript.ORDER_ATOMIC);
+  var dropdown_true_false = block.getFieldValue('true_false');
+  // TODO: Assemble JavaScript into code variable.
+  if(dropdown_true_false == "true"){
+    var code = `while(${value_wait}){};\n`
+  }
+  else{
+    var code = `while(!(${value_wait})){};`
+  }
+  return code;
+};
+
 Blockly.JavaScript['start'] = function(block) {
   var statements_runcode = Blockly.JavaScript.statementToCode(block, 'runcode');
   // TODO: Assemble JavaScript into code variable.

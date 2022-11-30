@@ -114,6 +114,24 @@ Blockly.Blocks['delay'] = {
   }
 };
 
+Blockly.Blocks['delay_bool'] = {
+  init: function() {
+    this.appendValueInput("wait")
+        .setCheck("Boolean");
+    this.appendDummyInput()
+        .appendField("が")
+        .appendField(new Blockly.FieldDropdown([[{"src":"https://img.icons8.com/material-outlined/48/000000/filled-circle--v2.png","width":16,"height":16,"alt":"*"},"true"], [{"src":"https://img.icons8.com/material-outlined/48/000000/delete-sign.png","width":16,"height":16,"alt":"*"},"false"]]), "true_false");
+    this.appendDummyInput()
+        .appendField("になるまで待機");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(210);
+ this.setTooltip("指定秒待ちます。");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
 Blockly.Blocks['start'] = {
   init: function() {
     this.appendDummyInput()
