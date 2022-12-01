@@ -105,10 +105,10 @@ Blockly.JavaScript['delay_bool'] = function(block) {
   var dropdown_true_false = block.getFieldValue('true_false');
   // TODO: Assemble JavaScript into code variable.
   if(dropdown_true_false == "true"){
-    var code = `while(${value_wait}){};\n`
+    var code = `emoji.while.create(null ,function(){}, \`${value_wait}\`);\n`
   }
   else{
-    var code = `while(!(${value_wait})){};`
+    var code = `emoji.while.create(null, function(){}, \`!(${value_wait})\`);`
   }
   return code;
 };
