@@ -217,7 +217,16 @@ emoji.loop.stop = (id) => {
  * @param {String} bool 判定式を文字列で入力 
  */
 emoji.while.create = (id, fn, bool) => {
-    if (!Object.keys(emoji.loop.data).includes(id)) {
+    if (id == null) {
+        setInterval(() => {
+            fn();
+            if (!eval(bool)) {
+                clearInterval(emoji.loop.data[id]);
+                delete emoji.loop.data[id];
+            }
+        }, 33);
+    }
+    else if (id !== null && !Object.keys(emoji.loop.data).includes(id)) {
         emoji.loop.data[id] = setInterval(() => {
             fn();
             if (!eval(bool)) {
@@ -235,7 +244,7 @@ emoji.while.create = (id, fn, bool) => {
  * 現在実行されているすべてのループを無条件で停止
  */
 emoji.loop.allStop = () => {
-    Object.keys(emoji.loop.data).forEach((e,i)=>{
+    Object.keys(emoji.loop.data).forEach((e, i) => {
         emoji.loop.stop(e);
         delete emoji.loop.data[e];
     })
