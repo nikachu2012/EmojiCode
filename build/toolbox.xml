@@ -137,9 +137,6 @@
         </block>
       </value>
     </block>
-    <block type="delay_bool">
-      <field name="true_false">true</field>
-    </block>
     <block type="if"></block>
     <block type="if_else"></block>
     <block type="equals_return_boolean">
