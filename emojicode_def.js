@@ -1,8 +1,428 @@
 /* 
     EmojiCode Block Define
     Created by nikachu2012(https://github.com/nikachu2012)
-    Create time: Sun Dec 04 2022 02:40:14 GMT+0900 (日本標準時)
+    Create time: Fri Feb 17 2023 19:18:39 GMT+0900 (日本標準時)
 */
+Blockly.Blocks['sprite_select'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldImage("https://img.icons8.com/stickers/100/000000/cat.png", 22, 22, { alt: "*", flipRtl: "FALSE" }))
+        .appendField(new Blockly.FieldTextInput("スプライト名"), "spriteName");
+    this.setInputsInline(true);
+    this.setOutput(true, "sprite_ID");
+    this.setColour(65);
+ this.setTooltip("スプライトの選択ができます");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['sprite_sayuu'] = {
+  init: function() {
+    this.appendValueInput("spriteName")
+        .setCheck("sprite_ID")
+        .appendField(new Blockly.FieldImage("https://img.icons8.com/external-flat-kendis-lasman/64/000000/external-move-graphic-design-flat-flat-kendis-lasman.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
+    this.appendValueInput("value")
+        .setCheck("Number")
+        .appendField("を");
+    this.appendDummyInput()
+        .appendField("歩動かす");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(65);
+ this.setTooltip("指定したスプライトを動かします。");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['sprite_rotate_right'] = {
+  init: function() {
+    this.appendValueInput("spriteName")
+        .setCheck("sprite_ID")
+        .appendField(new Blockly.FieldImage("https://img.icons8.com/material-outlined/48/000000/rotate-right.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
+    this.appendValueInput("rotate")
+        .setCheck("Number")
+        .appendField("を");
+    this.appendDummyInput()
+        .appendField("度回転");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(65);
+ this.setTooltip("指定したスプライトを右に回転します。");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['sprite_rotate_left'] = {
+  init: function() {
+    this.appendValueInput("spriteName")
+        .setCheck("sprite_ID")
+        .appendField(new Blockly.FieldImage("https://img.icons8.com/material-outlined/48/000000/rotate-left.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
+    this.appendValueInput("value")
+        .setCheck("Number")
+        .appendField("を");
+    this.appendDummyInput()
+        .appendField("度回転");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(65);
+ this.setTooltip("指定したスプライトを左に回転します。");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['sprite_move'] = {
+  init: function() {
+    this.appendValueInput("spriteName")
+        .setCheck("sprite_ID")
+        .appendField(new Blockly.FieldImage("https://img.icons8.com/external-flat-kendis-lasman/64/000000/external-move-graphic-design-flat-flat-kendis-lasman.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
+    this.appendValueInput("x")
+        .setCheck("Number")
+        .appendField("をx: ");
+    this.appendValueInput("y")
+        .setCheck("Number")
+        .appendField("y: ");
+    this.appendDummyInput()
+        .appendField("にする");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(65);
+ this.setTooltip("指定したスプライトを動かします。");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['sprite_move_seconds'] = {
+  init: function() {
+    this.appendValueInput("spriteName")
+        .setCheck("sprite_ID")
+        .appendField(new Blockly.FieldImage("https://img.icons8.com/external-flat-kendis-lasman/64/000000/external-move-graphic-design-flat-flat-kendis-lasman.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
+    this.appendValueInput("x")
+        .setCheck("Number")
+        .appendField("をx: ");
+    this.appendValueInput("y")
+        .setCheck("Number")
+        .appendField("y: ");
+    this.appendValueInput("seconds")
+        .setCheck("Number")
+        .appendField("に");
+    this.appendDummyInput()
+        .appendField("秒で動かす");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(65);
+ this.setTooltip("指定したスプライトを指定秒数以内に動かします。");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['sprite_rotate'] = {
+  init: function() {
+    this.appendValueInput("spriteName")
+        .setCheck("sprite_ID");
+    this.appendValueInput("value")
+        .setCheck("Number")
+        .appendField("を");
+    this.appendDummyInput()
+        .appendField("度に向ける");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(65);
+ this.setTooltip("指定したスプライトの向きを変えます。");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['sprite_move_xdake'] = {
+  init: function() {
+    this.appendValueInput("spriteName")
+        .setCheck("sprite_ID")
+        .appendField(new Blockly.FieldImage("https://img.icons8.com/fluency-systems-filled/48/000000/x.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
+    this.appendValueInput("x")
+        .setCheck("Number")
+        .appendField("のx座標を");
+    this.appendDummyInput()
+        .appendField("にする");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(65);
+ this.setTooltip("指定したスプライトのx座標を指定に変更します。");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['sprite_move_xdutu'] = {
+  init: function() {
+    this.appendValueInput("spriteName")
+        .setCheck("sprite_ID")
+        .appendField(new Blockly.FieldImage("https://img.icons8.com/fluency-systems-filled/48/000000/x.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
+    this.appendValueInput("x")
+        .setCheck("Number")
+        .appendField("のx座標を");
+    this.appendDummyInput()
+        .appendField("づつ動かす");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(65);
+ this.setTooltip("指定したスプライトのｘ座標を指定分づつ動かします。");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['sprite_move_ydake'] = {
+  init: function() {
+    this.appendValueInput("spriteName")
+        .setCheck("sprite_ID")
+        .appendField(new Blockly.FieldImage("https://img.icons8.com/fluency-systems-filled/48/000000/y.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
+    this.appendValueInput("y")
+        .setCheck("Number")
+        .appendField("のy座標を");
+    this.appendDummyInput()
+        .appendField("にする");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(65);
+ this.setTooltip("指定したスプライトのy座標を指定に変更します。");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['sprite_move_ydutu'] = {
+  init: function() {
+    this.appendValueInput("spriteName")
+        .setCheck("sprite_ID")
+        .appendField(new Blockly.FieldImage("https://img.icons8.com/fluency-systems-filled/48/000000/y.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
+    this.appendValueInput("y")
+        .setCheck("Number")
+        .appendField("のy座標を");
+    this.appendDummyInput()
+        .appendField("づつ動かす");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(65);
+ this.setTooltip("指定したスプライトのｙ座標を指定分づつ動かします。");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['sprite_end'] = {
+  init: function() {
+    this.appendValueInput("spriteName")
+        .setCheck("sprite_ID");
+    this.appendDummyInput()
+        .appendField("は、もし端に着いたら跳ね返る");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(65);
+ this.setTooltip("端に着いたら跳ね返るようにします。");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['sprite_rotate_houhou'] = {
+  init: function() {
+    this.appendValueInput("spriteName")
+        .setCheck("sprite_ID");
+    this.appendDummyInput()
+        .appendField("の回転方法を")
+        .appendField(new Blockly.FieldDropdown([["左右のみ","left-right"], ["回転しない","none"], ["自由に回転","free"]]), "NAME")
+        .appendField("のみにする");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(65);
+ this.setTooltip("指定したスプライトの回転方向を変更します。");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['sprite_const_xpos'] = {
+  init: function() {
+    this.appendValueInput("spriteName")
+        .setCheck("sprite_ID")
+        .appendField(new Blockly.FieldImage("https://img.icons8.com/fluency-systems-filled/48/000000/x.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
+    this.appendDummyInput()
+        .appendField("のｘ座標");
+    this.setInputsInline(true);
+    this.setOutput(true, "Number");
+    this.setColour(65);
+ this.setTooltip("指定したスプライトのｘ座標を取得します。");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['sprite_const_ypos'] = {
+  init: function() {
+    this.appendValueInput("spriteName")
+        .setCheck("sprite_ID")
+        .appendField(new Blockly.FieldImage("https://img.icons8.com/fluency-systems-filled/48/000000/y.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
+    this.appendDummyInput()
+        .appendField("のｙ座標");
+    this.setInputsInline(true);
+    this.setOutput(true, "Number");
+    this.setColour(65);
+ this.setTooltip("指定したスプライトのｙ座標を取得します。");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['sprite_const_rotate'] = {
+  init: function() {
+    this.appendValueInput("spriteName")
+        .setCheck("sprite_ID");
+    this.appendDummyInput()
+        .appendField("の向き");
+    this.setInputsInline(true);
+    this.setOutput(true, "Number");
+    this.setColour(65);
+ this.setTooltip("指定したスプライトの向きを取得します。");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['sprite_onclick'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldImage("https://img.icons8.com/stickers/100/000000/cat.png", 16, 16, { alt: "*", flipRtl: "FALSE" }))
+        .appendField(new Blockly.FieldTextInput("スプライト名"), "id")
+        .appendField("がクリックされた時");
+    this.appendStatementInput("run")
+        .setCheck(null);
+    this.setInputsInline(true);
+    this.setColour(65);
+ this.setTooltip("スプライトがクリックされた時の処理を追加");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['sprite_hide'] = {
+  init: function() {
+    this.appendValueInput("sprite")
+        .setCheck("sprite_ID");
+    this.appendDummyInput()
+        .appendField("を隠す");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(65);
+ this.setTooltip("スプライトを隠します");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['sprite_show'] = {
+  init: function() {
+    this.appendValueInput("sprite")
+        .setCheck("sprite_ID");
+    this.appendDummyInput()
+        .appendField("を表示する");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(65);
+ this.setTooltip("スプライトを表示します");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['sprite_collision_boolean'] = {
+  init: function() {
+    this.appendValueInput("sprite1")
+        .setCheck("sprite_ID");
+    this.appendDummyInput()
+        .appendField("が");
+    this.appendValueInput("sprite2")
+        .setCheck("sprite_ID");
+    this.appendDummyInput()
+        .appendField("に接触しているか");
+    this.setInputsInline(true);
+    this.setOutput(true, "Boolean");
+    this.setColour(65);
+ this.setTooltip("衝突の判定を行います。");
+ this.setHelpUrl("https://example.com");
+  }
+};
+ 
+Blockly.Blocks['sound_inputid'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldImage("https://img.icons8.com/material/48/000000/low-volume--v1.png", 16, 16, { alt: "*", flipRtl: "FALSE" }))
+        .appendField(new Blockly.FieldTextInput("音名"), "soundID");
+    this.setOutput(true, "sound_ID");
+    this.setColour(290);
+ this.setTooltip("音名のIDを指定できます");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+Blockly.Blocks['sound_play'] = {
+  init: function() {
+    this.appendValueInput("soundName")
+        .setCheck("sound_ID")
+        .appendField(new Blockly.FieldImage("https://img.icons8.com/material/48/000000/low-volume--v1.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
+    this.appendDummyInput()
+        .appendField("を再生");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(290);
+ this.setTooltip("音声を再生します");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+
+Blockly.Blocks['sound_tone'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldImage("https://img.icons8.com/ios-filled/50/000000/piano.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
+    this.appendValueInput("onkai")
+        .setCheck("String");
+    this.appendDummyInput()
+        .appendField("の音を")
+        .appendField(new Blockly.FieldDropdown([["全音符","1"], ["２分音符","2"], ["４分音符","4"], ["８分音符","8"], ["１６分音符","16"]]), "select")
+        .appendField("鳴らす");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(290);
+ this.setTooltip("指定トーンの音を出します");
+ this.setHelpUrl("https://example.com");
+  }
+};
+
+
+Blockly.Blocks['sound_tone_second'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldImage("https://img.icons8.com/ios-filled/50/000000/piano.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
+    this.appendValueInput("onkai")
+        .setCheck("String");
+    this.appendDummyInput()
+        .appendField("の音を");
+    this.appendValueInput("second")
+        .setCheck("Number");
+    this.appendDummyInput()
+        .appendField("秒間鳴らす");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(290);
+ this.setTooltip("指定トーンの音を出します");
+ this.setHelpUrl("https://example.com");
+  }
+};
+ 
 Blockly.Blocks['if'] = {
   init: function() {
     this.appendValueInput("formula")
@@ -780,426 +1200,6 @@ Blockly.Blocks['color_option'] = {
     this.setOutput(true, "String");
     this.setColour(20);
  this.setTooltip("色を細かく数字で指定できます。");
- this.setHelpUrl("https://example.com");
-  }
-};
- 
-Blockly.Blocks['sprite_select'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldImage("https://img.icons8.com/stickers/100/000000/cat.png", 22, 22, { alt: "*", flipRtl: "FALSE" }))
-        .appendField(new Blockly.FieldTextInput("スプライト名"), "spriteName");
-    this.setInputsInline(true);
-    this.setOutput(true, "sprite_ID");
-    this.setColour(65);
- this.setTooltip("スプライトの選択ができます");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['sprite_sayuu'] = {
-  init: function() {
-    this.appendValueInput("spriteName")
-        .setCheck("sprite_ID")
-        .appendField(new Blockly.FieldImage("https://img.icons8.com/external-flat-kendis-lasman/64/000000/external-move-graphic-design-flat-flat-kendis-lasman.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
-    this.appendValueInput("value")
-        .setCheck("Number")
-        .appendField("を");
-    this.appendDummyInput()
-        .appendField("歩動かす");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(65);
- this.setTooltip("指定したスプライトを動かします。");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['sprite_rotate_right'] = {
-  init: function() {
-    this.appendValueInput("spriteName")
-        .setCheck("sprite_ID")
-        .appendField(new Blockly.FieldImage("https://img.icons8.com/material-outlined/48/000000/rotate-right.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
-    this.appendValueInput("rotate")
-        .setCheck("Number")
-        .appendField("を");
-    this.appendDummyInput()
-        .appendField("度回転");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(65);
- this.setTooltip("指定したスプライトを右に回転します。");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['sprite_rotate_left'] = {
-  init: function() {
-    this.appendValueInput("spriteName")
-        .setCheck("sprite_ID")
-        .appendField(new Blockly.FieldImage("https://img.icons8.com/material-outlined/48/000000/rotate-left.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
-    this.appendValueInput("value")
-        .setCheck("Number")
-        .appendField("を");
-    this.appendDummyInput()
-        .appendField("度回転");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(65);
- this.setTooltip("指定したスプライトを左に回転します。");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['sprite_move'] = {
-  init: function() {
-    this.appendValueInput("spriteName")
-        .setCheck("sprite_ID")
-        .appendField(new Blockly.FieldImage("https://img.icons8.com/external-flat-kendis-lasman/64/000000/external-move-graphic-design-flat-flat-kendis-lasman.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
-    this.appendValueInput("x")
-        .setCheck("Number")
-        .appendField("をx: ");
-    this.appendValueInput("y")
-        .setCheck("Number")
-        .appendField("y: ");
-    this.appendDummyInput()
-        .appendField("にする");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(65);
- this.setTooltip("指定したスプライトを動かします。");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['sprite_move_seconds'] = {
-  init: function() {
-    this.appendValueInput("spriteName")
-        .setCheck("sprite_ID")
-        .appendField(new Blockly.FieldImage("https://img.icons8.com/external-flat-kendis-lasman/64/000000/external-move-graphic-design-flat-flat-kendis-lasman.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
-    this.appendValueInput("x")
-        .setCheck("Number")
-        .appendField("をx: ");
-    this.appendValueInput("y")
-        .setCheck("Number")
-        .appendField("y: ");
-    this.appendValueInput("seconds")
-        .setCheck("Number")
-        .appendField("に");
-    this.appendDummyInput()
-        .appendField("秒で動かす");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(65);
- this.setTooltip("指定したスプライトを指定秒数以内に動かします。");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['sprite_rotate'] = {
-  init: function() {
-    this.appendValueInput("spriteName")
-        .setCheck("sprite_ID");
-    this.appendValueInput("value")
-        .setCheck("Number")
-        .appendField("を");
-    this.appendDummyInput()
-        .appendField("度に向ける");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(65);
- this.setTooltip("指定したスプライトの向きを変えます。");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['sprite_move_xdake'] = {
-  init: function() {
-    this.appendValueInput("spriteName")
-        .setCheck("sprite_ID")
-        .appendField(new Blockly.FieldImage("https://img.icons8.com/fluency-systems-filled/48/000000/x.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
-    this.appendValueInput("x")
-        .setCheck("Number")
-        .appendField("のx座標を");
-    this.appendDummyInput()
-        .appendField("にする");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(65);
- this.setTooltip("指定したスプライトのx座標を指定に変更します。");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['sprite_move_xdutu'] = {
-  init: function() {
-    this.appendValueInput("spriteName")
-        .setCheck("sprite_ID")
-        .appendField(new Blockly.FieldImage("https://img.icons8.com/fluency-systems-filled/48/000000/x.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
-    this.appendValueInput("x")
-        .setCheck("Number")
-        .appendField("のx座標を");
-    this.appendDummyInput()
-        .appendField("づつ動かす");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(65);
- this.setTooltip("指定したスプライトのｘ座標を指定分づつ動かします。");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['sprite_move_ydake'] = {
-  init: function() {
-    this.appendValueInput("spriteName")
-        .setCheck("sprite_ID")
-        .appendField(new Blockly.FieldImage("https://img.icons8.com/fluency-systems-filled/48/000000/y.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
-    this.appendValueInput("y")
-        .setCheck("Number")
-        .appendField("のy座標を");
-    this.appendDummyInput()
-        .appendField("にする");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(65);
- this.setTooltip("指定したスプライトのy座標を指定に変更します。");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['sprite_move_ydutu'] = {
-  init: function() {
-    this.appendValueInput("spriteName")
-        .setCheck("sprite_ID")
-        .appendField(new Blockly.FieldImage("https://img.icons8.com/fluency-systems-filled/48/000000/y.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
-    this.appendValueInput("y")
-        .setCheck("Number")
-        .appendField("のy座標を");
-    this.appendDummyInput()
-        .appendField("づつ動かす");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(65);
- this.setTooltip("指定したスプライトのｙ座標を指定分づつ動かします。");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['sprite_end'] = {
-  init: function() {
-    this.appendValueInput("spriteName")
-        .setCheck("sprite_ID");
-    this.appendDummyInput()
-        .appendField("は、もし端に着いたら跳ね返る");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(65);
- this.setTooltip("端に着いたら跳ね返るようにします。");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['sprite_rotate_houhou'] = {
-  init: function() {
-    this.appendValueInput("spriteName")
-        .setCheck("sprite_ID");
-    this.appendDummyInput()
-        .appendField("の回転方法を")
-        .appendField(new Blockly.FieldDropdown([["左右のみ","left-right"], ["回転しない","none"], ["自由に回転","free"]]), "NAME")
-        .appendField("のみにする");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(65);
- this.setTooltip("指定したスプライトの回転方向を変更します。");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['sprite_const_xpos'] = {
-  init: function() {
-    this.appendValueInput("spriteName")
-        .setCheck("sprite_ID")
-        .appendField(new Blockly.FieldImage("https://img.icons8.com/fluency-systems-filled/48/000000/x.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
-    this.appendDummyInput()
-        .appendField("のｘ座標");
-    this.setInputsInline(true);
-    this.setOutput(true, "Number");
-    this.setColour(65);
- this.setTooltip("指定したスプライトのｘ座標を取得します。");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['sprite_const_ypos'] = {
-  init: function() {
-    this.appendValueInput("spriteName")
-        .setCheck("sprite_ID")
-        .appendField(new Blockly.FieldImage("https://img.icons8.com/fluency-systems-filled/48/000000/y.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
-    this.appendDummyInput()
-        .appendField("のｙ座標");
-    this.setInputsInline(true);
-    this.setOutput(true, "Number");
-    this.setColour(65);
- this.setTooltip("指定したスプライトのｙ座標を取得します。");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['sprite_const_rotate'] = {
-  init: function() {
-    this.appendValueInput("spriteName")
-        .setCheck("sprite_ID");
-    this.appendDummyInput()
-        .appendField("の向き");
-    this.setInputsInline(true);
-    this.setOutput(true, "Number");
-    this.setColour(65);
- this.setTooltip("指定したスプライトの向きを取得します。");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['sprite_onclick'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldImage("https://img.icons8.com/stickers/100/000000/cat.png", 16, 16, { alt: "*", flipRtl: "FALSE" }))
-        .appendField(new Blockly.FieldTextInput("スプライト名"), "id")
-        .appendField("がクリックされた時");
-    this.appendStatementInput("run")
-        .setCheck(null);
-    this.setInputsInline(true);
-    this.setColour(65);
- this.setTooltip("スプライトがクリックされた時の処理を追加");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['sprite_hide'] = {
-  init: function() {
-    this.appendValueInput("sprite")
-        .setCheck("sprite_ID");
-    this.appendDummyInput()
-        .appendField("を隠す");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(65);
- this.setTooltip("スプライトを隠します");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['sprite_show'] = {
-  init: function() {
-    this.appendValueInput("sprite")
-        .setCheck("sprite_ID");
-    this.appendDummyInput()
-        .appendField("を表示する");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(65);
- this.setTooltip("スプライトを表示します");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['sprite_collision_boolean'] = {
-  init: function() {
-    this.appendValueInput("sprite1")
-        .setCheck("sprite_ID");
-    this.appendDummyInput()
-        .appendField("が");
-    this.appendValueInput("sprite2")
-        .setCheck("sprite_ID");
-    this.appendDummyInput()
-        .appendField("に接触しているか");
-    this.setInputsInline(true);
-    this.setOutput(true, "Boolean");
-    this.setColour(65);
- this.setTooltip("衝突の判定を行います。");
- this.setHelpUrl("https://example.com");
-  }
-};
- 
-Blockly.Blocks['sound_inputid'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldImage("https://img.icons8.com/material/48/000000/low-volume--v1.png", 16, 16, { alt: "*", flipRtl: "FALSE" }))
-        .appendField(new Blockly.FieldTextInput("音名"), "soundID");
-    this.setOutput(true, "sound_ID");
-    this.setColour(290);
- this.setTooltip("音名のIDを指定できます");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-Blockly.Blocks['sound_play'] = {
-  init: function() {
-    this.appendValueInput("soundName")
-        .setCheck("sound_ID")
-        .appendField(new Blockly.FieldImage("https://img.icons8.com/material/48/000000/low-volume--v1.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
-    this.appendDummyInput()
-        .appendField("を再生");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(290);
- this.setTooltip("音声を再生します");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-
-Blockly.Blocks['sound_tone'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldImage("https://img.icons8.com/ios-filled/50/000000/piano.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
-    this.appendValueInput("onkai")
-        .setCheck("String");
-    this.appendDummyInput()
-        .appendField("の音を")
-        .appendField(new Blockly.FieldDropdown([["全音符","1"], ["２分音符","2"], ["４分音符","4"], ["８分音符","8"], ["１６分音符","16"]]), "select")
-        .appendField("鳴らす");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(290);
- this.setTooltip("指定トーンの音を出します");
- this.setHelpUrl("https://example.com");
-  }
-};
-
-
-Blockly.Blocks['sound_tone_second'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldImage("https://img.icons8.com/ios-filled/50/000000/piano.png", 16, 16, { alt: "*", flipRtl: "FALSE" }));
-    this.appendValueInput("onkai")
-        .setCheck("String");
-    this.appendDummyInput()
-        .appendField("の音を");
-    this.appendValueInput("second")
-        .setCheck("Number");
-    this.appendDummyInput()
-        .appendField("秒間鳴らす");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(290);
- this.setTooltip("指定トーンの音を出します");
  this.setHelpUrl("https://example.com");
   }
 };
