@@ -1,8 +1,225 @@
 /* 
     EmojiCode Block Stub
     Created by nikachu2012(https://github.com/nikachu2012)
-    Create time: Wed Oct 19 2022 21:56:40 GMT+0900 (日本標準時)
+    Create time: Fri Feb 17 2023 19:18:39 GMT+0900 (日本標準時)
 */
+Blockly.JavaScript[`sprite_select`] = function(block) {
+  var text_spritename = block.getFieldValue(`spriteName`);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `'${text_spritename}'`;
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript[`sprite_sayuu`] = function(block) {
+  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
+  var value_value = Blockly.JavaScript.valueToCode(block, `value`, Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emojisp.susumu(${value_spritename}, ${value_value});\n`;
+  return code;
+};
+
+Blockly.JavaScript[`sprite_rotate_right`] = function(block) {
+  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
+  var value_rotate = Blockly.JavaScript.valueToCode(block, `rotate`, Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emojisp.rotateplus(${value_spritename}, ${value_rotate});\n`;
+  return code;
+};
+
+Blockly.JavaScript[`sprite_rotate_left`] = function(block) {
+  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
+  var value_value = Blockly.JavaScript.valueToCode(block, `value`, Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emojisp.rotateplus(${value_spritename}, ${-(value_value)});\n`;
+  return code;
+};
+
+Blockly.JavaScript[`sprite_move`] = function(block) {
+  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
+  var value_x = Blockly.JavaScript.valueToCode(block, `x`, Blockly.JavaScript.ORDER_ATOMIC);
+  var value_y = Blockly.JavaScript.valueToCode(block, `y`, Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emojisp.posxy(${value_spritename}, ${value_x}, ${value_y});\n`;
+  return code;
+};
+
+Blockly.JavaScript[`sprite_move_seconds`] = function(block) {
+  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
+  var value_x = Blockly.JavaScript.valueToCode(block, `x`, Blockly.JavaScript.ORDER_ATOMIC);
+  var value_y = Blockly.JavaScript.valueToCode(block, `y`, Blockly.JavaScript.ORDER_ATOMIC);
+  var value_seconds = Blockly.JavaScript.valueToCode(block, `seconds`, Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emojisp.posxytime(${value_spritename}, ${value_x}, ${value_y}, ${value_seconds*1000});\n`;
+  return code;
+};
+
+Blockly.JavaScript[`sprite_rotate`] = function(block) {
+  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
+  var value_value = Blockly.JavaScript.valueToCode(block, `value`, Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emojisp.rotate(${value_spritename}, ${value_value});\n`;
+  return code;
+};
+
+Blockly.JavaScript[`sprite_move_xdake`] = function(block) {
+  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
+  var value_x = Blockly.JavaScript.valueToCode(block, `x`, Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emojisp.posx(${value_spritename}, ${value_x});\n`;
+  return code;
+};
+
+Blockly.JavaScript[`sprite_move_xdutu`] = function(block) {
+  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
+  var value_x = Blockly.JavaScript.valueToCode(block, `x`, Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emojisp.posxplus(${value_spritename}, ${value_x});\n`;
+  return code;
+};
+
+Blockly.JavaScript[`sprite_move_ydake`] = function(block) {
+  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
+  var value_y = Blockly.JavaScript.valueToCode(block, `y`, Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emojisp.posy(${value_spritename}, ${value_y});\n`;
+  return code;
+};
+
+Blockly.JavaScript[`sprite_move_ydutu`] = function(block) {
+  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
+  var value_y = Blockly.JavaScript.valueToCode(block, `y`, Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emojisp.posyplus(${value_spritename}, ${value_y});\n`;
+  return code;
+};
+
+Blockly.JavaScript[`sprite_end`] = function(block) {
+  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emojisp.rebound(${value_spritename});\n`;
+  return code;
+};
+
+Blockly.JavaScript[`sprite_rotate_houhou`] = function(block) {
+  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
+  var dropdown_name = block.getFieldValue(`NAME`);
+  // TODO: Assemble JavaScript into code variable.
+  if(dropdown_name == "left-right"){
+    var code = `emojisp.rotatetype(${value_spritename}, "lr");\n`;
+  }
+  else if(dropdown_name == "none"){
+    var code = `emojisp.rotatetype(${value_spritename}, "none");\n`;
+  }
+  else if(dropdown_name == "free"){
+    var code = `emojisp.rotatetype(${value_spritename}, "free");\n`;
+  }
+  return code;
+};
+
+Blockly.JavaScript[`sprite_const_xpos`] = function(block) {
+  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emojisp.spriteData['${value_spritename}'].x`;
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript[`sprite_const_ypos`] = function(block) {
+  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emojisp.spriteData['${value_spritename}'].y`;
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript[`sprite_const_rotate`] = function(block) {
+  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emojisp.accessSpriteData(\`${value_spritename}\`).deg`;
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript[`sprite_onclick`] = function(block) {
+  var text_id = block.getFieldValue(`id`);
+  var statements_run = Blockly.JavaScript.statementToCode(block, `run`);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emojisp.spriteData['${text_id}'].on('pointertap',function(){${statements_run}})\n`
+  return code;
+};
+
+Blockly.JavaScript[`sprite_hide`] = function(block) {
+  var value_sprite = Blockly.JavaScript.valueToCode(block, `sprite`, Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emojisp.hide(${value_sprite});\n`;
+  return code;
+};
+
+Blockly.JavaScript[`sprite_show`] = function(block) {
+  var value_sprite = Blockly.JavaScript.valueToCode(block, `sprite`, Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emojisp.show(${value_sprite});\n`;
+  return code;
+};
+
+Blockly.JavaScript['sprite_collision_boolean'] = function(block) {
+  var value_sprite1 = Blockly.JavaScript.valueToCode(block, 'sprite1', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_sprite2 = Blockly.JavaScript.valueToCode(block, 'sprite2', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emojisp.collision(${value_sprite1}, ${value_sprite2})\n`;
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+ 
+Blockly.JavaScript['sound_inputid'] = function(block) {
+  var text_soundid = block.getFieldValue('soundID');
+  // TODO: Assemble JavaScript into code variable.
+  var code = `\`${text_soundid}\``;
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript[`sound_play`] = function(block) {
+  var value_soundname = Blockly.JavaScript.valueToCode(block, `soundName`, Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emojiau.playSound(${value_soundname});\n`;
+  return code;
+};
+
+Blockly.JavaScript[`sound_tone`] = function(block) {
+  var value_onkai = Blockly.JavaScript.valueToCode(block, `onkai`, Blockly.JavaScript.ORDER_ATOMIC);
+  var dropdown_select = block.getFieldValue(`select`);
+  // TODO: Assemble JavaScript into code variable.
+
+  if(dropdown_select == '1'){
+    var code = `emojiau.playNote(${value_onkai}, '1m')`
+  }
+  else if(dropdown_select == '2'){
+    var code = `emojiau.playNote(${value_onkai}, '2n')`
+  }
+  else if(dropdown_select == '4'){
+    var code = `emojiau.playNote(${value_onkai}, '4n')`
+  }
+  else if(dropdown_select == '8'){
+    var code = `emojiau.playNote(${value_onkai}, '8n')`
+  }
+  else if(dropdown_select == '16'){
+    var code = `emojiau.playNote(${value_onkai}, '16n')`
+  }
+
+  var code = `...;\n`;
+  return code;
+};
+
+Blockly.JavaScript[`sound_tone_second`] = function(block) {
+  var value_onkai = Blockly.JavaScript.valueToCode(block, `onkai`, Blockly.JavaScript.ORDER_ATOMIC);
+  var value_second = Blockly.JavaScript.valueToCode(block, `second`, Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emojiau.playNoteSecond(${value_onkai}, ${value_second});\n`;
+  return code;
+};
+ 
 Blockly.JavaScript[`if`] = function(block) {
   var value_formula = Blockly.JavaScript.valueToCode(block, `formula`, Blockly.JavaScript.ORDER_ATOMIC);
   var statements_true = Blockly.JavaScript.statementToCode(block, `true`);
@@ -112,46 +329,35 @@ Blockly.JavaScript['start'] = function(block) {
   return code;
 };
  
-Blockly.JavaScript[`repeat_infinity`] = function(block) {
-  var statements_do = Blockly.JavaScript.statementToCode(block, `do`);
-
-  var code = `while(true){${statements_do}}\n`;
+Blockly.JavaScript['repeat_infinity'] = function(block) {
+  var value_loopid = Blockly.JavaScript.valueToCode(block, 'loopID', Blockly.JavaScript.ORDER_ATOMIC);
+  var statements_do = Blockly.JavaScript.statementToCode(block, 'do');
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emoji.infinityLoop.create(${value_loopid}, function(){${statements_do}});\n`;
   return code;
 };
 
-Blockly.JavaScript[`repeat`] = function(block) {
-  var value_index = Blockly.JavaScript.valueToCode(block, `index`, Blockly.JavaScript.ORDER_ATOMIC);
-  var statements_do = Blockly.JavaScript.statementToCode(block, `do`);
-
-  var code = `for (let index = 0; index < ${value_index}; index++) {${statements_do}}\n`;
-  
+Blockly.JavaScript['repeat'] = function(block) {
+  var value_loopid = Blockly.JavaScript.valueToCode(block, 'loopID', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_index = Blockly.JavaScript.valueToCode(block, 'index', Blockly.JavaScript.ORDER_ATOMIC);
+  var statements_do = Blockly.JavaScript.statementToCode(block, 'do');
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emoji.loop.create(${value_loopid}, function(){${statements_do}}, ${value_index});\n`;
   return code;
 };
 
 Blockly.JavaScript['repeat_true'] = function(block) {
+  var value_name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC);
   var value_formula = Blockly.JavaScript.valueToCode(block, 'formula', Blockly.JavaScript.ORDER_ATOMIC);
-  var dropdown_narumade = block.getFieldValue('narumade');
+  var dropdown_boolean = block.getFieldValue('boolean');
   var statements_do = Blockly.JavaScript.statementToCode(block, 'do');
-
-  if(dropdown_narumade == "continue"){
-    //なるまで続ける
-    var code = `while(${value_formula}){${statements_do}}`
+  // TODO: Assemble JavaScript into code variable.
+  if(dropdown_boolean == true){
+    var code = `emoji.while.create(${value_name}, function(){${statements_do}}, \`${value_formula}\`);\n`;
   }
-  else if(dropdown_narumade == "stop"){
-    //なったら終わる
-    var code = `while(!(${value_formula})){${statements_do}`
+  else{
+    var code = `emoji.while.create(${value_name}, function(){${statements_do}}, \`!${value_formula}\`);\n`;
   }
-  return code;
-};
-
-Blockly.JavaScript[`repeat_setting`] = function(block) {
-  var variable_various = Blockly.JavaScript.nameDB_.getName(block.getFieldValue(`various`), Blockly.Variables.NAME_TYPE);
-  var value_start = Blockly.JavaScript.valueToCode(block, `start`, Blockly.JavaScript.ORDER_ATOMIC);
-  var value_end = Blockly.JavaScript.valueToCode(block, `end`, Blockly.JavaScript.ORDER_ATOMIC);
-  var value_dutu = Blockly.JavaScript.valueToCode(block, `dutu`, Blockly.JavaScript.ORDER_ATOMIC);
-  var statements_do = Blockly.JavaScript.statementToCode(block, `do`);
-  
-  var code = `for (let ${variable_various} = ${value_start}; ${variable_various} <= ${value_end}; ${variable_various}+= ${value_dutu}) {${statements_do}}\n`;
   return code;
 };
 
@@ -174,6 +380,13 @@ Blockly.JavaScript[`break`] = function(block) {
 Blockly.JavaScript[`continue`] = function(block) {
   // TODO: Assemble JavaScript into code variable.
   var code = `continue;\n`;
+  return code;
+};
+
+Blockly.JavaScript['repeat_delete'] = function(block) {
+  var value_loopid = Blockly.JavaScript.valueToCode(block, 'loopID', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = `emoji.loop.stop(${value_loopid});\n`;
   return code;
 };
  
@@ -604,213 +817,5 @@ Blockly.JavaScript[`color_option`] = function(block) {
   var code = `#${emoji.dec_hex(parseInt(value_red))}${emoji.dec_hex(parseInt(value_green))}${emoji.dec_hex(parseInt(value_blue))}\n`;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
-};
- 
-Blockly.JavaScript[`sprite_select`] = function(block) {
-  var text_spritename = block.getFieldValue(`spriteName`);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `'${text_spritename}'`;
-  // TODO: Change ORDER_NONE to the correct strength.
-  return [code, Blockly.JavaScript.ORDER_NONE];
-};
-
-Blockly.JavaScript[`sprite_sayuu`] = function(block) {
-  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
-  var value_value = Blockly.JavaScript.valueToCode(block, `value`, Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.susumu(${value_spritename}, ${value_value});\n`;
-  return code;
-};
-
-Blockly.JavaScript[`sprite_rotate_right`] = function(block) {
-  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
-  var value_rotate = Blockly.JavaScript.valueToCode(block, `rotate`, Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.rotateplus(${value_spritename}, ${value_rotate});\n`;
-  return code;
-};
-
-Blockly.JavaScript[`sprite_rotate_left`] = function(block) {
-  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
-  var value_value = Blockly.JavaScript.valueToCode(block, `value`, Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.rotateplus(${value_spritename}, ${-(value_value)});\n`;
-  return code;
-};
-
-Blockly.JavaScript[`sprite_move`] = function(block) {
-  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
-  var value_x = Blockly.JavaScript.valueToCode(block, `x`, Blockly.JavaScript.ORDER_ATOMIC);
-  var value_y = Blockly.JavaScript.valueToCode(block, `y`, Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.posxy(${value_spritename}, ${value_x}, ${value_y});\n`;
-  return code;
-};
-
-Blockly.JavaScript[`sprite_move_seconds`] = function(block) {
-  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
-  var value_x = Blockly.JavaScript.valueToCode(block, `x`, Blockly.JavaScript.ORDER_ATOMIC);
-  var value_y = Blockly.JavaScript.valueToCode(block, `y`, Blockly.JavaScript.ORDER_ATOMIC);
-  var value_seconds = Blockly.JavaScript.valueToCode(block, `seconds`, Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.posxytime(${value_spritename}, ${value_x}, ${value_y}, ${value_seconds*1000});\n`;
-  return code;
-};
-
-Blockly.JavaScript[`sprite_rotate`] = function(block) {
-  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
-  var value_value = Blockly.JavaScript.valueToCode(block, `value`, Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.rotate(${value_spritename}, ${value_value});\n`;
-  return code;
-};
-
-Blockly.JavaScript[`sprite_move_xdake`] = function(block) {
-  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
-  var value_x = Blockly.JavaScript.valueToCode(block, `x`, Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.posx(${value_spritename}, ${value_x});\n`;
-  return code;
-};
-
-Blockly.JavaScript[`sprite_move_xdutu`] = function(block) {
-  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
-  var value_x = Blockly.JavaScript.valueToCode(block, `x`, Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.posxplus(${value_spritename}, ${value_x});\n`;
-  return code;
-};
-
-Blockly.JavaScript[`sprite_move_ydake`] = function(block) {
-  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
-  var value_y = Blockly.JavaScript.valueToCode(block, `y`, Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.posy(${value_spritename}, ${value_y});\n`;
-  return code;
-};
-
-Blockly.JavaScript[`sprite_move_ydutu`] = function(block) {
-  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
-  var value_y = Blockly.JavaScript.valueToCode(block, `y`, Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.posyplus(${value_spritename}, ${value_y});\n`;
-  return code;
-};
-
-Blockly.JavaScript[`sprite_end`] = function(block) {
-  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.rebound(${value_spritename});\n`;
-  return code;
-};
-
-Blockly.JavaScript[`sprite_rotate_houhou`] = function(block) {
-  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
-  var dropdown_name = block.getFieldValue(`NAME`);
-  // TODO: Assemble JavaScript into code variable.
-  if(dropdown_name == "left-right"){
-    var code = `emojisp.rotatetype(${value_spritename}, "lr");\n`;
-  }
-  else if(dropdown_name == "none"){
-    var code = `emojisp.rotatetype(${value_spritename}, "none");\n`;
-  }
-  else if(dropdown_name == "free"){
-    var code = `emojisp.rotatetype(${value_spritename}, "free");\n`;
-  }
-  return code;
-};
-
-Blockly.JavaScript[`sprite_const_xpos`] = function(block) {
-  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.accessSpriteData(${value_spritename}).x`;
-  // TODO: Change ORDER_NONE to the correct strength.
-  return [code, Blockly.JavaScript.ORDER_NONE];
-};
-
-Blockly.JavaScript[`sprite_const_ypos`] = function(block) {
-  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.accessSpriteData(${value_spritename}).y`;
-  // TODO: Change ORDER_NONE to the correct strength.
-  return [code, Blockly.JavaScript.ORDER_NONE];
-};
-
-Blockly.JavaScript[`sprite_const_rotate`] = function(block) {
-  var value_spritename = Blockly.JavaScript.valueToCode(block, `spriteName`, Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.accessSpriteData(${value_spritename}).deg`;
-  // TODO: Change ORDER_NONE to the correct strength.
-  return [code, Blockly.JavaScript.ORDER_NONE];
-};
-
-Blockly.JavaScript[`sprite_onclick`] = function(block) {
-  var text_id = block.getFieldValue(`id`);
-  var statements_run = Blockly.JavaScript.statementToCode(block, `run`);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `document.getElementById('emojiSprite_${text_id}').addEventListener('click', function() {${statements_run}});\n`;
-  return code;
-};
-
-Blockly.JavaScript[`sprite_hide`] = function(block) {
-  var value_sprite = Blockly.JavaScript.valueToCode(block, `sprite`, Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.hide(${value_sprite});\n`;
-  return code;
-};
-
-Blockly.JavaScript[`sprite_show`] = function(block) {
-  var value_sprite = Blockly.JavaScript.valueToCode(block, `sprite`, Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `emojisp.show(${value_sprite});\n`;
-  return code;
-};
- 
-Blockly.JavaScript['sound_inputid'] = function(block) {
-  var text_soundid = block.getFieldValue('soundID');
-  // TODO: Assemble JavaScript into code variable.
-  var code = `\`${text_soundid}\``;
-  // TODO: Change ORDER_NONE to the correct strength.
-  return [code, Blockly.JavaScript.ORDER_NONE];
-};
-
-Blockly.JavaScript[`sound_play`] = function(block) {
-  var value_soundname = Blockly.JavaScript.valueToCode(block, `soundName`, Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `emojiau.playSound(${value_soundname});\n`;
-  return code;
-};
-
-Blockly.JavaScript[`sound_tone`] = function(block) {
-  var value_onkai = Blockly.JavaScript.valueToCode(block, `onkai`, Blockly.JavaScript.ORDER_ATOMIC);
-  var dropdown_select = block.getFieldValue(`select`);
-  // TODO: Assemble JavaScript into code variable.
-
-  if(dropdown_select == '1'){
-    var code = `emojiau.playNote(${value_onkai}, '1m')`
-  }
-  else if(dropdown_select == '2'){
-    var code = `emojiau.playNote(${value_onkai}, '2n')`
-  }
-  else if(dropdown_select == '4'){
-    var code = `emojiau.playNote(${value_onkai}, '4n')`
-  }
-  else if(dropdown_select == '8'){
-    var code = `emojiau.playNote(${value_onkai}, '8n')`
-  }
-  else if(dropdown_select == '16'){
-    var code = `emojiau.playNote(${value_onkai}, '16n')`
-  }
-
-  var code = `...;\n`;
-  return code;
-};
-
-Blockly.JavaScript[`sound_tone_second`] = function(block) {
-  var value_onkai = Blockly.JavaScript.valueToCode(block, `onkai`, Blockly.JavaScript.ORDER_ATOMIC);
-  var value_second = Blockly.JavaScript.valueToCode(block, `second`, Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = `emojiau.playNoteSecond(${value_onkai}, ${value_second});\n`;
-  return code;
 };
  

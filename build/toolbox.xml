@@ -6,6 +6,7 @@
     <block type="sprite_onclick">
       <field name="id">スプライト名</field>
     </block>
+    <block type="sprite_collision_boolean"></block>
     <block type="sprite_sayuu">
       <value name="value">
         <block type="math_number">
@@ -161,27 +162,10 @@
     <block type="repeat_true">
       <field name="boolean">true</field>
     </block>
-    <block type="repeat_setting">
-      <field name="various" id="JKT,LXU/E+$@J0Ln4az5">i</field>
-      <value name="start">
-        <block type="math_number">
-          <field name="NUM">1</field>
-        </block>
-      </value>
-      <value name="end">
-        <block type="math_number">
-          <field name="NUM">10</field>
-        </block>
-      </value>
-      <value name="dutu">
-        <block type="math_number">
-          <field name="NUM">1</field>
-        </block>
-      </value>
-    </block>
     <block type="repeat_list">
       <field name="various" id="JKT,LXU/E+$@J0Ln4az5">i</field>
     </block>
+    <block type="repeat_delete"></block>
     <block type="break"></block>
     <block type="continue"></block>
   </category>

@@ -329,3 +329,21 @@ Blockly.Blocks['sprite_show'] = {
  this.setHelpUrl("https://example.com");
   }
 };
+
+Blockly.Blocks['sprite_collision_boolean'] = {
+  init: function() {
+    this.appendValueInput("sprite1")
+        .setCheck("sprite_ID");
+    this.appendDummyInput()
+        .appendField("が");
+    this.appendValueInput("sprite2")
+        .setCheck("sprite_ID");
+    this.appendDummyInput()
+        .appendField("に接触しているか");
+    this.setInputsInline(true);
+    this.setOutput(true, "Boolean");
+    this.setColour(65);
+ this.setTooltip("衝突の判定を行います。");
+ this.setHelpUrl("https://example.com");
+  }
+};

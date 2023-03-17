@@ -129,10 +129,10 @@ emoji.ask = (ask) => {
  */
 emoji.dec_hex = (dec) => {
     const a = dec.toString(16).toUpperCase();
-    if(a.length == 1){
-        return '0'+ a
+    if (a.length == 1) {
+        return '0' + a
     }
-    else{
+    else {
         return a
     }
 }
@@ -155,4 +155,97 @@ emoji.delay = (seconds) => {
     while ((end - start) < seconds * 1000) {
         end = new Date().getTime();
     }
+}
+
+emoji.loop = {};
+emoji.infinityLoop = {};
+emoji.loop.data = {};
+emoji.while = {};
+/**
+ * 回数指定ループの作成
+ * @param {String} id 
+ * @param {Function} fn 
+ * @param {Number} count 
+ */
+emoji.loop.create = (id, fn, count) => {
+    let counter = 0;
+    if (!Object.keys(emoji.loop.data).includes(id)) {
+        emoji.loop.data[id] = setInterval(() => {
+            fn();
+            counter++;
+            if (counter == count) {
+                clearInterval(emoji.loop.data[id]);
+                delete emoji.loop.data[id];
+            }
+        }, 33);
+    }
+    else {
+        alert('すでにループが作成されています')
+    }
+
+}
+/**
+ * 無限ループの作成
+ * @param {String} id 
+ * @param {Function} fn 
+ */
+emoji.infinityLoop.create = (id, fn) => {
+    if (!Object.keys(emoji.loop.data).includes(id)) {
+        emoji.loop.data[id] = setInterval(fn, 33);
+    }
+    else {
+        alert('すでにループが作成されています')
+    }
+}
+/**
+ * ループの強制停止
+ * @param {String} id 
+ */
+emoji.loop.stop = (id) => {
+    if (Object.keys(emoji.loop.data).includes(id)) {
+        clearInterval(emoji.loop.data[id])
+        delete emoji.loop.data[id];
+    }
+    else {
+        alert('ループが存在していません。')
+    }
+}
+/**
+ * whileループの作成
+ * @param {String} id 
+ * @param {Function} fn 
+ * @param {String} bool 判定式を文字列で入力 
+ */
+emoji.while.create = (id, fn, bool) => {
+    if (id == null) {
+        setInterval(() => {
+            fn();
+            if (!eval(bool)) {
+                clearInterval(emoji.loop.data[id]);
+                delete emoji.loop.data[id];
+            }
+        }, 33);
+    }
+    else if (id !== null && !Object.keys(emoji.loop.data).includes(id)) {
+        emoji.loop.data[id] = setInterval(() => {
+            fn();
+            if (!eval(bool)) {
+                clearInterval(emoji.loop.data[id]);
+                delete emoji.loop.data[id];
+            }
+        }, 33);
+    }
+    else {
+        alert('すでにループが作成されています')
+    }
+}
+
+/**
+ * 現在実行されているすべてのループを無条件で停止
+ */
+emoji.loop.allStop = () => {
+    Object.keys(emoji.loop.data).forEach((e, i) => {
+        emoji.loop.stop(e);
+        delete emoji.loop.data[e];
+    })
 }
